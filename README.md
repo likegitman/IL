@@ -9,5 +9,6 @@
 * [Layout](/CSS/layout.md)
 
 ## JAVASCRIPT
+* [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
 * [Data-type](/JAVASCRIPT/data-type.md)
 * [Operator](JAVASCRIPT/operator.md)
