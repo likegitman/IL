@@ -10,3 +10,4 @@
 
 ## JAVASCRIPT
 * [Data-type](/JAVASCRIPT/data-type.md)
+* [Operator](JAVASCRIPT/operator.md)
