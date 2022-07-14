@@ -11,4 +11,4 @@
 ## JAVASCRIPT
 * [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
 * [Data-type](/JAVASCRIPT/data-type.md)
-* [Operator](JAVASCRIPT/operator.md)
+* [Operator](JAVASCRIPT/operators.md)
