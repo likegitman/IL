@@ -4,6 +4,8 @@
 ## CSS
 * [Color](/CSS/color.md)
 * [Font](/CSS/font.md)
+* [Padding](/CSS/padding.md)
+* [Margin](/CSS/margin.md)
 * [Flexbox](/CSS/flexbox.md)
 * [Layout](/CSS/layout.md)
 
