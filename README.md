@@ -12,3 +12,7 @@
 * [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
 * [Data-type](/JAVASCRIPT/data-type.md)
 * [Operator](JAVASCRIPT/operators.md)
+* [If](/JAVASCRIPT/if.md)
+* [Switch-case](/JAVASCRIPT/switch-case.md)
+* [Loop](/JAVASCRIPT/loops.md)
+
