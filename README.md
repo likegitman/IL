@@ -14,6 +14,3 @@
 * [Operator](JAVASCRIPT/operators.md)
 * [Conditional](/JAVASCRIPT/conditional.md)
 * [Loop](/JAVASCRIPT/loops.md)
-
-## JAVA
-* none
