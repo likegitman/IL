@@ -14,3 +14,4 @@
 * [Operator](JAVASCRIPT/operators.md)
 * [Conditional](/JAVASCRIPT/conditional.md)
 * [Loop](/JAVASCRIPT/loops.md)
+* [Function](/JAVASCRIPT/function.md)
