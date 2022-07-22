@@ -7,6 +7,7 @@
 * [Margin](/CSS/margin.md)
 * [Flexbox](/CSS/flexbox.md)
 * [Layout](/CSS/layout.md)
+* [Border](/CSS/border.md)
 
 ## JAVASCRIPT
 * [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
