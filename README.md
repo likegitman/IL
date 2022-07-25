@@ -2,12 +2,6 @@
 공부한 내용을 하루하루 기록하는 공간입니다!
 
 ## HTML
-* [Header](/HTML/header.md)
-* [Nav](/HTML/nav.md)
-* [Article](/HTML/article.md)
-* [Section](/HTML/section.md)
-* [Aside](/HTML/aside.md)
-* [Footer](/HTML/footer.md)
 * [Div](/HTML/div.md)
 * [Span](/HTML/span.md)
 * [List](/HTML/list.md)
