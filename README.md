@@ -3,7 +3,6 @@
 
 ## HTML
 * [Div](/HTML/div.md)
-* [Span](/HTML/span.md)
 * [List](/HTML/list.md)
 * [Table](/HTML/table.md)
 
