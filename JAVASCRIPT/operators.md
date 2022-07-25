@@ -21,7 +21,6 @@ console.log(2 ** 3); //output: 8
 ```
 let counter = 2;
 const preIncrement = ++counter;
-
 console.log(`preIncrement: ${preIncrement}, counter: ${conter}`); // output: 3, 3
 
 let counter2 = 5;
@@ -42,10 +41,10 @@ x /= y;
 
 ## Comparison operators
 ```
-console.log(10 < 6); //작다
-console.log(10 <= 6); //작거나 같다
-console.log(10 > 6); //크다
-console.log(10 >= 6); //크거나 같다
+console.log(2 < 8); //작다
+console.log(4 <= 5); //작거나 같다
+console.log(3 > 1); //크다
+console.log(10 >= 5); //크거나 같다
 ```
 
 ## Logical operators
