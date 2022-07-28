@@ -73,7 +73,7 @@ function printMessage() {
   consolo.log(message); //작동
   console.log(globalMessage); //작동
 }
-console.log(message); //작동 안함
+console.log(message); //작동 하지않음
 ```
 
 ```
@@ -86,5 +86,38 @@ function printMessage() {
     console.log(message); //작동 => 자식은 부모에게서 정의된 메시지를 확인(사용)이 가능함
     let childMessage = 'hello';
   }
+  console.log(childMessage); //작동 하지않음
+}
+```
+
+## Return
+```
+function sum(a, b) {
+  return a + b;
+}
+const result = sum(1, 2); // 3
+console.log(`sum: ${sum(1, 2)}`) // output: sum: 3
+```
+
+## Every Return
+> 조건 참: user.point가 10 초과라면
+```
+//bad
+function upgradeUser(user) {
+  if(user.point > 10) {
+    // long uprtade logic...
+    // if안에 많은 logic들을 넣게되면 가독성이 떨어짐
+  }
+}
+```
+
+```
+//good
+function upgradeUser(user) {
+  if(user.point <= 10) {
+    return;
+    // 조건이 아닐때는 빨리 return으로 함수를 종료하는게 좋음
+  }
+  // long upgrade logic...
 }
 ```
