@@ -66,3 +66,25 @@ printAll('hello', 'good', 'wonderful');
 ```
 
 ## Local scope
+```
+let globalMessage = 'global'; //global variable => 어디에서든 사용가능
+function printMessage() {
+  let message = 'hello'; //local variable => 함수블럭안에서만 작동
+  consolo.log(message); //작동
+  console.log(globalMessage); //작동
+}
+console.log(message); //작동 안함
+```
+
+```
+let globalMessage = 'global';
+function printMessage() {
+  let message = 'hello';
+  consolo.log(message);
+  console.log(globalMessage);
+  function printAnother() { //부모 자식 함수
+    console.log(message); //작동 => 자식은 부모에게서 정의된 메시지를 확인(사용)이 가능함
+    let childMessage = 'hello';
+  }
+}
+```
