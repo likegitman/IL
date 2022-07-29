@@ -121,3 +121,58 @@ function upgradeUser(user) {
   // long upgrade logic...
 }
 ```
+## Function Expression
+> function은 변수에 할당이 가능하고, function에 parameter로 전달이되며  
+  return값으로 return이 가능하다
+  ```
+  function sum(a, b) {
+    return a + b; // return
+  }
+  // anonymous function
+  const print = function () { // 변수 print에 anonymous function을 할당함
+    console.log('print');
+  };
+  print(); // output: print
+  const printAgain = print; // print를 할당함으로써 printAgain이 함수를 가리키게 됨
+  printAgain(); // output: print
+  const sumAgain = sum; // 변수 sumAgain에 sum function을 할당함
+  console.log(sumAgain(2, 3)); // output: 5
+  ```
+  
+  ## Callback Function
+  > 상황에 맞게 전달된 함수를 출력하는 것
+  ```
+  function randomQuiz(answer, printYes, printNo) {
+    if(answer === 'love you') {
+      printYes();
+      } else {
+        printNo();
+      }
+    }
+    // anonymous function
+    const printYes = function () {
+      console.log('yes');
+    };
+    // named function
+    const printNo function print () {
+      console.log('no');
+    };
+    randomQuiz('hello', printYes, printNo);
+    randomQuiz('love you', printYes, printNo);    
+  ```
+  
+  ## Arrow function
+  ```
+  const simplePrint = () => console.log('simplePrint');
+  const add = (a, b) => a + b;
+  // block이 필요한 Arrow function이라면?
+  const simpleMultiply = (a, b) => {
+    return a * b;
+  };
+  ```
+  ## IIFE: Immediately Invoked Function Expression
+  ```
+  (function hello() {
+    console.log('IIFE')
+  })();
+  ```
