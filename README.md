@@ -21,5 +21,4 @@
 * [Conditional](/JAVASCRIPT/conditional.md)
 * [Loop](/JAVASCRIPT/loops.md)
 * [Function](/JAVASCRIPT/function.md)
-* [Class](/JAVASCRIPT/class.md)
-* [Object](/JAVASCRIPT/object.md)
+* [Class,Object](/JAVASCRIPT/class,object.md)
