@@ -93,3 +93,69 @@ function Person(name, age) {
 const person4 = new Person('woonrin', 17);
 console.log(person4); // output: Person {name: "woonrin", age: 17}
 ```
+
+## In Operator
+```
+const woonrin = { name: 'woonrin', age: 17 }
+woonrin.hasJob = true;
+
+console.log('name' in woonrin); // output: woonrin
+console.log('age' in woonrin); // output: 17
+console.log('random' in woonrin); // output: false
+console.log(woonrin.random); // output: undefined
+```
+
+## for..in and for..of
+```
+const woonrin = { name: 'woonrin', age: 17 }
+woonrin.hasJob = true;
+
+// for..in
+for (key in woonrin) {
+  console.log(key); // output: name \n age \n hasJob
+}
+
+// for..of
+// for (value of iterable)
+const array = [1, 2, 3, 4];
+
+for(let i = 0; i < array.length; i++){
+    console.log(array[i]); // output: 1 \n 2 \n 3 \n 4
+}
+
+// simplification
+for(value of array) {
+    console.log(value); // output: 1 \n 2 \n 3 \n 4
+}
+```
+
+## Cloning
+```
+const user = { name: 'woonrin', age: '17' };
+const user2 = user; // user2에 user를 할당
+user2.name = 'coder'; // user의 name은 coder로 바뀌게 됨
+console.log(user); // output: { name: 'woonrin', age: '17' }
+
+const user3 = {}; // 빈 공간으로 만듦
+for (key in user) {
+    user3[key] = user[key]; // user의 key값들이 user3에 할당되어 짐
+}
+console.log(user3); // output: {name: 'coder', age: '17'}
+
+// way 1
+const user4 = {};
+Object.assign(user4, user);
+console.log(user4); // output: {name: 'coder', age: '17'}
+
+// way2
+const user5 = Object.assign({}, user);
+console.log(user5); // output: {name: 'coder', age: '17'}
+
+// example       
+const fruit1 = { color: 'red' };
+const fruit2 = { color: 'blue', size: 'big' };
+// 앞에 동일한 propertie가 있다면 뒤의 변수가 값을 덮어씌움
+const mixed = Object.assign({}, fruit1, fruit2); 
+console.log(mixed.color); // output: blue
+console.log(mixed.size); // output: big
+```
