@@ -5,6 +5,8 @@
 * [Div](/HTML/div.md)
 * [List](/HTML/list.md)
 * [Table](/HTML/table.md)
+* [Image](HTML/image.md)
+* [Video](HTML/video.md)
 
 ## CSS
 * [Cascading](/CSS/cascading.md)
