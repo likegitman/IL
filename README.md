@@ -25,3 +25,4 @@
 * [Function](/JAVASCRIPT/function.md)
 * [Class](/JAVASCRIPT/class.md)
 * [Object](/JAVASCRIPT/object.md)
+* [Array](/JAVASCRIPT/array.md)
