@@ -1,5 +1,5 @@
 # TIL
-공부한 내용을 하루하루 기록하는 공간입니다!:fire:
+날마다 공부한 내용을 MarkDown기법으로 기록하는 공간입니다!:fire:
 
 ## HTML
 * [Div](/HTML/div.md)
