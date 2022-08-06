@@ -4,7 +4,14 @@
 ```
 {
     const animal = ['dog', 'cat', 'fox'];
-    // 구분자를 나타내면 원래 ',' 였던 기호가 괄호안의 string로 바뀌게 된다
+    
+    // join(separator?: string) => string
+    
+    // 구분자를 나타내지 않으면 ','로 표시된다
+    // const result = animal.join();
+    // console.log(result) // output: dog, cat, fox
+    
+    // 구분자를 나타내면 원래 ',' 였던 기호가 괄호안의 string으로 바뀌게 된다
     const result = animal.join(' , and '); 
     console.log(result); // output: dog , and cat , and fox
 }
@@ -14,6 +21,7 @@
 ```
 {
     const animal = '＃, ＆, ＠, ★';
+    
     // split(separator: string | RegExp, limit?: number) => spring[]
     const result = animal.split(',');
     console.log(result); // output: (4) ['＃', ' ＆', ' ＠', ' ★']
@@ -35,6 +43,7 @@
     const array = [1, 2, 3, 4, 5];
     const result = array.reverse();
     console.log(result); // output: (5) [5, 4, 3, 2, 1]
+   
     // reverse()는 기존의 배열의 순서도 바꾼다 
     console.log(array) // output: (5) [5, 4, 3, 2, 1]
 }
