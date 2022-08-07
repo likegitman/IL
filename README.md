@@ -26,4 +26,4 @@
 * [Class](/JAVASCRIPT/class.md)
 * [Object](/JAVASCRIPT/object.md)
 * [Array](/JAVASCRIPT/array.md)
-* [Array Api Quiz](/JAVASCRIPT/array api quiz.md)
+* [Array Api Quiz](/JAVASCRIPT/array_api_quiz.md)
