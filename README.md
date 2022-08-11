@@ -17,6 +17,7 @@
 * [Layout](/CSS/layout.md)
 * [Border](/CSS/border.md)
 * [Text](/CSS/text.md)
+* [Color](/CSS/color.md)
 
 ## JAVASCRIPT
 * [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
