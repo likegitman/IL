@@ -16,6 +16,7 @@ class Person {
 }
 
 //object produce
+
 const woonrin = new Person('woonrin', 17); // Person's constructors
 console.log(woonrin.name); // output: woonrin
 console.log(woorin.age); // output: 17
@@ -98,7 +99,7 @@ class Share {
 }
 
 // 자동적으로 Shape class에서 정의한 field, method들이
-   Rectangle과 Triangle class에 포함 됨(사용이 가능 함)
+// Rectangle과 Triangle class에 포함 됨(사용이 가능 함)
 
 class Rectangle extends Shape {}
 class Triangle extends Shape {
