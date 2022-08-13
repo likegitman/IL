@@ -17,7 +17,7 @@
 * [Border](/CSS/border.md)
 * [Text](/CSS/text.md)
 * [Color](/CSS/color.md)
-* [Virtual Class](/CSS/virtyal_class.md)
+* [Virtual Class](/CSS/virtual_class.md)
 
 ## JAVASCRIPT
 * [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
