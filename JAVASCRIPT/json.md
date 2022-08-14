@@ -1,5 +1,14 @@
 # JSON
-> JavaScript Object Notation
+> JavaScript Object Notation  
+  자바스크립트 객체 표기법
+
+* 데이터를 주고 받을 때 쓸 수 있는 가장 간단한 파일이다 
+* 가장 간단한 데이터 교환 형식이다
+* 가벼운 텍스트 기반 구조이다
+* 읽기 쉽다
+* key와 value로 이루어져 있다
+* 네트워크 연결 사이의 직렬화 및 데이터 전송에 사용된다
+* 독립적인 프로그래밍 언어 및 플랫폼이다
 
 ## JSON api 
 
