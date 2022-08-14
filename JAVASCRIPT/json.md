@@ -31,6 +31,7 @@ console.log(json);
 // output: {"name":"raby","color":"white","size":null,"birthDate":"2022-08-14T11:50:21.482Z"}
 ```
 
+
 ```
 let json;
 
@@ -47,6 +48,7 @@ const rabbit = {
 json = JSON.stringify(rabbit, ["name"]);
 console.log(json); // output: {"name":"raby"}
 ```
+
 
 ```
 let json;
@@ -78,6 +80,7 @@ console.log(json);
 // {"name":"raby","color":"white","size":null,"birthDate":"2022-08-14T11:58:09.673Z"}
 
 ```
+
 
 ```
 let json;
