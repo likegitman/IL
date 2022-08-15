@@ -122,3 +122,43 @@ console.log(json);
 ```
 
 ## JSON to Object
+
+```
+let json;
+
+const rabbit = {
+    name: 'raby',
+    color: 'white',
+    size: null,
+    birthDate: new Date(),
+    jump: () => {
+        console.log(`${name} can jump!`);
+    },
+};
+json = JSON.stringify(rabbit);
+const obj = JSON.parse(json);
+console.log(obj); // output: {name: 'raby', color: 'white', size: null, birthDate: '2022-08-15T13:15:42.718Z'}
+rabbit.jump(); // output: can jump! 
+obj.jump(); // output: Error (obj는 jump()를 갖고있지 않음)
+```
+
+```
+let json;
+
+const rabbit = {
+    name: 'raby',
+    color: 'white',
+    size: null,
+    birthDate: new Date(),
+    jump: () => {
+        console.log(`${name} can jump!`);
+    },
+};
+
+json = JSON.stringify(rabbit);
+const obj = JSON.parse(json, (key, value) => {
+    return key === 'birthDate' ? new Date(value) : value;
+});
+console.log(rabbit.birthDate.getDate()); // output: 15
+console.log(obj.birthDate.getDate()); // output: 15
+```
