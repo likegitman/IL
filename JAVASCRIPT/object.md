@@ -40,7 +40,7 @@ delete woonrin.hasJob;
 console.log(woonrin[name]); // undefined
 console.log(woonrin['name']); // woonrin
 
-woonrin{'hasJob'} = true;
+woonrin['hasJob'] = true;
 console.log(woonrin.hasJob); // output: true
 
 // 받을 key 값을 모를때에는 computed propertie
@@ -57,6 +57,7 @@ printValue(woonrin, 'name'); // output: undefined
 function printValue(obj, key) {
   console.log(obj[key]);
 }
+// key 값은 무조건 ''(string)로 감싸줘야 한다
 printValue(woonrin, 'name'); // output: woonrin
 printValue(woonrin, 'age'); // output: 17
 ```
@@ -99,8 +100,8 @@ console.log(person4); // output: Person {name: "woonrin", age: 17}
 const woonrin = { name: 'woonrin', age: 17 }
 woonrin.hasJob = true;
 
-console.log('name' in woonrin); // output: woonrin
-console.log('age' in woonrin); // output: 17
+console.log('name' in woonrin); // output: true
+console.log('age' in woonrin); // output: true
 console.log('random' in woonrin); // output: false
 console.log(woonrin.random); // output: undefined
 ```
