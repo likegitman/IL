@@ -12,8 +12,8 @@
   
   ## 사용방향
   ```
-  padding-top: 5px; //위에 padding 값을 줌
-  padding-bottom: 5px; //아래에 padding 값을 줌
-  padding-left: 5px; //왼쪽에 padding 값을 줌
-  padding-right: 5px; //오른쪽에 padding 값을 줌
+  padding-top: 5px; //상에 padding 값을 줌
+  padding-bottom: 5px; //하에 padding 값을 줌
+  padding-left: 5px; //좌에 padding 값을 줌
+  padding-right: 5px; //우에 padding 값을 줌
   ```
