@@ -53,18 +53,6 @@
 * length
 * %
 
-## text-decoration-color
-> 텍스트에 추가되는 장식의 색상을 설정합니다.
-* color
-
-## text-decoration-line
-> 밑줄이나 윗줄과 같이 요소의 텍스트에 사용되는 장식의 종류를 설정합니다.
-* none
-* underline
-* overline
-* line-through
-* underline overline
-
 ## text-align-last
 > 강제 줄 바꿈 직전의 블록이나 줄의 마지막 줄을 정렬하는 방법을 설정합니다.
 * right
