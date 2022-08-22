@@ -27,7 +27,7 @@ function printDelay(print, timeout) {
 printDelay(() => console.log('print2'), 2000);
 ```
 
-## Complex callback function
+## Complex Callback Function
 ```
 class UserStorage {
     loginUser(id, pwd, onSuccess, onError) {
