@@ -35,3 +35,4 @@
 * [Array Api Quiz](/JAVASCRIPT/array_api_quiz.md)
 * [JSON](/JAVASCRIPT/json.md)
 * [Callback](/JAVASCRIPT/callback.md)
+* [Promise](/JAVASCRIPT/promise.md)
