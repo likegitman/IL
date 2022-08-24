@@ -137,3 +137,42 @@ getTop() //
     .then(console.log) // error가 발생했기 때문에 no output
     .catch(console.log); // output: ■ => ♠
 ```
+
+## Simple Callback
+```
+class UserStorage {
+    loginUser(id, pwd) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (
+                    (id === 'woonrin' && pwd === 'thisme')
+                ) {
+                    resolve(id);
+                } else {
+                    reject(new Error('not found'));
+                }
+            }, 2000);
+        });
+    }
+
+    getRoles(user) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (user === 'woonrin') {
+                    resolve({ name: 'woonrin', role: 'student' });
+                } else {
+                    reject(new Error('no access'));
+                }
+            }, 1000)
+        });
+    }
+}
+const userStorage = new UserStorage();
+const id = prompt('enter your id');
+const pwd = prompt('enter your pwd');
+userStorage //
+    .loginUser(id, pwd)
+    .then(userStorage.getRoles)
+    .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
+    .catch(console.log);
+```
