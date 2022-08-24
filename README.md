@@ -27,7 +27,6 @@
 * [Data-type](/JAVASCRIPT/data-type.md)
 * [Operator](JAVASCRIPT/operators.md)
 * [Conditional](/JAVASCRIPT/conditional.md)
-* [Variable](/JAVASCRIPT/variable.md)
 * [Loop](/JAVASCRIPT/loops.md)
 * [Function](/JAVASCRIPT/function.md)
 * [Class](/JAVASCRIPT/class.md)
