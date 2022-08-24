@@ -1,18 +1,43 @@
 # Function
 
-## 사용법
+## Use
 ```
-fucntion printHello() {
+// declaration
+fucntion printanything() {
   console.log('Hello');
 } 
-printfHello(); // output: Hello
+
+function add(a, b) {
+  const sum = a + b;
+  return sum;
+}
+
+// call
+printanything(); // output: Hello
+
+const result = add(1, 2);
+console.log(result) // output: 3
 ```
 
 ```
-function log(message) {
-  console.log(message);
+// 함수를 인자로 전달
+fucntion printanything() {
+  const result = add(1, 2);
+  console.log(result);
 } 
-log('Test'); // output: Test
+
+function add(a, b) {
+  const sum = a + b;
+  return sum;
+}
+
+// 함수명만 전해주면 됨
+printfHello(add); // output: Hello
+
+// 함수를 변수에 할당
+const addFun = add;
+console.log(add);
+addFun(1, 2); // output: 3
 ```
 
 ## Parameters
