@@ -76,3 +76,64 @@ fetchNumber //
     })
     .then(num => console.log(num)); // output: 5
 ```
+
+## Error Handling
+```
+// resolve 일때
+const getTop = () =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve('↑'), 1000);
+    });
+const getTriangle = top =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${top} => ▲`), 1000)
+    });
+const add = triangle =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${triangle} => ♠`), 1000);
+    });
+
+// getTop()
+// .then(top => getTriangle(top))
+// .then(triangle => add(triangle))
+// .then(tree => console.log(tree));
+
+// 생략
+getTop() //
+    .then(getTriangle)
+    .then(add)
+    .then(console.log); // output: ↑ => ▲ => ♠
+```
+
+```
+// reject 일때
+const getTop = () =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve('↑'), 1000);
+    });
+const getTriangle = top =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => reject(new Error(`error! ${top} => ▲`)), 1000)
+    });
+const add = triangle =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${triangle} => ♠`), 1000);
+    });
+
+// getTop()
+// .then(top => getTriangle(top))
+// .then(triangle => add(triangle))
+// .then(tree => console.log(tree));
+
+// 생략
+getTop() //
+    .then(getTriangle)
+
+    // error가 발생했다면 ▲ 을 ■로 리턴
+    .catch(error => {
+        return '■';
+    })
+    .then(add)
+    .then(console.log) // error가 발생했기 때문에 no output
+    .catch(console.log); // output: ■ => ♠
+```
