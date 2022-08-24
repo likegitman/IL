@@ -138,7 +138,7 @@ getTop() //
     .catch(console.log); // output: ■ => ♠
 ```
 
-## Simple Callback
+## Simple Callback(previous improvements)
 ```
 class UserStorage {
     loginUser(id, pwd) {
