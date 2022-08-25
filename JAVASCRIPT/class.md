@@ -33,6 +33,8 @@ class Counter {
 
     increase() {
         this.counter++;
+        // this.counter가 5의 배수라면
+        // callback변수의 callback 함수를 실행
         if(this.counter % 5 === 0) {
             this.callback(this.counter);
         } else {
