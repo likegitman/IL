@@ -23,6 +23,39 @@ console.log(woorin.age); // output: 17
 woonrin.speak(); // output: woorin hello!!
 ```
 
+## Base 
+```
+class Counter {
+    constructor(runEvery5Times) {
+        this.counter = 0;
+        this.callback = runEvery5Times;
+    }
+
+    increase() {
+        this.counter++;
+        if(this.counter % 5 === 0) {
+            this.callback(this.counter);
+        } else {
+            console.log(this.counter);
+        }
+    }
+}
+
+function printSomething(num) {
+    console.log(`oh!! ${num}`);
+}
+
+function aleartSomething(num) {
+    alert(`oh!! ${num}`);
+}
+
+// class의 편리성
+// 하나의 class를 만들어 다양한 object를 만들고
+// 서로 다른 기능을 수행을 할 수 있게 함
+const printCounter = new Counter(printSomething);
+const aleartSomething = new Counter(aleartSomething);
+```
+
 ## Getter and Setters 
 ```
 class User {
