@@ -4,7 +4,7 @@
 
 ## JAVA
 * [Concept](/JAVA/concept.md)
-
+* [Array](/JAVA/array.md)
 ## HTML
 * [List](/HTML/list.md)
 * [Table](/HTML/table.md)
