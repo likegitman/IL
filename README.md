@@ -5,6 +5,7 @@
 ## JAVA
 * [Concept](/JAVA/concept.md)
 * [Array](/JAVA/array.md)
+* [Problem](/JAVA/problem.md)
 ## HTML
 * [List](/HTML/list.md)
 * [Table](/HTML/table.md)
