@@ -22,6 +22,7 @@
 * [Text](/CSS/text.md)
 * [Color](/CSS/color.md)
 * [Virtual Class](/CSS/virtual_class.md)
+* [Box-Sizing](/CSS/box-sizing.md)
 
 ## JAVASCRIPT
 * [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
