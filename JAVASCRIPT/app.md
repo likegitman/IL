@@ -1,5 +1,0 @@
-# Chrom App
-
-## Login
-
-## Clock
