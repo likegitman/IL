@@ -27,7 +27,7 @@
 * [Box-Sizing](/CSS/box-sizing.md)
 
 ## JAVASCRIPT
-* [Const, Let, Var의 차이](/JAVASCRIPT/declaration.md)
+* [Const, Let, Var](/JAVASCRIPT/declaration.md)
 * [Data-type](/JAVASCRIPT/data-type.md)
 * [Operator](JAVASCRIPT/operators.md)
 * [Conditional](/JAVASCRIPT/conditional.md)
