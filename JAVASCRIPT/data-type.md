@@ -17,9 +17,9 @@ const greeting = 'hello' + name;
 console.log(greeting); //output: hello Woonrin
 ```
 - template literals
-> 백택기호로 감싸고 $기호를 사요하는 것
+> 백택기호로 감싸고 $기호를 사용하는 것
 ```
-const name = 'Woorin'
+const name = 'Woonrin'
 console.log(`hello ${name}`); //output: hello Woonrin
 ```
 
@@ -36,6 +36,7 @@ console.log(`hello ${name}`); //output: hello Woonrin
 - null
 > 명확하게 비어있다고 지정하였을 때  
 `let x = null;`
+
 - undefined
 > 선언은 되어있지만 안의 값이 지정되지 않았을 때  
 `let x;`
