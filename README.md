@@ -8,12 +8,6 @@
 * [Problem](/JAVA/problem.md)
 * [String](/JAVA/string.md)
 
-## HTML
-* [List](/HTML/list.md)
-* [Table](/HTML/table.md)
-* [Image](HTML/image.md)
-* [Video](HTML/video.md)
-
 ## CSS
 * [Cascading](/CSS/cascading.md)
 * [Padding](/CSS/padding.md)
