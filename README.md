@@ -7,6 +7,7 @@
 * [Array](/JAVA/array.md)
 * [Problem](/JAVA/problem.md)
 * [String](/JAVA/string.md)
+* [anything](/JAVA/any.md)
 
 ## CSS
 * [Cascading](/CSS/cascading.md)
