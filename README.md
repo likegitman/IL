@@ -7,11 +7,13 @@
 
 * [Array](/JAVA/array.md)
 
-* [Problem](/JAVA/problem.md)
-
 * [String](/JAVA/string.md)
 
 * [Inheritance](/JAVA/inheritance.md)
+
+* [Problem](/JAVA/problem.md)
+
+* [InheritanceProblem](/JAVA/inhroblem.md)
 
 ## CSS
 * [Cascading](/CSS/cascading.md)
