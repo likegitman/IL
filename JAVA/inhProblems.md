@@ -167,3 +167,95 @@ public class CircleTest {
 
 }
 ```
+
+## 폰
+```
+package test;
+
+public class Phone {
+	protected String owner;
+	
+	Phone(){
+		owner="없음";
+	}
+	
+	Phone(String owner){
+		this.owner=owner;
+	}
+	
+	void talk() {
+		System.out.println(owner+"가 통화 중이다.");
+	}
+	
+	
+}
+
+public class TelePhone extends Phone {
+	private String when;
+	
+	TelePhone(){
+		// owner="없음"을 하지 않아도 super();가 자동으로
+		when="미정";
+	}
+	
+	TelePhone(String when){
+		this.when=when;
+	}
+	
+	TelePhone(String owner, String when){
+		super(owner);
+		this.when=when;
+	}
+	
+	void autoAnsering() {
+		System.out.println(owner+"(이)가 없다. "+when +" 전화 줄래.");
+	}
+	
+}
+
+package sangsi;
+
+public class SmartPhone extends TelePhone{
+	// String owner;
+	private String game;
+	
+	SmartPhone(){
+		game="미정";
+	}
+	
+	SmartPhone(String game){
+		this.game=game;
+	}
+	
+	SmartPhone(String owner, String game){
+		this.owner=owner;
+		this.game=game;
+	}
+	
+	void playGame() {
+		System.out.println(owner+"(이)가 " + game +"게임을 하는 중이다.");
+	}
+}
+
+public class PhoneTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Phone[] phones = {new Phone("황진이"), new Telephone("길동이", "내일"), new Smartphone("민국이", "갤러그")};
+		
+		for(Phone p:phones) {
+			if(p instanceof Smartphone) {
+				((Smartphone)p).playGame();;
+			}
+			else if(p instanceof Telephone) {
+				((Telephone)p).autoAnswering();
+			}
+			else if(p instanceof Phone) {
+				p.talk();
+			}
+		}
+	}
+
+}
+
+```
