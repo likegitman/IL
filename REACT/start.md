@@ -2,6 +2,8 @@
 
 
 ## 바닐라JS
+> html을 만들고 js로 가져와서 다시 html을 수정하는 
+
 ```
 <!DOCTYPE html>
 <html>
@@ -24,6 +26,8 @@
 ```
 
 ## 리액트
+> 모든것이 js로 시작해 그 다음에 html을 수정
+
 ```
 <!DOCTYPE html>
 <html>
