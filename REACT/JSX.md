@@ -16,6 +16,7 @@
 <script type="text/babel">
     const root = document.getElementById("root");
     const Title = (
+        // JSX 문법
         <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
             Hello I'm a title
         </h3>
