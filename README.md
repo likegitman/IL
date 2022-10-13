@@ -77,3 +77,5 @@
 * [JSX](/REACT/JSX.md)
 
 * [State](/REACT/state.md)
+
+* [Tour of CRA](/REACT/CRA.md)
