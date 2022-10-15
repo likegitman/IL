@@ -2,11 +2,8 @@
 > 코드가 언제 실행될지 결정
 
 ```
-import Button from "./Button";
-import styles from "./App.module.css";
 // useState와 useEffect를 import
 import { useState, useEffect } from "react";
-import { render } from "@testing-library/react";
 
 function App() {
   const [cnt, setValue] = useState(0);
