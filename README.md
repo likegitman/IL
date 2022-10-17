@@ -81,3 +81,5 @@
 * [Tour of CRA](/REACT/CRA.md)
 
 * [useEffect](/REACT/useEffect.md)
+
+* [Cleanup_Function](/REACT/cleanup_function.md)
