@@ -40,6 +40,7 @@
 <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
 <script>
     // element를 만들고 event를 넣고 값을 넣는것을 한 번에 함
+    // 흔히 사용 안 하는 방법
     const root = document.getElementById("root");
     const h3 = React.createElement("h3", {
         onMouseEnter: () => console.log("mouse enter"),
