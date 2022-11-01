@@ -12,6 +12,7 @@ function App() {
     if (toDo === "") {
       return;
     }
+    // currentArray라는 현재 배열을 갖고오고 submit event가 실행되면 toDo를 배열에 합친다
     setToDos((currentArray) => [toDo, ...currentArray]);
     setToDo("");
   };
