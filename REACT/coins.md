@@ -4,8 +4,10 @@
 import { useEffect, useState } from "react";
 function App() {
    const [loading, setLoading] = useState(true);
-  const [coins, setCoins] = useState([]);
+   //배열형태의 state 생성 
+   const [coins, setCoins] = useState([]);
   useEffect(() => {
+  // coin들을 가져옴
     fetch("https://api.coinpaprika.com/v1/tickers")
       .then((response) => response.json())
       .then((json) => {
@@ -15,6 +17,7 @@ function App() {
   }, []);
   return (
     <div>
+       // 삼항연산자
        <h1>The Coins! {loading ? "" : `(${coins.length})`}</h1>
       {loading ? (
         <strong>Loading...</strong>
@@ -30,6 +33,4 @@ function App() {
     </div>
   );
 }
-
-
 ```
