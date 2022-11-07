@@ -63,7 +63,7 @@
 
 * [JSX](/REACT/JSX.md)
 
-* [State](/REACT/state.md)
+* [useState](/REACT/state.md)
 
 * [Tour of CRA](/REACT/CRA.md)
 
