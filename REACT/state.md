@@ -1,5 +1,16 @@
-# State
-> 변하는 값
+# useState
+> state의 두번째 값은 첫번째 값을 설정한다
+```'
+import { useState } from "react";
+
+const [cnt,setCnt]=useState(0);
+const onClick=()=>{
+    setCnt(cnt+1);
+};
+return(
+    <button onClick={onClick}>{cnt}</button>
+);
+```
 
 ## Vanilla JS
 ```
