@@ -52,11 +52,6 @@
 
 * [Async, Await](/JAVASCRIPT/async&await.md)
 
-## DATABASE
-* [Base](/DATABASE/base.md)
-
-* [Design](/DATABASE/design.md)
-
 ## REACT
 * [Start](/REACT/start.md)
 
