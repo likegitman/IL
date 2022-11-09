@@ -23,6 +23,8 @@
 
 * [Box-Sizing](/CSS/box-sizing.md)
 
+* [Z-index](/CSS/z-index.md)
+
 ## JAVASCRIPT
 * [Const, Let, Var](/JAVASCRIPT/declaration.md)
 
