@@ -75,3 +75,5 @@
 * [Coins](/REACT/coins.md)
 
 * [Route](/REACT/route.md)
+
+* [useParams](/REACT/useParams.md)
