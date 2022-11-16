@@ -1,6 +1,6 @@
 # String function
 ```
-var introduce="Hello My name is Woonrin";
+let introduce="Hello My name is Woonrin";
 
 console.log(introduce.charAt(0));
 // charAt(n) : n번째 문자를 출력한다. 
