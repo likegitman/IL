@@ -32,6 +32,8 @@
 
 * [Data-type](/JAVASCRIPT/data-type.md)
 
+* [String_function](/JAVASCRIPT/string.md)
+
 * [Operator](JAVASCRIPT/operators.md)
 
 * [Conditional](/JAVASCRIPT/conditional.md)
