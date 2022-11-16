@@ -14,7 +14,7 @@ function print(person) {
 
 // object 정의
 const woonrin = { name: 'woonrin', age: 17 }
-print(woonrin); // output: woonrin \n 4
+print(woonrin); // output: woonrin \n 17
 
 // object 정의 후 뒤늦게 propertie를 새로 추가 할 수 있음
 woonrin.hasJob = true;
