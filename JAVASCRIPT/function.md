@@ -3,7 +3,7 @@
 ## Use
 ```
 // declaration
-fucntion printanything() {
+fucntion printHello() {
   console.log('Hello');
 } 
 
@@ -17,27 +17,6 @@ printanything(); // output: Hello
 
 const result = add(1, 2);
 console.log(result) // output: 3
-```
-
-```
-// 함수를 인자로 전달
-fucntion printanything() {
-  const result = add(1, 2);
-  console.log(result);
-} 
-
-function add(a, b) {
-  const sum = a + b;
-  return sum;
-}
-
-// 함수명만 전해주면 됨
-printfHello(add); // output: Hello
-
-// 함수를 변수에 할당
-const addFun = add;
-console.log(add);
-addFun(1, 2); // output: 3
 ```
 
 ## Parameters
@@ -90,6 +69,12 @@ function printAll(...args) {
 printAll('hello', 'good', 'wonderful');
 ```
 
+```
+function printAll(...args) {
+  args.forEach((arg)=>console.log(arg))
+}
+printAll('hello', 'good', 'wonderful');
+```
 ## Local scope
 ```
 let globalMessage = 'global'; //global variable => 어디에서든 사용가능
@@ -147,7 +132,8 @@ function upgradeUser(user) {
 }
 ```
 ## Function Expression
-> function은 변수에 할당이 가능하고, function에 parameter로 전달이되며  
+> function은 변수에 할당이 가능하고,
+  function에 parameter로 전달이되며  
   return값으로 return이 가능하다
   ```
   function sum(a, b) {
