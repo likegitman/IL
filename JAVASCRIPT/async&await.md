@@ -2,6 +2,13 @@
 
 ## Async
 ```
+// Promise
+// function fetchUser(){
+//     return new Promise((resolve, reject)=>{
+//         resolve('woonrin');
+//     });
+// }
+
 // async를 function앞에 쓰면 code block이 Promise로 바뀜
 async function fetchUser() {
     return 'woonrin';
