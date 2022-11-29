@@ -1,4 +1,28 @@
 # JSX
+> JAVASCRIPT의 확장 문법이며 XML과 비슷하게 생겼음  
+  JSX형식으로 작성한 코드는 브라우저가 실행되기 전에 
+  번들링되는 과정에서 바벨을 사용하여 일반 자바스크립트로 변환된다.
+  
+## JSX -> Babel
+```
+// JSX
+function App(){
+    return (
+        <div>
+            Hello <b>react</b>
+        </div>
+    );
+}
+
+// Babel
+function App(){
+    return React.createElement("div", null, "Hello", React.createElement("b", null, "react"));
+}
+```
+
+> 기본적으로 JSX는 JAVASCRIPT만 사용한 코드보다 익숙함  
+  결국 HTML코드를 작성하는 것과 비슷해서 가독성과 편리함이라는 장점 때문에  
+  JSX를 사용한다.
 
 ## JSX part_1 (JSX 기초)
 ```
