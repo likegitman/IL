@@ -59,10 +59,10 @@
 * [Async, Await](/JAVASCRIPT/async&await.md)
 
 ## REACT
-* [Start](/REACT/start.md)
-
 
 * [JSX](/REACT/JSX.md)
+
+* [props](/REACT/props.md)
 
 * [useState](/REACT/state.md)
 
