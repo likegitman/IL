@@ -2,7 +2,7 @@
 > properties를 줄인 표현으로 컴포넌트 속성을 설정할 때 사용하는 요소  
   props값은 해당 컴포넌트를 불러와 사용하는 부모 컴포넌트에서 설정 할 수 있음.
   
-## 부모에서 값 지정
+# 부모에서 값 지정
   
 ### App.js
 ```
@@ -33,7 +33,7 @@ const MyComponent=props=>{
 export default MyComponent;
 ```
   
-## defaultProps
+# defaultProps
 
 ### App.js
 ```
@@ -68,7 +68,7 @@ MyComponent.defaultProps={
 export default MyComponent;
 ```
   
-## children
+# children
 > 컴포넌트 태그 사이의 내용
 ### App.js
 ```
@@ -104,7 +104,7 @@ MyComponent.defaultProps={
 export default MyComponent;
 ```
 
-## 비구조화 할당 문법
+# 비구조화 할당 문법
 
 ### App.js
 ```
@@ -162,7 +162,7 @@ MyComponent.defaultProps={
 export default MyComponent;
 ```
 
-## propTypes
+# propTypes
 
 ### App.js
 ```
@@ -205,7 +205,7 @@ MyComponent.propTypes={
 export default MyComponent;
 ```
 
-## isRequired
+# isRequired
 > propTypes를 지정하지 않았을 때 경고 메시지 출력
 
 ### App.js
@@ -255,7 +255,7 @@ MyComponent.propTypes={
 export default MyComponent;
 ```
 
-## 다양한 PropTypes 종류
+# 다양한 PropTypes 종류
 * array : 배열
 * arrayOf(다른 PropType) : 특정 PropType으로 이루어진 배열을 의미, 예를 들어 
 arrayOf(PropTypes.number)는 숫자로 이루어진 배열
@@ -273,7 +273,7 @@ arrayOf(PropTypes.number)는 숫자로 이루어진 배열
 * shape({ name: PropTypes.string, num: PropTypes.number }) : 주어진 스키마를 가진 객체 
 * any : 아무 종류
 
-## 클래스형 컴포넌트에서 props 사용
+# 클래스형 컴포넌트에서 props 사용
 
 ### MyComponent.js
 ```
@@ -306,7 +306,7 @@ MyComponent.propTypes={
 export default MyComponent;
 ```
 
-## 클래스형 컴포넌트에서는 defaultProps와 propTypes를 class내부에서 설정할 수 있음
+# 클래스형 컴포넌트에서는 defaultProps와 propTypes를 class내부에서 설정할 수 있음
 
 ### MyComponent.js
 ```
