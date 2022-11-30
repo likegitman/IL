@@ -17,19 +17,27 @@ return(
 <!DOCTYPE html>
 <html>
     <body>
-        <span>Total clicks: 0</span>
-        <button id="btn">Click me</button>
+        <h1>The Number is : 0</h1>
+        <button class="btn__1">ADD</button>
+        <button class="btn__2">MINUS</button>
     </body>
 
     <script>
         let cnt=0;
-        const button=document.getElementById("btn");
-        const span=document.querySelector("span");
-        function handleClick(){
+        const h1=document.querySelector("h1");
+        const btn__1=document.getElementById("btn__1");
+        const btn__2=document.getElementById("btn__2");
+        
+        function add(){
             cnt=cnt+1;
-            span.innerText=`Total clicks: ${cnt}`;
+            h1.innerText=`The Number is : ${cnt}`;
         }
-        button.addEventListener("click", handleClick)
+        function minus(){
+            cnt=cnt-1;
+            h1.innerText=`The Number is : ${cnt}`;
+        }
+        bnt__1.addEventListener("click", add);
+        btn__2.addEventListener("click", minus);
     </script>
 </html>
 ```
