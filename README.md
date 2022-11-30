@@ -76,6 +76,8 @@
 
 * [CoinsExample](/REACT/coins.md)
 
+* [CountExample](/REACT/count.md)
+
 * [Route](/REACT/route.md)
 
 * [useParams](/REACT/useParams.md)
