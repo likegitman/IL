@@ -125,7 +125,7 @@ export default App;
 ### MyComponent.js
 ```
 const MyComponent=props=>{
-
+    // 비구조화 할당 
     const {name, children}=props;
 
     return(
