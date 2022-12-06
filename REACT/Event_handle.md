@@ -1,5 +1,5 @@
 # Event
-> 사용자가 웹 브라우저에서 DOM 요소들과 상호 작용하는 것을 이벤트(EVENT)라고gksek. 
+> 사용자가 웹 브라우저에서 DOM 요소들과 상호 작용하는 것을 이벤트(EVENT)라고한다.
 
 # Event Type
 * Clipboard
