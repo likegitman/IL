@@ -19,11 +19,13 @@
 
 * [Color](/CSS/color.md)
 
-* [Virtual Class](/CSS/virtual_class.md)
+* [Virtual_Class](/CSS/virtual_class.md)
 
 * [Box-Sizing](/CSS/box-sizing.md)
 
 * [Z-index](/CSS/z-index.md)
+
+* [Scroll_Bar](/CSS/scroll.md)
 
 ## JAVASCRIPT
 * [Const, Let, Var](/JAVASCRIPT/declaration.md)
