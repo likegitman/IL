@@ -1,7 +1,7 @@
 # Concept
 
 ## 객체
-> 사물이나 개념
+> 
 
 ## 클래스
 > 객체를 받아서 PGT설계도(java)를 설계
@@ -22,9 +22,48 @@
 > 상위 객체를 상속받은 하위 객체가 상위 객체의 필드와 메서드를  
   사용할 수 있는 것
 
-* 관련된 것
-> extend
-> 재사용
+## 메서드 오버로딩
+> 기능은 같은데 데이터 타입이 다를 때  
+> 함수의 이름은 같게하고 매개변수만 변화를 주어 메서드를 사용하는 것
+
+```
+package OverLoading;
+
+
+public class OverLoadDemo {
+	
+	public static int max(int n1, int n2){
+		int result=n1>n2?n1:n2;
+		return result;
+	}
+	
+	public static double max(double n1, double n2){
+		double result=n1>n2?n1:n2;
+		return result;
+	}
+	
+	public static int max(int n1, int n2, int n3){
+		return max(max(n1,n2), n3);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i1=3, i2=7, i3=10;
+		double d1=7.0, d2=3.0;
+		
+		System.out.printf("max(%d, %d) = %d \n", i1, i2, max(i1, i2));
+		System.out.printf("max(%.1f, %.1f) = %.1f \n", d1, d2, max(d1, d2));
+		System.out.printf("max(%d, %d, %d) = %d \n", i1, i2, i3, max(i1, i2, i3));
+	}
+
+}
+
+/*결과:
+	 * max(3, 7)=7
+	 * max(3.0, 7.0)=7.0
+	 * max(3, 7, 10)=10
+	 * */
+```
 
 ## 다형성
 
