@@ -71,7 +71,7 @@
 
 ## REACT
 
-* [DOM](/React/dom.md)
+* [DOM](/REACT/dom.md)
 
 * [JSX](/REACT/JSX.md)
 
