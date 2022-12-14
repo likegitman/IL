@@ -12,3 +12,110 @@
 
 2. 리액트에 내장되어있는 createRef()를 이용한 ref 설정  
 `input = React.createRef();`
+
+# Example
+
+## HTML
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .success{
+            background-color: green;
+        }
+
+        .failure{
+            background-color: red;
+        }
+    </style>
+    <script>
+        function validate(){
+            let input=document.getElementById("password");
+            input.className="";
+            if(input.value==='0000'){
+                input.className="success";
+            } else{
+                input.className="failure";
+            }
+        }
+    </script>
+    <input type="password" id="password"></b> 
+    <button onclick="validate()">검증하기</button>
+</body>
+</html>
+```
+
+## React
+
+## ValidationSample.js
+```
+import { Component } from "react";
+import "./styles/validated.css";
+
+class ValidationSample extends Component {
+  state = {
+    password: "",
+    clicked: false,
+    validated: false,
+  };
+
+  handleChange = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  handleButtonClick = () => {
+    this.setState({
+      clicked: true,
+      validated: this.state.password === "0000",
+    });
+    this.input.focus();
+  };
+
+  render() {
+    return (
+      <div>
+        <input
+          ref={(ref)=>this.input=ref}
+          type="password"
+          value={this.state.password}
+          onChange={this.handleChange}
+          className={
+            this.state.clicked
+              ? this.state.validated
+                ? "success"
+                : "failure"
+              : ""
+          }
+        />
+        <button onClick={this.handleButtonClick}>검증하기</button>
+      </div>
+    );
+  }
+}
+
+export default ValidationSample;
+```
+
+## App.js
+```
+import ValidationSample from "./ValidationSample";
+
+function App() {
+  return (
+    <div>
+      <ValidationSample />
+    </div>
+  );
+}
+
+export default App;
+```
