@@ -13,46 +13,7 @@
 2. 리액트에 내장되어있는 createRef()를 이용한 ref 설정  
 `input = React.createRef();`
 
-# Example
-
-## HTML
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <style>
-        .success{
-            background-color: green;
-        }
-
-        .failure{
-            background-color: red;
-        }
-    </style>
-    <script>
-        function validate(){
-            let input=document.getElementById("password");
-            input.className="";
-            if(input.value==='0000'){
-                input.className="success";
-            } else{
-                input.className="failure";
-            }
-        }
-    </script>
-    <input type="password" id="password"></b> 
-    <button onclick="validate()">검증하기</button>
-</body>
-</html>
-```
-
-## React
+# 특정 input에 포커스 
 
 ## ValidationSample.js
 ```
@@ -118,4 +79,66 @@ function App() {
 }
 
 export default App;
+```
+
+# 스크롤박스 조정
+
+## ScrollBox.js
+```
+import { Component } from "react";
+
+class ScrollBox extends Component {
+  scrollToBottom = () => {
+    const { scrollHeight, clientHeight } = this.box;
+    /*  앞 코드는 비구조화 할당 문법
+        const scrollHeight=this.box.scrollHeight;
+        const clientHeight=this.box.clientHeight;
+    */
+    this.box.scrollTop = scrollHeight - clientHeight;
+  };
+
+  render() {
+    const style = {
+      border: "1px solid black",
+      height: "300px",
+      width: "300px",
+      overflow: "auto",
+      position: "relative",
+    };
+
+    const innerStyle = {
+      width: "100%",
+      height: "650px",
+      background: "linear-gradient(white, black)",
+    };
+
+    return (
+      <div style={style} ref={(ref) => (this.box = ref)}>
+        <div style={innerStyle} />
+      </div>
+    );
+  }
+}
+
+export default ScrollBox;
+
+```
+
+## App.js
+```
+import { Component } from "react";
+import ScrollBox from "./ScrollBox";
+
+class App_class extends Component{
+    render() {
+        return (
+            <div>
+                <ScrollBox ref={(ref)=>this.scrollbox=ref} />
+                <button onClick={()=>this.scrollbox.scrollToBottom()}>맨 밑으로</button>
+            </div>
+        );
+    }
+}
+
+export default App_class;
 ```
