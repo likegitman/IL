@@ -13,6 +13,9 @@
 2. 리액트에 내장되어있는 createRef()를 이용한 ref 설정  
 `input = React.createRef();`
 
+3. React Hooks인 useRef를 이용한 설정
+`  const input = useRef();`
+
 # 특정 input에 포커스 
 
 ## ValidationSample.js
