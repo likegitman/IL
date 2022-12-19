@@ -83,6 +83,8 @@
 
 * [useState](/REACT/state.md)
 
+* [Map](/REACT/map.md)
+
 * [Tour of CRA](/REACT/CRA.md)
 
 * [useEffect](/REACT/useEffect.md)
