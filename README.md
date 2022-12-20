@@ -85,6 +85,8 @@
 
 * [Map](/REACT/map.md)
 
+* [Life_Cycle](/REACT/life_cycle.md)
+
 * [Tour of CRA](/REACT/CRA.md)
 
 * [useEffect](/REACT/useEffect.md)
