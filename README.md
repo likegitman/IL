@@ -95,6 +95,8 @@
 
 * [To to_list](/REACT/ToDoList.md)
 
+* [Server_Communication](/REACT/server_commu.md)
+
 * [CoinsExample](/REACT/coins.md)
 
 * [Route](/REACT/route.md)
