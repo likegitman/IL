@@ -32,6 +32,9 @@
 * div, button, input, form, span 등의 DOM요소에는 이벤트를 설정할 수 있지만,  
   직접 만든 컴포넌트에는 이벤트를 자체적으로 설정할 수 없다.
 
+4. Component에 직접 이벤트를 설정할 수 없다
+* 설정하고싶다면 component에 props로 전해줘 그 props를 함수로 설정한다.
+
 # Arrow Function으로 바로 전달
 
 ## App.js
