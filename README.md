@@ -75,6 +75,8 @@
 
 * [JSX](/REACT/JSX.md)
 
+* [Component](/REACT/component.md)
+
 * [props](/REACT/props.md)
 
 * [EventHandling](/REACT/event.md)
