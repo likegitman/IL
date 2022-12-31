@@ -23,6 +23,7 @@
 * onclick -> onClick
 * onchange -> onChange
 * onkeyup -> onKeyUp
+* onsubmit -> onSubmit
 
 2. 이벤트에 실행할 때 자바스크립트 코드를 전달하는 것이 아니라, 함수 형태의 값을 전달한다.
 * arrow function 문법으로 함수를 만들어 전달하는 방법
