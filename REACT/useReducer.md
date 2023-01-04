@@ -95,6 +95,7 @@ const ReduInfo=()=> {
   const { name, nikname } = state;
 
   const onChange = (e) => {
+    // useReducer는 어떤 값도 사용할 수 있어 e.target.value를 안 해도 된다.
     dispatch(e.target);
   };
 
