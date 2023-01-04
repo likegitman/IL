@@ -92,6 +92,10 @@
 
 * [useState](/REACT/state.md)
 
+* [useEffect](/REACT/useEffect.md)
+
+* [useReducer](/REACT/useReducer.md)
+
 * [Map](/REACT/map.md)
 
 * [Life_Cycle](/REACT/life_cycle.md)
