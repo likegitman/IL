@@ -2,9 +2,14 @@
 1. useState보다 더 다양한 컴포넌트 상황에 따라 다양한 상태를  
 다른 값으로 업데이트 해주고 싶을 때 사용하는 Hook이다.
 
-2. 현재상태, 업데이트를 위해 필요한 정보를 담은 액션 값을 전달받아  
+2. 아래 reducer는 현재상태, 업데이트를 위해 필요한 정보를 담은 액션 값을 전달받아  
    새로운 상태를 반환하는 함수이다.
    
+```
+function reducer(state, action) {
+   return { ... }
+}
+```
 # useReducer를 이용한 Counter
 
 ## App.js
