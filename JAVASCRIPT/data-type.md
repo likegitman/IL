@@ -9,8 +9,30 @@
 > 숫자가 아닌것을 숫자로 나누게되면 Not a Number 값
 
 ## String
-> ' '로 감싼 것
+> ' '(작은 따옴표)나 " "(큰 따옴표)로 감싼 것
 - 문자열과 변수를 + 기호를 이용해  연결시킬수 있음
+
+> 여러 따옴표사용
+```
+// 작은 따옴표가 포함되어 있으면 큰 따옴표로 문자열을 작성.
+let str = "I'm String";
+
+// 큰 따옴표가 포함되어 있으면 작은 따옴표로 문자열을 작성.
+let str2 = 'I"m String';
+
+console.log(str, str2);
+// output: I'm String
+           I "m String
+```
+
+```
+// 잘못된 방법
+let str = "I'm String!"and good"";
+
+// 옳은 방법
+let str = "I'm String!\"and good\"";
+```
+
 ```
 const name = 'Woonrin';
 const greeting = 'hello' + name;
