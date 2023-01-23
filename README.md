@@ -78,8 +78,6 @@
 
 ## REACT
 
-* anything
-
 * [DOM](/REACT/dom.md)
 
 * [JSX](/REACT/JSX.md)
@@ -99,6 +97,8 @@
 * [useReducer](/REACT/useReducer.md)
 
 * [useMemo](/REACT/useMemo.md)
+
+* [useCallback](/REACT/useCallback.md)
 
 * [Map](/REACT/map.md)
 
