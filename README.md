@@ -98,6 +98,8 @@
 
 * [useReducer](/REACT/useReducer.md)
 
+* [useMemo](/REACT/useMemo.md)
+
 * [Map](/REACT/map.md)
 
 * [Life_Cycle](/REACT/life_cycle.md)
