@@ -86,6 +86,8 @@
 
 * [props](/REACT/props.md)
 
+* [Style](/REACT/style.md)
+
 * [EventHandling](/REACT/event.md)
 
 * [Ref](/REACT/ref.md)
