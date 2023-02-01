@@ -1,10 +1,13 @@
 # ref
 > 컴포넌트 내부에서 DOM에 직접 접근해야 할 때 사용(DOM을 직접적으로 건드려야 할 때)
+> 
 
 ## DOM을 꼭 사용해야 하는 상황
-* 특정 input tag에 포커스를 줘야 할 때
+* 포커스, 텍스트 선택영역, 혹은 미디어의 재생을 관리할 때.
+* 애니메이션을 직접적으로 실행시킬 때.
 * 스크롤 박스를 조작해야 할 때
 * Canvas 요소에 그림을 그려야 할 때 등
+* 서드 파티 DOM 라이브러리를 React와 같이 사용할 때.
 
 ## USE
 1. 콜백 함수를 이용한 ref 설정  
@@ -16,67 +19,72 @@
 3. React Hooks인 useRef를 이용한 설정  
 `const input = useRef();`
 
-# 특정 input에 포커스 
+# 특정 input tag에 포커스 
 
-## ValidationSample.js
+## InputSample.js
 ```
-import { Component } from "react";
-import "./styles/validated.css";
+import React, { useState, useRef } from 'react';
 
-class ValidationSample extends Component {
-  state = {
-    password: "",
-    clicked: false,
-    validated: false,
-  };
+function InputSample() {
+  const [inputs, setInputs] = useState({
+    name: '',
+    nickname: ''
+  });
+  const nameInput = useRef();
 
-  handleChange = (e) => {
-    this.setState({
-      password: e.target.value,
+  const { name, nickname } = inputs; // 비구조화 할당을 통해 값 추출
+
+  const onChange = e => {
+    const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
+    setInputs({
+      ...inputs, // 기존의 input 객체를 복사한 뒤
+      [name]: value // name 키를 가진 값을 value 로 설정
     });
   };
 
-  handleButtonClick = () => {
-    this.setState({
-      clicked: true,
-      validated: this.state.password === "0000",
+  const onReset = () => {
+    setInputs({
+      name: '',
+      nickname: ''
     });
-    this.input.focus();
+    nameInput.current.focus();
   };
 
-  render() {
-    return (
+  return (
+    <div>
+      <input
+        name="name"
+        placeholder="이름"
+        onChange={onChange}
+        value={name}
+        ref={nameInput}
+      />
+      <input
+        name="nickname"
+        placeholder="닉네임"
+        onChange={onChange}
+        value={nickname}
+      />
+      <button onClick={onReset}>초기화</button>
       <div>
-        <input
-          ref={(ref)=>this.input=ref}
-          type="password"
-          value={this.state.password}
-          onChange={this.handleChange}
-          className={
-            this.state.clicked
-              ? this.state.validated
-                ? "success"
-                : "failure"
-              : ""
-          }
-        />
-        <button onClick={this.handleButtonClick}>검증하기</button>
+        <b>값: </b>
+        {name} ({nickname})
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default ValidationSample;
+export default InputSample;
 ```
 
 ## App.js
 ```
-import ValidationSample from "./ValidationSample";
+import InputSample from "./InputSample";
 
 function App() {
   return (
     <div>
-      <ValidationSample />
+      <InputSample />
     </div>
   );
 }
