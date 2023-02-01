@@ -1,6 +1,10 @@
 # ref
 > 컴포넌트 내부에서 DOM에 직접 접근해야 할 때 사용(DOM을 직접적으로 건드려야 할 때)
-> 
+
+> JavaScript 를 사용 할 때에는, 우리가 특정 DOM 을 선택해야 하는 상황에  
+> getElementById, querySelector 같은 
+> DOM Selector 함수를 사용해서 DOM 을 선택하는데  
+> 리액트 함수 컴포넌트에서는 useRef라는 Hooks를 사용해서 DOM에 직접 접근한다.
 
 ## DOM을 꼭 사용해야 하는 상황
 * 포커스, 텍스트 선택영역, 혹은 미디어의 재생을 관리할 때.
