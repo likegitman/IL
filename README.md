@@ -112,8 +112,6 @@
 
 * [Life_Cycle](/REACT/life_cycle.md)
 
-* [Tour of CRA](/REACT/CRA.md)
-
 * [Server_Communication](/REACT/server_commu.md)
 
 * [Route](/REACT/route.md)
