@@ -114,6 +114,6 @@
 
 * [Server_Communication](/REACT/server_commu.md)
 
-* [Route](/REACT/route.md)
+* [Router](/REACT/router.md)
 
 * [useParams](/REACT/useParams.md)
