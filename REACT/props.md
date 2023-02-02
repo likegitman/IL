@@ -8,7 +8,7 @@
 ```
 import MyComponent from "./MyComponent";
 
-const App=()=>{
+function App() {
   return (
     <div>
       <MyComponent name='woonrin' />
@@ -22,10 +22,10 @@ export default App;
   
 ### MyComponent.js
 ```
-const MyComponent=props=>{
+function MyComponent({name}) {
     return(
         <div>
-            안녕하세요, 제 이름은 {props.name}입니다.
+            안녕하세요, 제 이름은 {name}입니다.
         </div>
     );
 };
@@ -39,7 +39,7 @@ export default MyComponent;
 ```
 import MyComponent from "./MyComponent";
 
-const App=()=>{
+function App() {
   return (
     <div>
       <MyComponent />
@@ -53,10 +53,10 @@ export default App;
 
 ### MyComponent.js
 ```
-const MyComponent=props=>{
+function MyComponent({name}) {
     return(
         <div>
-            안녕하세요, 제 이름은 {props.name}입니다. <br />
+            안녕하세요, 제 이름은 {name}입니다. <br />
         </div>
     );
 };
@@ -70,11 +70,12 @@ export default MyComponent;
   
 # children
 > 컴포넌트 태그 사이의 내용
+
 ### App.js
 ```
 import MyComponent from "./MyComponent";
 
-const App=()=>{
+function App() {
   return (
     <div>
       <MyComponent>리액트</MyComponent>
@@ -88,7 +89,7 @@ export default App;
 
 ### MyComponent.js
 ```
-const MyComponent=props=>{
+function MyComponent(props)=>{
     return(
         <div>
             안녕하세요, 제 이름은 {props.name}입니다. <br />
@@ -110,7 +111,7 @@ export default MyComponent;
 ```
 import MyComponent from "./MyComponent";
 
-const App=()=>{
+function App() {
   return (
     <div>
       <MyComponent>리액트</MyComponent>
@@ -124,8 +125,8 @@ export default App;
 
 ### MyComponent.js
 ```
-const MyComponent=props=>{
-    // 비구조화 할당 
+function MyComponent(props) {
+    // 비구조화 할당 문법
     const {name, children}=props;
 
     return(
@@ -184,7 +185,7 @@ export default App;
 ```
 import PropTypes from "prop-types"; 
 
-const MyComponent=({name, children})=>{
+function MyComponent({name, children}){
 
     return(
         <div>
@@ -199,6 +200,7 @@ MyComponent.defaultProps={
 };
 
 MyComponent.propTypes={
+    // prop의 타입을 지정
     name: PropTypes.string
 };
 
@@ -212,7 +214,7 @@ export default MyComponent;
 ```
 import MyComponent from "./MyComponent";
 
-const App=()=>{
+function App() {
   return (
     <div>
       <MyComponent name="woonrin" favoriteNum={7}>
@@ -231,7 +233,7 @@ export default App;
 ```
 import PropTypes from "prop-types"; 
 
-const MyComponent=({name, favoriteNum,children})=>{
+function MyComponent({name, favoriteNum,children}) {
 
     return(
         <div>
@@ -248,7 +250,7 @@ MyComponent.defaultProps={
 
 MyComponent.propTypes={
     name: PropTypes.string,
-    // App.js에서 지정하지 않았다면 경고 메시지 출력
+    // App.js에서 지정하지 않았다면 console창에 경고 메시지 출력
     favoriteNum: PropTypes.number.isRequired
 };
 
@@ -257,8 +259,8 @@ export default MyComponent;
 
 # 다양한 PropTypes 종류
 * array : 배열
-* arrayOf(다른 PropType) : 특정 PropType으로 이루어진 배열을 의미, 예를 들어 
-arrayOf(PropTypes.number)는 숫자로 이루어진 배열
+* arrayOf(다른 PropType) : 특정 PropType으로 이루어진 배열을 의미,  
+  예를 들어 arrayOf(PropTypes.number)는 숫자로 이루어진 배열
 * bool : true 혹은 false 값
 * func : 함수
 * number : 숫자
