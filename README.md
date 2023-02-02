@@ -96,25 +96,25 @@
 
 * [useEffect](/REACT/useEffect.md)
 
+* [Cleanup_Function](/REACT/cleanup_function.md)
+
+* [Map](/REACT/map.md)
+
+* [To to_list](/REACT/ToDoList.md)
+
+* [CoinsExample](/REACT/coins.md)
+
 * [useReducer](/REACT/useReducer.md)
 
 * [useMemo](/REACT/useMemo.md)
 
 * [useCallback](/REACT/useCallback.md)
 
-* [Map](/REACT/map.md)
-
 * [Life_Cycle](/REACT/life_cycle.md)
 
 * [Tour of CRA](/REACT/CRA.md)
 
-* [Cleanup_Function](/REACT/cleanup_function.md)
-
-* [To to_list](/REACT/ToDoList.md)
-
 * [Server_Communication](/REACT/server_commu.md)
-
-* [CoinsExample](/REACT/coins.md)
 
 * [Route](/REACT/route.md)
 
