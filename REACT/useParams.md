@@ -6,6 +6,7 @@
 import { useEffect } from "react";
 import {useParams} from "react-router-dom";
 function Detail(){
+.   // 이름이 path설정과 같아야 함
     const {id}=useParams();
     const getMovie=async()=>{
         const json = await (
