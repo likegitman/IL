@@ -1,4 +1,4 @@
-# useParams
+8# useParams
 > 라우터 사용 시 파라미터 정보를 가져와 활용할 때 사용하는 것
 
 ## USE
@@ -16,7 +16,7 @@ function Detail(){
     useEffect(()=>{
         getMovie();
     }, []);
-    return <h1>Detail</h1>
+    return <h1>{id}</h1>
 }
 
 export default Detail;
