@@ -2,7 +2,7 @@
 
 ## color
 > text의 색상을 설정할 수 있다.
-* color ex) 16진수, 색상 이름
+* color ex) 16진수(#FFFFFF), 색상 이름(white)
 
 ## direction 
 > text가 위치할 가로 방향을 지정할 수 있다.
