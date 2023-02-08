@@ -41,7 +41,7 @@
 
 * [Scroll_Bar](/CSS/scroll.md)
 
-## JAVASCRIPT
+## JavaScript
 * [Const, Let, Var](/JAVASCRIPT/declaration.md)
 
 * [Variable_name-notation](/JAVASCRIPT/notation.md)
@@ -74,7 +74,7 @@
 
 * [Async, Await](/JAVASCRIPT/async&await.md)
 
-## REACT
+## React
 
 * [DOM](/REACT/dom.md)
 
@@ -115,3 +115,9 @@
 * [Router](/REACT/router.md)
 
 * [useParams](/REACT/useParams.md)
+
+# TypeScript
+
+* [Meaning](/TYPESCRIPT/meaning.md)
+
+* [Type](/TYPESCRIPT/type.md)
