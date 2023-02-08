@@ -1,24 +1,7 @@
 # Meaning
-> TypeScript는 JavaScript에 Type을 적용 시키는 것
-> 자바스크립트는 동적 타입의 인터프리터 언어로 런타임에서 오류를 발견할 수 있는데 타입스크립트는 정적 타입의 컴파일 언어로  
-> 코드 작성단계에서 오류를 발견한다. 타입스크립트는 실행할 때 타입스크립트 컴파일러나 바벨(Babel)을 통해 자바스크립트 코드로 변환됨.
-
-`let num:number`  
- 
-## 반환값이 있을 때
-```
-function add(num1:number, num2:number):number {
-  const result:number=num1+num2;
-  return result;
-}
-```
-
-## 반환값이 없을 때
-```
-function add(num1:number, num2:number):void {
-  console.log(num1+num2);
-}
-```
+> TypeScript는 JavaScript에 Type을 작성 하는 것  
+> 자바스크립트는 동적 타입의 인터프리터 언어로 런타임에서 오류를 발견할 수 있는데 반면 타입스크립트는 정적 타입의 컴파일 언어로  
+> 코드 작성단계에서 오류를 발견한다. 타입스크립트는 실행할 때 타입스크립트 컴파일러나 바벨(Babel)을 통해 자바스크립트 코드로 변환 됨.
 
 ---
 
