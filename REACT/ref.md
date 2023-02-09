@@ -1,6 +1,14 @@
 # ref
-> 컴포넌트 내부에서 DOM에 직접 접근해야 할 때 사용(DOM을 직접적으로 건드려야 할 때)
+> ref = 하나의 Object(={current : any})  
+> 그래서 ref에 접근하려면 `변수이름.current`로 접근해주어야한다.  
+> 또 ref를 변수로 사용할 때 ref를 아무리 변화시키도 화면을 렌더링하지 않는다.
 
+
+## 어떨 때 사용?
+1. 페이지가 리렌더링 돼도 값(변수)을 유지시키고 싶을 때
+* ref 값은 화면이 렌더링 되면 state처럼 값이 초기화 되지 않는다.
+
+2. 컴포넌트 내부에서 DOM에 직접 접근해야 할 때 (DOM을 직접적으로 건드려야 할 때)  
 > JavaScript 를 사용 할 때에는, 우리가 특정 DOM 을 선택해야 하는 상황에  
 > getElementById, querySelector 같은 
 > DOM Selector 함수를 사용해서 DOM 을 선택하는데  
@@ -14,14 +22,14 @@
 * 서드 파티 DOM 라이브러리를 React와 같이 사용할 때.
 
 ## USE
-1. 콜백 함수를 이용한 ref 설정  
-`<input ref={(ref)=>this.input=ref} />`
+1. React Hooks인 useRef를 이용한 설정  
+`const input = useRef();`
 
 2. 리액트에 내장되어있는 createRef()를 이용한 ref 설정  
 `input = React.createRef();`
 
-3. React Hooks인 useRef를 이용한 설정  
-`const input = useRef();`
+3. 콜백 함수를 이용한 ref 설정  
+`<input ref={(ref)=>this.input=ref} />`
 
 # 특정 input tag에 포커스 
 
