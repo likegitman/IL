@@ -34,7 +34,7 @@ function App() {
   return (
     // 이렇게 감싸면 모든 하위 컴포넌트들은 context를 사용할 수 있게 됨
     
-    // .Provider에에 value를 전해주지 않으면 context의 기본값이 전달 됨
+    // .Provider에 value를 전해주지 않으면 context의 기본값이 전달 됨
     <UserContext.Provider value={{ user}}>
       <ThemeContext.Provider value={{ isDark, setIsDark }}>
         <Page />
