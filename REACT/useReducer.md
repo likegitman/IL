@@ -121,3 +121,78 @@ const ReduInfo=()=> {
 export default ReduInfo;
 
 ```
+
+# useReducer를 이용한 입출금 시스템
+```
+import React, { useReducer, useState } from 'react';
+
+// reducer - state를 업데이트 하는 역할 (은행)
+// dispatch - state 업데이트를 위한 요구
+// action - dispatch의 요구내용
+
+const ACTION_TYPES = {
+    deposit: 'deposit',
+    withdraw: 'withdraw',
+};
+
+function reducer(state, action) {
+    console.log("reducer 작동!", state, action);
+    switch (action.type) {
+        case ACTION_TYPES.deposit:
+            if(action.payload===0){
+                alert('0원은 입금하실 수 없습니다.');
+                return state;
+            }
+            return state + action.payload;
+        case ACTION_TYPES.withdraw:
+            if (state === 0 ) {
+                alert('잔고가 0원입니다.');
+                return state;
+            } else if (action.payload === 0) {
+                alert('0원은 출금하실 수 없습니다.');
+                return state;
+            } else if(action.payload>state) {
+                alert('출금하시는 금액이 잔고보다 많습니다.');
+                return state;
+            } else {
+                return state - action.payload;
+            }
+        default:
+            return state;
+    }
+}
+
+function ReduBank() {
+    const [num, setNum] = useState(0);
+    const [money, dispatch] = useReducer(reducer, 0);
+
+    const onChange = (e) => {
+        setNum(parseInt(e.target.value));
+    };
+
+    return (
+        <div>
+            <h2>useReducer 은행에 오신것을 환엽합니다!</h2>
+            <p>통장 잔고: {money}원</p>
+            <input
+                type="number"
+                value={num}
+                onChange={onChange}
+                step="1000"
+            />
+            <button onClick={() => {
+                dispatch({ type: ACTION_TYPES.deposit, payload: num });
+                setNum(0);
+            }}>예금</button>
+            <button onClick={() => {
+                dispatch({ type: ACTION_TYPES.withdraw, payload: num });
+                setNum(0);
+            }}>출금</button>
+        </div>
+    );
+}
+
+export default ReduBank;
+```
+
+# useReducer를 이용한 출석부 
