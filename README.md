@@ -100,7 +100,7 @@
 
 * [To to_list](/REACT/ToDoList.md)
 
-* [CoinsExample](/REACT/coins.md)
+* [Coins](/REACT/coins.md)
 
 * [useReducer](/REACT/useReducer.md)
 
