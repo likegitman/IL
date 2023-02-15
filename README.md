@@ -41,6 +41,8 @@
 
 * [Scroll_Bar](/CSS/scroll.md)
 
+* [Filter](/CSS/filter.md)
+
 ## JavaScript
 * [Const, Let, Var](/JAVASCRIPT/declaration.md)
 
