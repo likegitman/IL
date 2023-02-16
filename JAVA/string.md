@@ -38,6 +38,7 @@ String str1 = "Hi,";
 String str2 = " Java!";
 
 // charAt concat contains indexOf isEmpty length subsstring
+
 // charat은 괄호안의 index number를 넣어 그 index의 값을 출력한다
 System.out.println(str1.charAt(2)); // ,
 // concat은 괄호안의 문자열을 이어준다
