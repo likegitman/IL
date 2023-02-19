@@ -18,7 +18,7 @@ const getAverage = (numbers) => {
 
 const Average = () => {
   const [list, setList] = useState([]);
-  const [number, setNumber] = useState("");
+  const [number, setNumber] = useState(0);
 
   const onChange = (e) => {
     setNumber(e.target.value);
