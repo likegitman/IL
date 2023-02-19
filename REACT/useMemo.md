@@ -24,7 +24,7 @@ const Average = () => {
     setNumber(e.target.value);
   };
 
-  const onInsert = (e) => {
+  const onInsert = () => {
     const nextList = list.concat(parseInt(number));
     setList(nextList);
     setNumber("");
@@ -36,7 +36,7 @@ const Average = () => {
   return (
     <div>
       <div>
-        <input value={number} onChange={onChange} />
+        <input type="number" value={number} onChange={onChange} />
         <button onClick={onInsert}>등록</button>
         <ul>
           {list.map((value, index) => (
