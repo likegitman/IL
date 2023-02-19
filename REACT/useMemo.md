@@ -1,23 +1,9 @@
 # useMemo
 > 렌더링하는 과정에서 특정 값이 바뀌었을 때만 연산을 실행하고  
   특정 값이 바뀌지 않았다면 이전에 연산한 결과를 다시 사용하는 Hook이다.
-  
+  useMemo는 첫번째 값으로 콜백함수를 받고 두번째 값으로는 의존성 배열을 받는다.
+
 # 평균값 계산하기
-
-## App.js
-```
-import Average from "./Average";
-
-function App() {
-  return (
-    <div>
-      <Average />
-    </div>
-  );
-}
-
-export default App;
-```
 
 ## Average.js
 ```
@@ -43,8 +29,8 @@ const Average = () => {
     setList(nextList);
     setNumber("");
   };
-
-  // useMemo를 사용하지 않는다면 list가 변할때 뿐만아니라 input값이 변할때도 getAverage가 호출됨 
+  
+  // useMemo를 사용하지 않는다면 list가 변할때 뿐만아니라 number가 변할때도 getAverage가 호출됨 
   const avg=useMemo(()=>getAverage(list), [list]);
 
   return (
