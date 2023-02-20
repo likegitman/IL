@@ -125,3 +125,5 @@
 * [Meaning](/TYPESCRIPT/meaning.md)
 
 * [Type](/TYPESCRIPT/type.md)
+
+* [Interface](/TYPESCRIPT/interface.md)
