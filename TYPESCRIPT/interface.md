@@ -38,8 +38,25 @@ interface 이름 {
 }
 ```
 
-# Optional, Readonly, Index
-* optional
+# Union, Optional, Readonly, Index
+
+## union
+> 기본 type
+```
+interface User {
+    name: string;
+    age: number;
+    student: boolean;
+}
+
+let user:User = {
+  name: "unrin",
+  age: 18,
+  student: false,
+}
+```
+
+## optional
 > 있어도 되고 없어도 되는 속성으로 만듦(? 사용)    
 ```
 interface User {
@@ -55,7 +72,7 @@ let user:User = {
 }
 ```
 
-* readonly
+## readonly
 > 읽기전용 속성으로 만듦(처음 생성할 때만 할당이 가능하고 후에는 재할당이 불가능)
 ```
 interface User {
@@ -75,7 +92,7 @@ let user:User = {
 // user.birthday="2000.01.02"; // error
 ```
 
-* index
+## index
 > 여러 속성 정보를 받을 때 사용 (key:number, value:string)
 ```
 interface User{
