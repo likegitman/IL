@@ -38,7 +38,7 @@ interface 이름 {
 }
 ```
 
-# Union, Optional, Readonly, Index
+# Union, Optional, Readonly, Index, Function
 
 ## union
 > 기본 type
@@ -111,4 +111,18 @@ let user:User = {
   1: "A",
   2: "B",
 }
+```
+
+## function
+> 함수의 매개변수와 리턴 값의 type을 지정할 때 사용
+```
+interface Add {
+    (num1:number, num2: number): number;
+}
+
+function add : Add(a, b) {
+    return a + b;
+}
+
+add(10, 20);
 ```
