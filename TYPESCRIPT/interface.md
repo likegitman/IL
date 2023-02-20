@@ -15,7 +15,7 @@ console.log(user.age); // possible
 
 * TypeScript
 ```
-// 기존 JS처럼 선언하고 접근하면 오류가 생기는
+// 기존 JS처럼 선언하고 접근하면 오류가 생기는데
 // 이럴 때 사용하는 것이 interface
 interface User {
     name: string;
@@ -40,18 +40,18 @@ interface 이름 {
 
 # Optional, Readonly, Index
 * optional
-> 있어도 되고 없어도 되는 속성으로 만듦    
+> 있어도 되고 없어도 되는 속성으로 만듦(? 사용)    
 ```
 interface User {
     name: string;
     age: number;
-    gender?: string;
+    gender?: string; // optional
 }
 
 let user:User = {
   name: "unrin",
   age: 18,
-  // gender 선언하지 않아도 오류가 생기지 않음
+  // gender를 선언하지 않아도 오류가 생기지 않음
 }
 ```
 
@@ -61,14 +61,37 @@ let user:User = {
 interface User {
     name: string;
     age: number;
-    readonly gender: string;
+    gender?: string
+    readonly birthday: string; // readonly
 }
 
 let user:User = {
   name: "unrin",
   age: 18,
   gender: "male",
+  birthday: "2000.01.01",
 }
 
-// user.gender="female"; // error
+// user.birthday="2000.01.02"; // error
+```
+
+* index
+> 여러 속성 정보를 받을 때 사용 (key:number, value:string)
+```
+interface User{
+    name: string;
+    age: number:
+    gender?: string;
+    readonly birthday: string; 
+    [grade:number]: string;
+}
+
+let user:User = {
+  name: "unrin",
+  age: 18,
+  gender: "male",
+  birthday: "2000.01.01",
+  1: "A",
+  2: "B",
+}
 ```
