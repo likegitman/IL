@@ -115,7 +115,9 @@ let user:User = {
 
 ## function
 > 함수의 매개변수와 리턴 값의 type을 지정할 때 사용
+
 ```
+// 2개의 매개변수를 받아 두 숫자의 합을 반환하는 함수
 interface Add {
     (num1:number, num2: number): number;
 }
@@ -124,5 +126,16 @@ function add : Add(a, b) {
     return a + b;
 }
 
-add(10, 20);
+add(10, 20); // 30
+
+// 1개의 매개변수를 받아 그 숫자가 19보다 큰지(성인인지) boolean값을 반환하는 함수
+interface Adult {
+    (age:number): boolean;
+}
+    
+const isAdult : Adult=(age)=>{
+    return age > 19;
+};
+
+isAdult(20); // true
 ```
