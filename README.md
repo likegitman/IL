@@ -118,8 +118,6 @@
 
 * [useParams](/REACT/useParams.md)
 
-* [anyting]
-
 # TypeScript
 
 * [Meaning](/TYPESCRIPT/meaning.md)
@@ -127,5 +125,7 @@
 * [Type](/TYPESCRIPT/type.md)
 
 * [Interface](/TYPESCRIPT/interface.md)
+
+* [Function](/TYPESCRIPT/function.md)
 
 * [Generic](/TYPESCRIPT/generic.md)
