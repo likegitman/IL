@@ -6,12 +6,12 @@ let apple:string = 'apple';
 apple = 7; // error
 ```
 # unknown
-'''
+```
 let x = unknown;
 
 // 검사 필요
 if(typeof x  === 'number') return let b = a + 1;
-'''
+```
 # number
 ```
 let height:number = 170;
