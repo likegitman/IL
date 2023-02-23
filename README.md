@@ -127,3 +127,5 @@
 * [Type](/TYPESCRIPT/type.md)
 
 * [Interface](/TYPESCRIPT/interface.md)
+
+* [Generic](/TYPESCRIPT/generic.md)
