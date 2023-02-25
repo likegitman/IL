@@ -1,5 +1,5 @@
 # TIL
-## Today I Learn 
+## Today I Learn
 날마다 공부한 내용을 MarkDown기법으로 기록(정리)하는 공간입니다!:fire:
 
 ## JAVA
@@ -7,11 +7,11 @@
 
 * [Array](/JAVA/array.md)
 
-* [InhProblems](/JAVA/inhProblems.md)
+* [InhExample](/JAVA/inhProblems.md)
 
 * [Inheritance](/JAVA/Inheritance.md)
 
-* [Problem](/JAVA/Problem.md)
+* [Example](/JAVA/Problem.md)
 
 * [String](/JAVA/String.md)
 
