@@ -15,9 +15,9 @@ function reducer(state, action) {
 ```
 
 ## 구성요소
-* dispatch - state 업데이트를 위한 요구를 하는 역할
-* action - dispatch의 요구내용
-* reducer - dispatch의 action값을 받아 state를 업데이트 하는 역할
+* Dispatch - state 업데이트를 위한 요구를 하는 역할
+* Action - dispatch의 요구내용
+* Reducer - dispatch의 action값을 받아 state를 업데이트 하는 역할
 
 # useReducer를 이용한 Counter
 
