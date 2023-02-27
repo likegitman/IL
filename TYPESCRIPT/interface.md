@@ -140,7 +140,7 @@ isAdult(20);
 
 # Different from Type
 ## 공통점
-> 둘 다 Object의 모양을 결정한다
+> 둘 다 Object의 모양을 결정할 수 있다.
 
 ## 차이점
 > interface는 오로지 Object의 모양을 TS에게 설명해 주기 위한 키워드  
