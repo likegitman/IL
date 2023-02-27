@@ -137,3 +137,23 @@ const isAdult: Adult = (age) => {
 
 isAdult(20);
 ```
+
+# Different from Type
+## 공통점
+> 둘 다 Object의 모양을 결정한다
+
+## 차이점
+> interface는 오로지 Object의 모양을 TS에게 설명해 주기 위한 키워드  
+> 이러한 이유로 type이 interface보다 할 수 있는 작업이 많다.
+
+1. Type alias 만들기
+```
+type Hello = string; // possible
+interface Hello = string; // error
+```
+
+2. 특정 값으로 제한
+```
+type Team = "red" | "blue" | "yellow";
+type Health = 1 | 5 | 10;
+```
