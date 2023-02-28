@@ -110,6 +110,8 @@
 
 * [useCallback](/REACT/useCallback.md)
 
+* [React.memo](/REACT/React_memo.md)
+
 * [Life_Cycle](/REACT/life_cycle.md)
 
 * [Server_Communication](/REACT/server_commu.md)
