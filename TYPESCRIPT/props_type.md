@@ -7,10 +7,12 @@ import React from 'react';
 import Greet from './components/Greet';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import Status from './components/Status;
 
 function App() {
   
-  const name = "Unrin"
+  const name = "Unrin";
+  const status = false;
   
   const personName = {
     first: "Bruce",
@@ -30,13 +32,14 @@ function App() {
       first: "Princess",
       last: "Diana",
     }
-  ]
+  ];
 
   return (
     <div className='App'>
-      <Greet name="Vishwas" messageCnt={20} isLoggedIn={true} />
+      <Greet name={name} messageCnt={20} isLoggedIn={true} />
       <Person name={personName}/>
       <PersonList names={nameList}/>
+      <Status status={status} />
     </div>
   );
 }
@@ -121,4 +124,37 @@ function PersonList(props:PersonListProps) {
 }
 
 export default PersonList;
+```
+
+## Status.tsx (String Literal)
+```
+import React, { useEffect, useState } from 'react';
+
+type StatusProps = {
+    status: "loading" | "success" | "error"
+}
+
+function Status(props: StatusProps) {
+    const { status } = props;
+    const [message, setMessage] = useState("");
+
+    // setMessage 무한로딩 방지
+    useEffect(() => {
+        if (status === "loading") {
+            setMessage("Loading");
+        } else if (status === "success") {
+            setMessage("Data fetched successfully!")
+        } else if (status === "error") {
+            setMessage("Error fetching data");
+        }
+    }, [status]);
+
+    return (
+        <div>
+            <h2>{message}</h2>
+        </div>
+    );
+}
+
+export default Status;
 ```
