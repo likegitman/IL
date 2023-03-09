@@ -64,7 +64,7 @@ function About() {
     };
 
     const onIncreaseMode = () => {
-        // mode 값 
+        // mode 값 증가
         const nextMode=mode===null ? 1 : parseInt(mode)+1;
         setSerchParams({mode: nextMode, detail});
     };
