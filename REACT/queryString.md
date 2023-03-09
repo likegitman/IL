@@ -59,12 +59,12 @@ function About() {
     const mode=searchParams.get("mode");
    
     const onToggleDetail = () => {
-        // detail 업데이트
+        // detail boolean 상태 바꾸기
         setSerchParams({mode, detail: detail === "true" ? false : true});
     };
 
     const onIncreaseMode = () => {
-        // mode 업데이
+        // mode 값 증가
         const nextMode=mode===null ? 1 : parseInt(mode)+1;
         setSerchParams({mode: nextMode, detail});
     };
