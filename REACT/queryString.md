@@ -43,11 +43,12 @@ export default About;
    업데이트 할 수 있다.
 3. 두번째 원소는 쿼리파라미터를 객체 형태로 업데이트할 수 있는 함수를 반환한다.
 ```
+// 주소: http://localhost:3000/about?detail=true3&mode=1
+    
 import React from 'react';
 import { useLocation, useSearchParams } from "react-router-dom";
 
 function About() {
-    // 주소: http://localhost:3000/about?detail=true3&mode=1
     // const location = useLocation();
     // console.log(location.search);
     const [searchParams, setSerchParams]=useSearchParams();
