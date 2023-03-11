@@ -52,7 +52,7 @@ import { useLocation, useSearchParams } from "react-router-dom";
 function About() {
     // const location = useLocation();
     // console.log(location.search);
-    const [searchParams, setSerchParams]=useSearchParams();
+    const [searchParams, setSerchParams] = useSearchParams();
     console.log(searchParams);
 
     // 쿼리파라미터 조회
@@ -61,13 +61,13 @@ function About() {
    
     const onToggleDetail = () => {
         // detail boolean 상태변환
-        setSerchParams({mode, detail: detail === "true" ? false : true});
+        setSerchParams({ mode, detail: detail === "true" ? false : true} );
     };
 
     const onIncreaseMode = () => {
         // mode 값 증가
-        const nextMode=mode===null ? 1 : parseInt(mode)+1;
-        setSerchParams({mode: nextMode, detail});
+        const nextMode = mode === null ? 1 : parseInt(mode) + 1;
+        setSerchParams({ mode: nextMode, detail });
     };
 
     return (
