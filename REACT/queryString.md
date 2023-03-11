@@ -18,6 +18,7 @@
 > 고유의 값이 생성 됨
 ```
 // 주소: http://localhost:3000/about?detail=true&mode=1
+
 import React from 'react';
 import { useLocation } from "react-router-dom";
 
