@@ -31,6 +31,27 @@ export default App;
 > 이렇게 되면 원래 리액트 앱의 상태들이 초기화되고 새로 렌더링을 하게 된다.  
 > 반면 Link 컴포넌트는 브라우저의 주소만 바꾸고 페이지가 새로고침 되지 않는다.
 
+## App.js
+```
+import { Routes, Route } from "react-router-dom"
+import Home from './components/Home';
+import About from './components/About';
+
+function App() {
+  return (
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path='/about' element={<About />} />
+    </Routes>
+  );
+}
+
+export default App;
+
+```
+
+## Home.js
+
 ```
 import React from 'react';
 import { Link } from "react-router-dom";
