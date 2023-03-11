@@ -118,8 +118,6 @@
 
 * [Router](/REACT/router.md)
 
-* [useParams](/REACT/useParams.md)
-
 * [Classnames](/REACT/classnames.md)
 
 * [QueryString](/REACT/queryString.md)
