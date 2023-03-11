@@ -1,4 +1,4 @@
-# Route
+# Router
 1. 리액트에서 페이지 이동을 할 수 있게 해주는 기능이다.(주소에 따라)
 2. React Router v6에서는 v5의 Switch기능을 Routes가 해준다.
 
