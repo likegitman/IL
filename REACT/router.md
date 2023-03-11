@@ -70,7 +70,8 @@ export default Home;
 ```
 
 # useParams
-> URL parameter를 조회할 때 사용하는 React Hooks
+> URL parameter를 조회할 때 사용하는 React Hooks  
+> 사용할 때 Route의 주소설정은 /:keyword를 입력한다.
 
 ## App.js
 ```
@@ -91,6 +92,29 @@ function App() {
 };
 
 export default App;
+```
+
+## Movie.js
+```
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const IMG_BASE_URL="https://image.tmdb.org/t/p/w1280/";
+
+function Movie({id , title, img, star }) {
+    return (
+        <div className='movie-container'>
+            <img src={IMG_BASE_URL + img} alt="영화 포스터" />
+            <div className='movie-info'>
+                {/**/}
+                <Link to={`/${id}`}><h4>{title}</h4></Link>
+                <span>{star}</span>
+            </div>
+        </div>
+    );
+}
+
+export default Movie;
 ```
 
 ## Detail.js
