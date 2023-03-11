@@ -47,3 +47,12 @@ function Home() {
 
 export default Home;
 ```
+
+# useParams
+>
+
+# Outlet
+> Route의 chidren으로 들어가는 JSX element를 보여주는 역할을 한다.
+
+## App.js
+```
