@@ -106,7 +106,7 @@ function Movie({id , title, img, star }) {
         <div className='movie-container'>
             <img src={IMG_BASE_URL + img} alt="영화 포스터" />
             <div className='movie-info'>
-                {/**/}
+                {/*id값을 넘겨줌*/}
                 <Link to={`/${id}`}><h4>{title}</h4></Link>
                 <span>{star}</span>
             </div>
@@ -125,6 +125,7 @@ import { dummy } from "../movieDummy";
 import Overview from "../components/Overview";
 
 function Detail() {
+  // 받은 id값 조회
   const { id } = useParams();
   const movieList = dummy.results.filter((movie) => movie.id === Number(id));
   console.log(movieList);
