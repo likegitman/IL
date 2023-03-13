@@ -124,6 +124,8 @@
 
 * [Redux_Keyword](/REACT/redux_keyword.md)
 
+* [Redux_Rule](/REACT/redux_rule.md)
+
 # TypeScript
 
 * [Meaning](/TYPESCRIPT/meaning.md)
