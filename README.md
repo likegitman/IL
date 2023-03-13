@@ -122,6 +122,8 @@
 
 * [QueryString](/REACT/queryString.md)
 
+* [Redux_Keyword](/REACT/redux_keyword.md)
+
 # TypeScript
 
 * [Meaning](/TYPESCRIPT/meaning.md)
