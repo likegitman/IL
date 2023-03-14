@@ -130,10 +130,12 @@
 
 * [Meaning](/TYPESCRIPT/meaning.md)
 
-* [Type](/TYPESCRIPT/type.md)
+* [Types](/TYPESCRIPT/types.md)
 
 * [Interface](/TYPESCRIPT/interface.md)
 
 * [Function](/TYPESCRIPT/function.md)
 
 * [Generic](/TYPESCRIPT/generic.md)
+
+* [Props_Types](/TYPESCRIPT/props_types.md)
