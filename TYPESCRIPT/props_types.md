@@ -253,3 +253,25 @@ function Input(props: InputProps) {
 
 export default Input;
 ```
+
+# Styles
+
+## Container.tsx (React.CSSProperties)
+```
+import React from 'react';
+
+type ContainerProps = {
+    styles: React.CSSProperties;
+}
+
+function Container(props: ContainerProps) {
+    const { styles } = props;
+    return (
+        <div style={styles}>
+            Text content goes here
+        </div>
+    );
+}
+
+export default Container;
+```
