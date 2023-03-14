@@ -1,6 +1,7 @@
 # Props_Type
 
 # Basic
+
 ## App.tsx
 ```
 import React from 'react';
@@ -207,4 +208,48 @@ function Oscar(props: OscarProps) {
 }
 
 export default Oscar;
+```
+
+# Event
+
+## Button.tsx (React.MouseEvent<HTMLButtonElement>)
+```
+import React from 'react';
+
+type ButtonProps = {
+    handleClick: (evnet: React.MouseEvent<HTMLButtonElement>, id:number) => void
+}
+
+function Button(props: ButtonProps) {
+    const { handleClick } = props;
+    return (
+        <div>
+            <button onClick={(event)=>handleClick(event, 1)}>Click!</button>
+        </div>
+    );
+}
+
+export default Button;
+```
+  
+## Input.tsx (React.ChangeEvent<HTMLInputElement>)
+```
+import React from 'react';
+
+type InputProps = {
+    value: string;
+    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+function Input(props: InputProps) {
+    const { value, handleChange } = props;
+
+    return (
+        <div>
+            <input type="text" value={value} onChange={(event) => handleChange(event)} />
+        </div>
+    );
+}
+
+export default Input;
 ```
