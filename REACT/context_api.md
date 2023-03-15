@@ -1,5 +1,7 @@
 # Context Api
 
+# Example
+
 # New Component
 
 ## color.js
