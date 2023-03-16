@@ -75,6 +75,9 @@ export default App;
 # SCSS
 > 복잡한 작업을 쉽게 할 수 있게 해주고, 코드의 가독성을 높여주어 유지보수를 쉽게해준다.
 
+## Installation
+`yarn add scss`
+
 ## App.js
 ```
 import "./style.scss";
@@ -108,4 +111,33 @@ export default App;
         }
     }
 }
+```
+
+# Styled-Component
+> JS 안에 CSS 를 작성하는 것을 말한다. style을 적용하고자 하는 태그나 컴포넌트를
+> styled-component로 감싸면 style이 적용된다.
+
+## Installation
+`yarn add styled-components`
+
+## App.js
+```
+import styled from 'styled-components';
+
+// 백틱으로 감싸줘야 함
+const StyleBox = styled.div`
+    color: red;
+`;
+
+function App() {
+    return (
+        <div>
+            <StyleBox>
+                <h1 className={style.hello}>Hello React!!</h1>
+            </StyleBox>
+        </div>
+    );
+}
+
+export default App;
 ```
