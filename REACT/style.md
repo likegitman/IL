@@ -1,4 +1,5 @@
 # React_Style
+> React의 다양한 스타일링 기법
 
 # Inline styling
 
@@ -13,7 +14,7 @@ function App() {
                 style={{
                     color:'red',
                     // Kebab case가 아닌 Camel case 표기법으로 작성해야 됨
-                    backgroundColor: 'black'
+                    textAlign: "center"
                 }}
             >Hello React!!</h1>
         </div>
@@ -33,7 +34,7 @@ import "./style.css";
 function App() {
     return (
         <div>
-            <h1 class="hello">Hello React!!</h1>
+            <h1 className="hello">Hello React!!</h1>
         </div>
     );
 }
@@ -43,7 +44,6 @@ function App() {
 ```
 .hello {
   color: red;
-  background-color: black;
 }
 ```
 
@@ -57,7 +57,7 @@ import style from "./style.module.css";
 function App() {
     return (
         <div>
-            <h1 style={style.hello}>Hello React!!</h1>
+            <h1 className={style.hello}>Hello React!!</h1>
         </div>
     );
 }
@@ -69,6 +69,42 @@ export default App;
 ```
 .hello {
   color: red;
-  background-color: black;
+}
+```
+
+# SCSS
+
+## App.js
+```
+import "./style.scss";
+
+function App() {
+    return (
+        <div className="warp">
+            <h1 className="hello">Hello React!!</h1>
+            <h2 className="useScss">SCSS 사용해보기</h2>
+        </div>
+    );
+}
+
+export default App;
+```
+
+## style.scss
+```
+.warp{
+    width: 100%;
+    height: 100vh;
+    
+    .hello {
+        color: red;
+    }
+
+    .useScss{
+        color: blue;
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 ```
