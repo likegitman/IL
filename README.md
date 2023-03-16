@@ -76,6 +76,8 @@
 
 * [Async, Await](/JAVASCRIPT/async&await.md)
 
+* [Synchronous, Asynchronous](/JAVASCRIPT/sync&async.md)
+
 ## React
 
 * [DOM](/REACT/dom.md)
