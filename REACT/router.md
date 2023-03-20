@@ -70,7 +70,7 @@ export default Home;
 ```
 
 # useParams
-> URL parameter를 조회할 때 사용하는 React Hooks  
+> URL parameter를 조회할 때 사용하는 React Hooks이다.  
 > 사용할 때 Route의 주소설정은 /:keyword를 입력한다.
 
 ## App.js
@@ -106,7 +106,7 @@ function Movie({id , title, img, star }) {
         <div className='movie-container'>
             <img src={IMG_BASE_URL + img} alt="영화 포스터" />
             <div className='movie-info'>
-                {/*id값을 넘겨줌*/}
+                {/* id값을 넘겨줌 */}
                 <Link to={`/${id}`}><h4>{title}</h4></Link>
                 <span>{star}</span>
             </div>
