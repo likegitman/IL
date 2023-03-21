@@ -130,6 +130,8 @@
 
 * [Redux_Rule](/REACT/redux_rule.md)
 
+* [Server_Side_Rendering](/REACT/server_side_rendering.md)
+
 # TypeScript
 
 * [Meaning](/TYPESCRIPT/meaning.md)
