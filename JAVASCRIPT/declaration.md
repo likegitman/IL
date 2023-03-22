@@ -1,18 +1,10 @@
 # Declaration
 
-## Scope
-* block scope
-> block 안에서만 작동  
-  block 밖에서 블럭안의 변수에 접근을 못함
-
-* global scope
-> block안이든 어디에서든 사용이 가능 함
-
-## Const (Immutable data)
+# Const (Immutable data)
 > 변하지 않는 상수를 선언할 때 사용  
  `const PI = 3.14`
 
-## Let (Mutable  data)
+# Let (Mutable  data)
 > 변할 수 있는 값을 선언할 때 사용  
   단, 변수의 값을 재할당 할 때는 let을 빼고  
   변수의 이름만 선언하고 할당해야한다.
@@ -21,7 +13,7 @@ let name = 'Minsu';
 name = 'Woonrin';
 ```
 
-## Var
+# Var
 * Var Hoisting
 > 변수를 어디에 선언했냐에 상관없이  
   항상 제일 위로 선언을 끌어올려주는 것  
