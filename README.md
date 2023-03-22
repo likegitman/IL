@@ -46,6 +46,8 @@
 ## JavaScript
 * [Const, Let, Var](/JAVASCRIPT/declaration.md)
 
+* [Scope](/JAVASCRIPT/scope.md)
+
 * [Variable_name-notation](/JAVASCRIPT/notation.md)
 
 * [Data-type](/JAVASCRIPT/data-type.md)
