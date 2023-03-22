@@ -4,7 +4,7 @@
   
 # 부모에서 값 지정
   
-### App.js
+## App.js
 ```
 import MyComponent from "./MyComponent";
 
@@ -20,7 +20,7 @@ export default App;
 
 ```
   
-### MyComponent.js
+## MyComponent.js
 ```
 function MyComponent({name}) {
     return(
@@ -35,7 +35,7 @@ export default MyComponent;
   
 # defaultProps
 
-### App.js
+## App.js
 ```
 import MyComponent from "./MyComponent";
 
@@ -51,7 +51,7 @@ export default App;
 
 ```
 
-### MyComponent.js
+## MyComponent.js
 ```
 function MyComponent({name}) {
     return(
@@ -71,7 +71,7 @@ export default MyComponent;
 # children
 > 컴포넌트 태그 사이의 내용
 
-### App.js
+## App.js
 ```
 import MyComponent from "./MyComponent";
 
@@ -87,7 +87,7 @@ export default App;
 
 ```
 
-### MyComponent.js
+## MyComponent.js
 ```
 function MyComponent(props)=>{
     return(
@@ -107,7 +107,7 @@ export default MyComponent;
 
 # 비구조화 할당 문법
 
-### App.js
+## App.js
 ```
 import MyComponent from "./MyComponent";
 
@@ -123,7 +123,7 @@ export default App;
 
 ```
 
-### MyComponent.js
+## MyComponent.js
 ```
 function MyComponent(props) {
     // 비구조화 할당 문법
@@ -144,7 +144,7 @@ MyComponent.defaultProps={
 export default MyComponent;
 ```
 
-### MyComponent.js(2)
+## MyComponent.js(2)
 ```
 const MyComponent=({name, children})=>{
 
@@ -165,7 +165,7 @@ export default MyComponent;
 
 # propTypes
 
-### App.js
+## App.js
 ```
 import MyComponent from "./MyComponent";
 
@@ -181,7 +181,7 @@ export default App;
 
 ```
 
-### MyComponent.js
+## MyComponent.js
 ```
 import PropTypes from "prop-types"; 
 
@@ -210,7 +210,7 @@ export default MyComponent;
 # isRequired
 > propTypes를 지정하지 않았을 때 경고 메시지 출력
 
-### App.js
+## App.js
 ```
 import MyComponent from "./MyComponent";
 
@@ -229,7 +229,7 @@ export default App;
 
 ```
 
-### MyComponent.js
+## MyComponent.js
 ```
 import PropTypes from "prop-types"; 
 
@@ -277,7 +277,7 @@ export default MyComponent;
 
 # 클래스형 컴포넌트에서 props 사용
 
-### MyComponent.js
+## MyComponent.js
 ```
 import { Component } from "react";
 import PropTypes from "prop-types"; 
@@ -310,7 +310,7 @@ export default MyComponent;
 
 # 클래스형 컴포넌트에서는 defaultProps와 propTypes를 class내부에서 설정할 수 있음
 
-### MyComponent.js
+## MyComponent.js
 ```
 import { Component } from "react";
 import PropTypes from "prop-types"; 
