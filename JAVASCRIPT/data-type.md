@@ -27,19 +27,19 @@ console.log(str, str2);
 
 ```
 // 잘못된 방법
-let str = "I'm String!"and good"";
+let str1 = "I'm String!"and good"";
 
 // 옳은 방법
-let str = "I'm String!\"and good\"";
+let str2 = "I'm String!\"and good\"";
 ```
 
 ```
 const name = 'Woonrin';
-const greeting = 'hello' + name;
+const greeting = 'hello ' + name;
 console.log(greeting); //output: hello Woonrin
 ```
 - template literals
-> 백택기호로 감싸고 $기호를 사용하는 것
+> ``(백틱)으로 감싸고 $기호를 사용하는 것
 ```
 const name = 'Woonrin'
 console.log(`hello ${name}`); //output: hello Woonrin
