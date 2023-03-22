@@ -70,6 +70,8 @@
 
 * [Array Api Quiz](/JAVASCRIPT/array_api_quiz.md)
 
+* [Closer](/JAVASCRIPT/closer.md)
+
 * [JSON](/JAVASCRIPT/json.md)
 
 * [Callback](/JAVASCRIPT/callback.md)
