@@ -16,7 +16,7 @@ let global = "전역스코프입니다!";
 
 function print() {
     let block = "블록스코프입니다!"
-    console.log(block);
+    console.log(block); // possible
     console.log(global); // possible
 }
 
