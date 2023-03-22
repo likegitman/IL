@@ -132,6 +132,8 @@
 
 * [Server_Side_Rendering](/REACT/server_side_rendering.md)
 
+* [REST](/REACT/rest.md)
+
 # TypeScript
 
 * [Meaning](/TYPESCRIPT/meaning.md)
