@@ -52,8 +52,8 @@
 5. 행위를 포함하지 않는다.
 
 # RESTful
-> REST API가 REST의 원리를 따르는 API라면 RESTful은 REST의 원리를 따르는 시스템이다.
-> 단, REST API의 설계 규칙을 올바르게 지키지 않았다면 RESTful하다고 말할 수 없다.
+> REST API가 REST의 원리를 따르는 API라면 RESTful은 REST의 원리를 따르는 시스템이다.  
+> 단, REST API의 설계 규칙을 올바르게 지키지 않았다면 RESTful하다고 말할 수 없다.  
 > 예를들어 CRUD 기능을 모두 POST로 처리하는 API나 URI규칙을 지키지 않은 API는  
 > REST API를 사용했으나 RESTful하다고는 말할 수 없다.
 
