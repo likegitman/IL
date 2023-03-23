@@ -72,7 +72,7 @@
 
 * [Array Api Quiz](/JAVASCRIPT/array_api_quiz.md)
 
-* [Closer](/JAVASCRIPT/closer.md)
+* [Closure](/JAVASCRIPT/closure.md)
 
 * [JSON](/JAVASCRIPT/json.md)
 
