@@ -11,31 +11,26 @@ function App() {
   const onClick = () => setValue((prev) => prev + 1);
   const onChange = (event) => setKeyword(event.target.value);
   
-  // []에 아무것도 없기때문에 1번만 실행될 코드
+  // 의존성 배열에 아무것도 없기때문에 마운트 될 때 1번만 실행될 코드
   useEffect(() => {
     console.log("i run only once");
   }, []);
   
-  // keyword가 변할때만 실행
-  // cnt값이 변해도 실행되지 않음
-
-  // useEffect(()=>{
-  //   // keyword의 값이 빈값이 아니고
-  //   // 길이가 5보다 길다면 실행
-  //   if(keyword!==""&&keyword.length>5){
-  //     console.log("SEARCH FOR", keyword);
-  //   }
-  // },[keyword]);
-  
+  // cnt의 값이 업데이트 될 때만 실행
+  // keyword의 값이 업데이트 될 때는 실행이 안 됨
   useEffect(()=>{
     console.log("i run when 'cnt' changes.");
-},[cnt]);
+  },[cnt]);
+  // keyword의 값이 업데이트 될 때만 실행
+  // cnt의 값이 업데이트 될 때는 실행이 안 됨
   useEffect(()=>{
       console.log("i run when 'keyword' changes.");
   },[keyword]);
+  // keyword의 값이 변할 때도 실행되고, cnt의 값이 변할 때도 실행이 됨
   useEffect(()=>{
     console.log("I run when keyword & cnt change");
   },[keyword, cnt]);
+  
   return (
     <div>
       <input
