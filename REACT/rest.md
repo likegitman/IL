@@ -21,8 +21,8 @@
 1. Server-Client (서버-클라이언트 구조)
 2. Stateless (무상태)
 3. Cacheable (캐시 처리 가능)
-4. Layered System(계층화)
-5. Uniform Interface(인터페이스 일관성)
+4. Layered System (계층화)
+5. Uniform Interface (인터페이스 일관성)
 
 ## 장점
 1. HTTP 프로토콜의 인프라를 그대로 사용하기 때문에 REST API사용을 위한 별도의 인프라를 구축할 필요가 없다.
