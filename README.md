@@ -48,6 +48,8 @@
 
 * [Scope](/JAVASCRIPT/scope.md)
 
+* [Hoisitng](/JAVASCRIPT/hoisting.md)
+
 * [Variable_name-notation](/JAVASCRIPT/notation.md)
 
 * [Data-type](/JAVASCRIPT/data-type.md)
