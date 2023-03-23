@@ -1,3 +1,7 @@
+# State
+> 컴포넌트 내부에서 선언하며 내부에서 값을 변경할 수 있다. 리액트에서 변하는 값을 사용하고 싶을 때 사용한다.  
+> 함수형 컴포넌트에서는 useState라는 hooks를 사용해 class에서만 사용할 수 있던 state를 다룰 수 있다.
+
 # useState
 > state의 두번째 값은 첫번째 값을 설정한다
 ```'
@@ -85,3 +89,5 @@ function App(){
 }
 export default App;
 ```
+
+# useState선언이 const인 이유
