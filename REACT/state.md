@@ -91,3 +91,5 @@ export default App;
 ```
 
 # useState선언이 const인 이유
+> React에서는 변하는 값인 state를 const로 선언한다. 
+> 이러한 이유는 JS에서는 
