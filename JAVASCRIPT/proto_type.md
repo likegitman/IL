@@ -7,4 +7,14 @@
 # 함수와 객체의 내부 구조
 > JS에서는 함수를 정의하고 파싱단계에 들어가면 내부적으로 수행되는 작업이 있다.  
 > 함수 멤버로 prototype속성이 있고 이 속성은 다른 곳에 생성된 함수이름의 프로토타입 객체를  
-> 참조한다. 또, 이 프로토타입 객체의 멤버 constructor속성은 함수를 참조하는 내부구조를 가진다. 
+> 참조한다. 또, 이 프로토타입 객체의 멤버 constructor속성은 함수를 참조하는 내부구조를 가진다.  
+![스크린샷 2023-03-25 213308](https://user-images.githubusercontent.com/105215297/227717698-fa815c22-56f4-4b55-bd8e-ce2a5b14c78b.png)  
+> 위 이미지의 code는 `function Person(){}`이다.  
+> Person 함수의 prototype속성이 참조하는 Person프로토타입 객체는 아래 code와 같이  
+> `new Person()`를 통해 생성된 모든 객체의 원형이 되는 객체이다.  
+```
+function Person(){}
+
+let minsu = new Person();
+let woonrin = new Person();
+```
