@@ -66,6 +66,8 @@
 
 * [Class](/JAVASCRIPT/class.md)
 
+* [ProtoType](/JAVASCRIPT/proto_type.md)
+
 * [Object](/JAVASCRIPT/object.md)
 
 * [Array](/JAVASCRIPT/array.md)
