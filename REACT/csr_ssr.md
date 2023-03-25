@@ -32,7 +32,7 @@
 ## SSR의 순서
 1. User가 Website에 요청을 보낸다.
 
-2. Server는 'Ready to Render'. 말그대로 즉시 렌더링 가능한 html파일을 만든다.
+2. Server는 'Ready to Render', 말그대로 즉시 렌더링 가능한 html파일을 만든다.
 > 리소스 체크, 컴파일 후 완성된 HTML 컨텐츠로 만든다.
 
 3. 클라이언트에 전달되는 순간, 이미 렌더링 준비가 되어있기 때문에 HTML은 즉시 렌더링 된다.
