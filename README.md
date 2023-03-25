@@ -140,7 +140,7 @@
 
 * [Redux_Rule](/REACT/redux_rule.md)
 
-* [Server_Side_Rendering](/REACT/server_side_rendering.md)
+* [CSR, SSR](/REACT/CSR_SSR.md)
 
 * [API](/REACT/api.md)
 
