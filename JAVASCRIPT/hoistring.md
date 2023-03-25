@@ -7,15 +7,14 @@
 > block scope, function scope, global scope
 
 # var hoisting
-> 변수 할당이 선언보다 위에 있어도 실행이 된다.
+> 변수 할당이 선언보다 위에 있어도 오류가 생기지 않는다.
 ```
 name = "Mike";
 var name;
 ```
 
 # function hoisting
-> 함수 호출이 선언보다 위에 있어도 실행이 된다.
-> 
+> 함수 호출이 선언보다 위에 있어도 오류가 생기지 않는다.
 ```
 let name = "Mike";
 
@@ -43,7 +42,7 @@ function printName(name) {
 > 아래코드는 실행은 되지만 console에는 undefined가 출력된다.  
 > 그 이유는 JavaScript내부상황을 보면 알 수 있다.
 ```
-pringName(name);
+printName(name);
 
 function printName(name) {
   console.log(name);
@@ -56,7 +55,7 @@ var name = "Mike";
 > 이런식으로 hoisting이 이뤄지기 때문에 실행은 되지만  
 > var 변수의 값이 undefined인 이유이다.
 ```
-var name = undefined;
+var name = undefined; // 선언과 초기화
 
 printName(name);
 
