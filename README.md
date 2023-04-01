@@ -43,6 +43,8 @@
 
 * [Filter](/CSS/filter.md)
 
+* [nth-child]
+
 ## JavaScript
 * [Const, Let, Var](/JAVASCRIPT/declaration.md)
 
