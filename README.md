@@ -50,7 +50,7 @@
 
 * [Scope](/JAVASCRIPT/scope.md)
 
-* [this]
+* [This](/JAVASCRIPT/this.md)
 
 * [Hoisitng](/JAVASCRIPT/hoisting.md)
 
