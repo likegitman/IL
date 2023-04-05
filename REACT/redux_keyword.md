@@ -8,7 +8,7 @@
 > 적을 수 있다.
 
 ## 객체 형태
-```
+```javascript
 {
   type: "ADD_TODO",
   data : {
@@ -25,7 +25,7 @@
 
 # 2. 액션 생성 함수
 > 액션 객체를 만들어 주는 함수이다.
-```
+```javascript
 // function
 function addTodo(data) {
   return  {
@@ -45,7 +45,7 @@ const changeInput = text => ({
 > 변화를 일으키는 함수입니다. 액션을 만들어서 발생시키면  
 > 리듀서가 현재 상태와 전달받은 액션 객체를 파라미터로 받아온다.  
 > 그리고 두 값을 참고하여 새로운 상태를 만들어서 반환해준다.
-```
+```javascript
 const initialState = {
   cnt: 1
 };
