@@ -8,7 +8,7 @@
 1. 클래스형 컴포넌트보다 선언하기 편하고 메모리 자원을 더 사용한다.
 2. React Hooks로 state 및 라이프사이클 API 등을 사용할 수 있다.
 3. 일반적인 함수 선언 방식이 있고 arrow function선언 방식이 있다. (arrow function은 함수를 파라미터로 전달할 때 유용함)
-```javscript
+```javascript
 function Component(){
   return(
     ...
