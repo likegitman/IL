@@ -33,41 +33,29 @@
 * div, button, input, form, span 등의 DOM요소에는 이벤트를 설정할 수 있지만,  
   직접 만든 컴포넌트(`<Component />`)에는 이벤트를 자체적으로 설정할 수 없다.
 
-# Arrow Function으로 바로 전달
-
-## App.js
-```
-import EventHandle from "./EventHandle";
-
-const App=()=>{
-  return <EventHandle />;
-};
-
-export default App;
-```
-
+# Example
 ## EventHandle.js
-```
+```javascript
 function EventHandle() {
-	const [message, setMessage]=useState("");
-  	const onChange=(e)=>{
-    	setMessage(e.target.value);
+    const [message, setMessage] = useState("");
+    const onChange = (e) => {
+        setMessage(e.target.value);
     };
-  	const onClick=()=>{
-    	setMessage("");
+    const onClick = () => {
+        setMessage("");
     };
-  
-  	return(
-    	<div>
-      	<input 
-   			 type="text"
-      	 name="message"
-      	 value={message}
-			   onChange={onChange}
-      	/>
-        <br />
-        <button onClick={onClick}>공백</button>
-      </div>
+
+    return (
+        <div>
+            <input
+                type="text"
+                name="message"
+                value={message}
+                onChange={onChange}
+            />
+            <br />
+            <button onClick={onClick}>공백</button>
+        </div>
     );
 }
 ```
