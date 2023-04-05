@@ -7,21 +7,21 @@
 # Example
 
 ## ThemeContext.js
-```
+```javascript
 import { createContext } from "react";
 
 export const ThemeContext=createContext(null);
 ```
 
 ## UserContext.js
-```
+```javascript
 import { createContext } from "react";
 
 export const UserContext=createContext(null);
 ```
 
 ## App.js
-```
+```javascript
 import { useState } from 'react';
 import Page from './components/Page';
 import { ThemeContext } from './context/ThemeContext';
@@ -47,7 +47,7 @@ export default App;
 ```
 
 ## Page.js
-```
+```javascript
 import React from 'react';
 import Content from './Content';
 import Footer from './Footer';
@@ -67,7 +67,7 @@ export default Page;
 ```
 
 ## Footer.js
-```
+```javascript
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
