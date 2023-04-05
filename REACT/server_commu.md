@@ -3,7 +3,7 @@
 # fetch()
 
 ## fetch/server/app.js
-```
+```javascript
 const express = require("express");
 const app = express();
 const cors = require('cors');
@@ -41,7 +41,7 @@ app.listen(4000, () => {
 ```
 
 ## fetch/client/src/App.js
-```
+```javascript
 import { useEffect, useState } from "react";
 
 function App() {
@@ -113,7 +113,7 @@ export default App;
 # axios
 
 ## fetch/server/app.js
-```
+```javascript
 const express = require("express");
 const app = express();
 const cors = require('cors');
@@ -151,7 +151,7 @@ app.listen(4000, () => {
 ```
 
 ## fetch/client/src/App.js
-```
+```javascript
 import { useEffect, useState } from "react";
 import axios from "axios";
 
