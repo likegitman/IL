@@ -5,7 +5,7 @@
   바벨을 사용하여 일반 자바스크립트로 변환된다.
   
 ## JSX -> Babel
-```
+```javascript
 // JSX
 function App(){
     return (
@@ -26,7 +26,7 @@ function App(){
   JSX를 사용한다.
 
 ## JSX part_1 (JSX 기초)
-```
+```javascript
 <!DOCTYPE html>
 <html>
 
@@ -61,7 +61,7 @@ function App(){
 ```
 
 ## JSX part_2(함수, 컴포넌트)
-```
+```javascript
 <!DOCTYPE html>
 <html>
 
