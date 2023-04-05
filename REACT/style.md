@@ -6,7 +6,7 @@
 ## App.js
 > style 우선순위가 높음
 
-```
+```javascript
 function App() {
     return (
         <div>
@@ -28,7 +28,7 @@ export default App;
 > 클래스명이 충돌하는 문제 발생
 
 ## App.js
-```
+```javascript
 import "./style.css";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
 ```
 
 ## style.css
-```
+```css
 .hello {
   color: red;
 }
@@ -51,7 +51,7 @@ function App() {
 > 클래스명이 충돌하지 않는 방법
 
 ## App.js
-```
+```javascript
 import style from "./style.module.css";
 
 function App() {
@@ -66,7 +66,7 @@ export default App;
 ```
 
 ## style.module.css
-```
+```css
 .hello {
   color: red;
 }
@@ -79,7 +79,7 @@ export default App;
 `yarn add scss`
 
 ## App.js
-```
+```javascript
 import "./style.scss";
 
 function App() {
@@ -95,7 +95,7 @@ export default App;
 ```
 
 ## style.scss
-```
+```css
 .warp{
     width: 100%;
     height: 100vh;
@@ -121,7 +121,7 @@ export default App;
 `yarn add styled-components`
 
 ## App.js
-```
+```javascript
 import styled from 'styled-components';
 
 // 백틱으로 감싸줘야 함
