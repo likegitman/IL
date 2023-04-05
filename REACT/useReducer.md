@@ -6,7 +6,7 @@
 2. 아래 reducer는 현재상태 업데이트를 위해 필요한 정보를 담은 액션 값을 전달받아  
    상황에 따라 새로운 상태를 반환하는 함수이다.
    
-```
+```javascript
 function reducer(state, action) {
    switch(action.type){
       return { ... }
@@ -22,7 +22,7 @@ function reducer(state, action) {
 # useReducer를 이용한 Counter
 
 ## App.js
-```
+```javascript
 import ReduCounter from "./ReduCounter";
 
 function App() {
@@ -37,7 +37,7 @@ export default App;
 ```
 
 ## ReduCounter.js
-```
+```javascript
 import React, { useReducer } from 'react';
 
 function reducer(state, action){
@@ -75,7 +75,7 @@ export default ReduCounter;
 # useReducer를 이용한 Input 상태 관리
 
 ## ReduInfo.js
-```
+```javascript
 import React, { useReducer } from "react";
 
 function reducer(state, action) {
@@ -117,7 +117,7 @@ export default ReduInfo;
 ```
 
 # useReducer를 이용한 입출금 시스템
-```
+```javascript
 import React, { useReducer, useState } from 'react';
 
 // reducer - state를 업데이트 하는 역할 (은행)
@@ -192,7 +192,7 @@ export default ReduBank;
 # useReducer를 이용한 출석부 (여러개의 state)
 
 # ReduAttendance.js
-```
+```javascript
 import React, { useReducer, useState } from 'react';
 import StudentList from './StudentList';
 
@@ -279,7 +279,7 @@ export default ReduAttendance;
 ```
 
 ## StudentList.js
-```
+```javascript
 import React from 'react';
 
 function StudentList({name, dispatch, id, isHere}) {
