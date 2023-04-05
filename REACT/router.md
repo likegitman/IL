@@ -6,7 +6,7 @@
 `yarn add react-router-dom`
 
 # USE
-```
+```javascript
 import {Routes, Route} from "react-router-dom"
 import Home from './components/Home';
 import About from './components/About';
@@ -32,7 +32,7 @@ export default App;
 > 반면 Link 컴포넌트는 브라우저의 주소만 바꾸고 페이지가 새로고침 되지 않는다.
 
 ## App.js
-```
+```javascript
 import { Routes, Route } from "react-router-dom"
 import Home from './components/Home';
 import About from './components/About';
@@ -52,7 +52,7 @@ export default App;
 
 ## Home.js
 
-```
+```javascript
 import React from 'react';
 import { Link } from "react-router-dom";
 
@@ -74,7 +74,7 @@ export default Home;
 > 사용할 때 Route의 주소설정은 /:keyword를 입력한다.
 
 ## App.js
-```
+```javascript
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
@@ -95,7 +95,7 @@ export default App;
 ```
 
 ## Movie.js
-```
+```javascript
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -118,7 +118,7 @@ export default Movie;
 ```
 
 ## Detail.js
-```
+```javascript
 import React from "react";
 import { useParams } from "react-router-dom";
 import { dummy } from "../movieDummy";
@@ -151,7 +151,7 @@ export default Detail;
 > Route의 chidren으로 들어가는 JSX element를 보여주는 역할을 한다.
 
 ## App.js
-```
+```javascript
 import { Routes, Route } from "react-router-dom"
 import Home from './components/Home';
 import About from './components/About';
@@ -178,7 +178,7 @@ export default App;
 ```
 
 ## Articles.js
-```
+```javascript
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
 
@@ -207,7 +207,7 @@ export default Articles;
 
 # useNavigate
 > Link 컴포넌트를 사용하지 않고 페이지를 이동해야 할 때 사용하는 React Hooks이다.
-```
+```javascript
 import React from 'react';
 import { Outlet, useNavigate } from "react-router-dom";
 
@@ -251,7 +251,7 @@ export default Layout;
    특정 스타일을 적용하는 컴포넌트이다.
 2. 이 컴포넌트는 style과 className은 { isActive: boolean }을 파라미터로  
    전달받는 함수타입의 값을 전달한다.
-```
+```javascript
 <NavLink
   style={({isActive}) => isActive ? activeStyle : undefined}
 />
@@ -262,7 +262,7 @@ export default Layout;
 ```
 
 ## USE
-```
+```javascript
 import React from 'react';
 import { NavLink, Outlet } from "react-router-dom";
 
