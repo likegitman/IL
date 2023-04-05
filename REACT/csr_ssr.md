@@ -1,7 +1,7 @@
 # CSR과 SSR의 차이
 
 # CSR
-* Client Side Rendering의 약자
+### Client Side Rendering의 약자
 > 렌더링이 클라이언트 쪽에서 일어나는 것을 말한다.  
 > 서버는 요청을 받으면 클라이언트에 HTML과 JS를 보내주고  
 > 클라이언트는 그것을 받아 렌더링을 시작한다.  
@@ -26,7 +26,7 @@
 7. API로부터 받아온 data를 placeholder자리에 넣어준다. 이때부터 페이지는 상효작용이 가능해진다.
 
 # SSR
-* Server Side Rendering의 약자
+### Server Side Rendering의 약자
 > 서버쪽에서 렌더링 준비를 끝마친 상태로 클라이언트에 전달하는 것을 말한다.
 
 ## SSR의 순서
