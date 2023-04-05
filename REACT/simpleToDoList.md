@@ -1,6 +1,6 @@
 # ToDoList
 
-```
+```javascript
 import { useState, useEffect } from "react";
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
     if (toDo === "") {
       return;
     }
-    // currentArray라는 현재 배열을 갖고오고 submit event가 실행되면 toDo를 배열에 합친다
-    setToDos((currentArray) => [toDo, ...currentArray]);
+    // 현재 배열을 갖고오고 Submit event가 실행되면 toDo를 배열에 합친다
+    setToDos((toDos) => [toDo, ...toDos]);
     setToDo("");
   };
   return (
