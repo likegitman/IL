@@ -6,7 +6,7 @@
 # 부모에서 값 지정
   
 ## App.js
-```
+```javascript
 import MyComponent from "./MyComponent";
 
 function App() {
@@ -22,7 +22,7 @@ export default App;
 ```
   
 ## MyComponent.js
-```
+```javascript
 function MyComponent({name}) {
     return(
         <div>
@@ -37,7 +37,7 @@ export default MyComponent;
 # defaultProps
 
 ## App.js
-```
+```javascript
 import MyComponent from "./MyComponent";
 
 function App() {
@@ -53,7 +53,7 @@ export default App;
 ```
 
 ## MyComponent.js
-```
+```javascript
 function MyComponent({name}) {
     return(
         <div>
@@ -73,7 +73,7 @@ export default MyComponent;
 > 컴포넌트 태그 사이의 내용
 
 ## App.js
-```
+```javascript
 import MyComponent from "./MyComponent";
 
 function App() {
@@ -89,7 +89,7 @@ export default App;
 ```
 
 ## MyComponent.js
-```
+```javascript
 function MyComponent(props)=>{
     return(
         <div>
@@ -109,7 +109,7 @@ export default MyComponent;
 # 비구조화 할당 문법
 
 ## App.js
-```
+```javascript
 import MyComponent from "./MyComponent";
 
 function App() {
@@ -125,7 +125,7 @@ export default App;
 ```
 
 ## MyComponent.js
-```
+```javascript
 function MyComponent(props) {
     // 비구조화 할당 문법
     const {name, children}=props;
@@ -146,7 +146,7 @@ export default MyComponent;
 ```
 
 ## MyComponent.js(2)
-```
+```javascript
 const MyComponent=({name, children})=>{
 
     return(
@@ -167,7 +167,7 @@ export default MyComponent;
 # propTypes
 
 ## App.js
-```
+```javascript
 import MyComponent from "./MyComponent";
 
 const App=()=>{
@@ -183,7 +183,7 @@ export default App;
 ```
 
 ## MyComponent.js
-```
+```javascript
 import PropTypes from "prop-types"; 
 
 function MyComponent({name, children}){
@@ -212,7 +212,7 @@ export default MyComponent;
 > propTypes를 지정하지 않았을 때 경고 메시지 출력
 
 ## App.js
-```
+```javascript
 import MyComponent from "./MyComponent";
 
 function App() {
@@ -231,7 +231,7 @@ export default App;
 ```
 
 ## MyComponent.js
-```
+```javascript
 import PropTypes from "prop-types"; 
 
 function MyComponent({name, favoriteNum,children}) {
@@ -279,14 +279,14 @@ export default MyComponent;
 # 클래스형 컴포넌트에서 props 사용
 
 ## MyComponent.js
-```
+```javascript
 import { Component } from "react";
 import PropTypes from "prop-types"; 
 
 class MyComponent extends Component{
     render(){
         // 비구조화 할당
-        const { name, favoriteNum, children }=this.props;
+        const { name, favoriteNum, children } = this.props;
         return(
             <div>
                 안녕하세요, 제 이름은 {name}입니다. <br />
@@ -297,11 +297,11 @@ class MyComponent extends Component{
     }
 };
 
-MyComponent.defaultProps={
+MyComponent.defaultProps = {
     name: '기본이름'
 };
 
-MyComponent.propTypes={
+MyComponent.propTypes = {
     name: PropTypes.string,
     favoriteNum: PropTypes.number.isRequired
 };
@@ -312,7 +312,7 @@ export default MyComponent;
 # 클래스형 컴포넌트에서는 defaultProps와 propTypes를 class내부에서 설정할 수 있음
 
 ## MyComponent.js
-```
+```javascript
 import { Component } from "react";
 import PropTypes from "prop-types"; 
 
