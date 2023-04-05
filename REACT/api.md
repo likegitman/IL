@@ -5,7 +5,7 @@
 
 # 의미
 > Application Programming Interface의 약자.  
-> APPlication은 고유한 기능을 가진 모든 소프트웨어를 나타내고  
+> Application은 고유한 기능을 가진 모든 소프트웨어를 나타내고  
 > Interface는 두 Application간의 계약이라고 말할 수 있다.  
 > 이 계약은 요청과 응답을 사용해 두 Application간의 통신하는 방법을 정의한다.
 
