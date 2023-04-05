@@ -34,7 +34,7 @@
 # 특정 input tag에 포커스 
 
 ## InputSample.js
-```
+```javascript
 import React, { useState, useRef } from 'react';
 
 function InputSample() {
@@ -90,7 +90,7 @@ export default InputSample;
 ```
 
 ## App.js
-```
+```javascript
 import InputSample from "./InputSample";
 
 function App() {
@@ -107,7 +107,7 @@ export default App;
 # 스크롤박스 조정
 
 ## ScrollBox.js
-```
+```javascript
 import { Component } from "react";
 
 class ScrollBox extends Component {
@@ -148,7 +148,7 @@ export default ScrollBox;
 ```
 
 ## App.js
-```
+```javascript
 import { Component } from "react";
 import ScrollBox from "./ScrollBox";
 
