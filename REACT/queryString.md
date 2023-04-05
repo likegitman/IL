@@ -16,7 +16,7 @@
 * key
 > location 객체의 고유값, 초기에는 default이며 페이지가 변경될 때마다  
 > 고유의 값이 생성 됨
-```
+```javascript
 // 주소: http://localhost:3000/about?detail=true&mode=1
 
 import React from 'react';
@@ -43,7 +43,7 @@ export default About;
    get 메서드를 통하여 쿼리파라미터를 조회할 수 있고 set 메서드를 통하여 특정 쿼리파라미터를  
    업데이트 할 수 있다.
 3. 두번째 원소는 쿼리파라미터를 객체 형태로 업데이트할 수 있는 함수를 반환한다.
-```
+```javascript
 // 주소: http://localhost:3000/about?detail=true3&mode=1
     
 import React from 'react';
