@@ -6,7 +6,7 @@
 # 평균값 계산하기
 
 ## Average.js
-```
+```javascript
 import React, { useState, useMemo } from "react";
 
 const getAverage = (numbers) => {
