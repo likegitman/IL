@@ -58,7 +58,7 @@
 # getDerivedStateFromProps()
 1. 이 메서드는 리액트 v16.3 이후에 새로 만든 라이프사이클 메서드이다.
 2. props로 받아온 값을 state에 동기화시키는 용도로 사용하고 컴포넌트가 마운트될 때와 업데이트될 때 호출된다.
-```
+```javascript
 static getDerivedStateFromsProps(nextProps, prevState) {
   if(nextProps.value !== prevState.value) { // 조건에 따라서 특정 값 동기화
     return {value: nextProps.value};
