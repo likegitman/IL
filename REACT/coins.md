@@ -1,5 +1,5 @@
 # Coin List
-```
+```javascript
 import React, { useEffect, useState } from 'react';
 
 function Coin() {
@@ -12,8 +12,8 @@ function Coin() {
     };
 
     useEffect(() => {
-        fetch("https://api.coinpaprika.com/v1/tickers").
-            then((response) => {
+        fetch("https://api.coinpaprika.com/v1/tickers")
+            .then((response) => {
                 return response.json();
             })
             .then((data) => {
