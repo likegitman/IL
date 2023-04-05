@@ -17,7 +17,7 @@
 # Example
 
 ## MemoParent.js
-```
+```javascript
 import React, { useState } from 'react';
 import MemoChild from './MemoChild';
 
@@ -55,7 +55,11 @@ export default MemoParent;
 ```
 
 ## MemoChild.js
-```
+> memo를 사용하지 않는다면 부모의 parentAge가 업데이트 될 때 자식 컴포넌트는  
+> 업데이트 되는게 하나도 없는데 자식 컴포넌트도 렌더링이 된다  
+> memo를 사용함으로서 props인 name과 age를 검사해 parentAge가 업데이트 되어도  
+> 자식 컴포넌트는 렌더링 되지 않는다.(childAge가 업데이트 된다면 렌더링 됨)
+```javascript
 import React, {memo} from 'react';
 
 function MemoChild({name, age}) {
@@ -73,9 +77,5 @@ function MemoChild({name, age}) {
     );
 }
 
-// memo를 사용하지 않는다면 부모의 parentAge가 업데이트 될 때 자식 컴포넌트는
-// 업데이트 되는게 하나도 없는데 자식 컴포넌트도 렌더링이 된다
-// memo를 사용함으로서 props인 name과 age를 검사해 parentAge가 업데이트 되어도
-// 자식 컴포넌트는 렌더링 되지 않는다.(childAge가 업데이트 된다면 렌더링 됨)
 export default memo(MemoChild);
 ```
