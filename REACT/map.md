@@ -1,8 +1,8 @@
 # Map
 
 ## 컴포넌트 반복
-```
-const IterationSample=()=>{
+```javascript
+function Winter() {
   return(
     <ul>
       <li>눈사람</li>
@@ -13,43 +13,55 @@ const IterationSample=()=>{
   );
 };
 
-export default IterationSample;
+export default Winter;
 ```
 
 ## map
-```
-const IterationSample=()=>{
-  const winters=["눈사람", "눈", "얼음", "당근"];
-  // key 값이 없을 때는 index를 키로 지정
-  const winterList=winters.map((winter,index)=><li key={index}>{winter}</li>)
-  return(
-    <ul>
-      {winterList}
-    </ul>
-  );
-};
 
-export default IterationSample;
+### Key값이 없을 때
+```javascript
+import React from 'react';
+
+function Winter() {
+    const winters = ["눈사람", "눈", "얼음", "당근"];
+
+    return (
+        <div>
+            <ul>
+                {winters.map((winter, index) => (
+                    <li key={index}>{winter}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+export default Winter;
 ```
 
-```
+### Key값을 지정했을 때
+```javascript
 import { useState } from 'react';
 
-const IterationSample=()=>{
-  const [winters, setWinters]=useState([
-    {id: 1, text: "눈사람"},
-    {id: 2, text: "눈"},
-    {id: 3, text: "얼음"},
-    {id: 4, text: "당근"}
-  ]);
-  // 고유한 값을 지정했다면 key 값에 써주기
-  const winterList=winters.map((winter)=><li key={winter.id}>{winter.text}</li>)
-  return(
-    <ul>
-      {winterList}
-    </ul>
-  );
+function Winter() {
+    
+    const [winters, setWinters] = useState([
+        { id: 1, text: "눈사람" },
+        { id: 2, text: "눈" },
+        { id: 3, text: "얼음" },
+        { id: 4, text: "당근" }
+    ]);
+
+    return (
+        <ul>
+            {winters.map((winter) => (
+                <li key={winter.id}>
+                    {winter.text}
+                </li>
+            ))}
+        </ul>
+    );
 };
 
-export default IterationSample;
+export default Winter;
 ```
