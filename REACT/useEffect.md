@@ -1,7 +1,7 @@
 # useEffect
 > 코드가 언제 실행될지 결정
 
-```
+```javascript
 // useState와 useEffect를 import
 import { useState, useEffect } from "react";
 
