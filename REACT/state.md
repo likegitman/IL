@@ -4,7 +4,7 @@
 
 # useState
 > state의 두번째 값은 첫번째 값을 설정한다
-```
+```javascript
 import React, { useState } from "react";
 function App(){
 
