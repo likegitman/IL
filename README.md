@@ -116,8 +116,6 @@
 
 * [Map](/REACT/map.md)
 
-* [Todo_list](/REACT/ToDoList.md)
-
 * [Coins](/REACT/coins.md)
 
 * [useReducer](/REACT/useReducer.md)
