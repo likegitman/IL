@@ -39,11 +39,9 @@
 
 ### [Z-index](/CSS/z-index.md)
 
-###[Scroll_Bar](/CSS/scroll.md)
+### [Scroll_Bar](/CSS/scroll.md)
 
 ### [Filter](/CSS/filter.md)
-
-### [nth-child]
 
 ## JavaScript
 ### [Const, Let, Var](/JAVASCRIPT/declaration.md)
