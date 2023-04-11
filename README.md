@@ -163,3 +163,5 @@
 ### [Generic](/TYPESCRIPT/generic.md)
 
 ### [Props_Types](/TYPESCRIPT/props_types.md)
+
+### [Conjugation](/TYPESCRIPT/conjugation.md)
