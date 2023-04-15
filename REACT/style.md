@@ -115,7 +115,7 @@ export default App;
 
 # Styled-Component
 > JS 안에 CSS 를 작성하는 것을 말한다. style을 적용하고자 하는 태그나 컴포넌트를
-> styled-component로 감싸면 style이 적용된다.
+> styled-components로 감싸면 style이 적용된다.  
 
 ## Installation
 `yarn add styled-components`
@@ -141,3 +141,6 @@ function App() {
 
 export default App;
 ```
+
+## Caution
+> styled-components를 함수 컴포넌트 안에 선언하면 console에 warning들이 잔뜩 뜨니까 조심해야된다.
