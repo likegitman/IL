@@ -150,6 +150,8 @@
 
 ### [REST](/REACT/rest.md)
 
+### [Pagination](/REACT/pagination.md)
+
 ## TypeScript
 
 ### [Meaning](/TYPESCRIPT/meaning.md)
