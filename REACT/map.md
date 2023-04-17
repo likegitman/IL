@@ -18,7 +18,7 @@ export default Winter;
 
 ## map
 
-### Key값이 없을 때
+### Key값이 없을 때 (index)
 ```javascript
 import React from 'react';
 
@@ -65,3 +65,9 @@ function Winter() {
 
 export default Winter;
 ```
+
+## React에서 Key란?
+> React에서 key란 어떠한 항목을 추가, 변경, 삭제할 때 식별하는 것을 돕는다.  
+> key는 element에 안정적인 고유성을 부여해야하기 때문에 배열 내부의 element에 지정을 해야하고  
+> 배열 안에서 형제 사이에서 고유하고 전체 범위에서 고유하지않는다. 따라서 두개의 다른 배열을 만들 때  
+> key 이름이 똑같아도 상관이없다.
