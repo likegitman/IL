@@ -1,5 +1,5 @@
 # ref
-> ref = 하나의 Object(={current : any})  
+> ref는 하나의 Object(={current : any})이다.  
 > 그래서 ref에 접근하려면 `변수이름.current`로 접근해주어야한다.  
 > 또 ref를 변수로 사용할 때 ref를 아무리 변화시키도 화면을 렌더링하지 않는다.
 
