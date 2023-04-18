@@ -146,6 +146,8 @@
 
 ### [CSR, SSR](/REACT/csr_ssr.md)
 
+### [SPA, MPA](/REACT/spa_mpa.md)
+
 ### [API](/REACT/api.md)
 
 ### [REST](/REACT/rest.md)
