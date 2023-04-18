@@ -51,7 +51,7 @@ for(let i of arr) {
 
 ### forEach
 ```
-let arr = [1, 2, 3, 4, 5]
+let arr = [1, 2, 3, 4, 5];
 // forEach()는 주어진 callback을 배열에 있는 각 요소에 대해 오름차순으로 한 번씩 실행한다.
-arr.forEach(item => console.log(item))
+arr.forEach(item => console.log(item));
 ```
