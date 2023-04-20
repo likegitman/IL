@@ -3,8 +3,8 @@
 > 필요한 자원의 모임이라고 할 수 있고 프레임워크는 개발 코드를 작성하는 기본적인 틀을 제공하여  
 > 효율적으로 개발을 할 수 있는 소프트웨어 환경이다. React에서 내가 모든 것을 직접 생성하고 설정했지만  
 > Next에는 이것들이 이미 만들어져있다. 또, Next는 CSR(Client Side Rendering)인 React와 다르게  
-> SEO(Search Engine Optimization)를 위한 SSR(Server Side Rendering)이 가능한 프레임워크이다.
-[참고](/REACT/csr_ssr.md)
+> SEO(Search Engine Optimization)를 위한 SSR(Server Side Rendering)이 가능한 프레임워크이다.  
+> #### [참고](/REACT/csr_ssr.md)
 
 # 폴더
 > React에서 있던 src폴더를 없애고 pages 폴더 안에 index, _app, _document를 추가하고  
