@@ -8,7 +8,8 @@
 # 폴더
 > React에서 있던 src폴더를 없애고 pages 폴더 안에 index, _app, _document를 추가하고  
 > 페이지 관련 js파일들은 전부 pages안에 보관해야한다. 그리고 pages안에 보관된 파일들은  
-> 파일명 그대로 route가 되는 특징이있다. (index.js => "/") (detail/description.js => "/detail/description")
+> 파일명 그대로 route가 되는 특징이있다. (/pages/index.js => "/") (/pages/detail/description.js => "/detail/description")
+> 파일명은 중요하지만 그 파일안의 함수의 이름은 중요치 않다. 중요한건 함수에 export default가 붙어야된다는 것이다.
 
 * public
 이미지나 동영상같은 assets파일들을 보관한다.
