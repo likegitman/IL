@@ -12,7 +12,7 @@
 > 위 이미지의 code는 `function Person(){}`이다.  
 > Person 함수의 prototype속성이 참조하는 Person프로토타입 객체는 아래 code와 같이  
 > `new Person()`을 통해 생성된 모든 객체의 원형이 되는 객체이다.  
-```
+```javascript
 function Person(){}
 
 let minsu = new Person();
