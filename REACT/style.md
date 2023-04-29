@@ -52,12 +52,12 @@ function App() {
 
 ## App.js
 ```javascript
-import style from "./style.module.css";
+import styles from "./style.module.css";
 
 function App() {
     return (
         <div>
-            <h1 className={style.hello}>Hello React!!</h1>
+            <h1 className={styles.hello}>Hello React!!</h1>
         </div>
     );
 }
