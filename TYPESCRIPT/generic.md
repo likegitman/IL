@@ -3,10 +3,10 @@
 
 # Example
 ## generic을 쓰지 않을 때
-> 함수를 호출할 때마다 다른 배열을 인자로 주고싶을 때  
-> 이런 방식들은 번거로울 수 있다.
+함수를 호출할 때마다 다른 배열을 인자로 주고싶을 때  
+이런 방식들은 번거로울 수 있다.
   
-```
+```javascript
 function getSize(arr:number[] | string[] | boolean[]):number {
     return arr.length;
 }
@@ -19,7 +19,7 @@ const arr3 = [false, true, false];
 getSize(arr3);
 ```
 
-```
+```javascript
 interface SuperPrint{
     (arr:number[]):void;
     (arr:boolean[]):void;
@@ -39,7 +39,7 @@ superPrint(["a", "b", "c", "d"]);
 > 위의 방식보다 확실히 코드가 간단해지고 유연성이 증가한다.  
 > (꼭 T라고 쓰지 않아도 되지만 T라고 쓰는것이 보편적)
   
-```
+```javascript
 function getSize<T>(arr: T[]): number {
     return arr.length;
 }
@@ -53,7 +53,7 @@ getSize<boolean>(arr3);
 getSize(arr3); // 굳이 <type>을 안 써도 TS는 어떤 타입인지 안다.
 ```
 
-```
+```javascript
 interface SuperPrint{
     <T>(arr:T[]):void;
 }
