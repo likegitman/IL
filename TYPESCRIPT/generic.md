@@ -36,9 +36,9 @@ superPrint(["a", "b", "c", "d"]);
 ```
 
 ## generic을 사용할 때
-> 위의 방식보다 확실히 코드가 간단해지고 유연성이 증가한다.  
-> (꼭 T라고 쓰지 않아도 되지만 T라고 쓰는것이 보편적)
-  
+위의 방식보다 확실히 코드가 간단해지고 유연성이 증가한다.  
+(꼭 T라고 쓰지 않아도 되지만 T라고 쓰는것이 보편적)
+
 ```javascript
 function getSize<T>(arr: T[]): number {
     return arr.length;
