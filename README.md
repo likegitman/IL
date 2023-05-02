@@ -90,7 +90,7 @@
 
 ### [Synchronous, Asynchronous](/JAVASCRIPT/sync&async.md)
 
-### [ESLint](/JAVASCRIPT/ESLint)
+### [ESLint](/JAVASCRIPT/ESLint.md)
 
 ## React
 
