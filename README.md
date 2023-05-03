@@ -146,7 +146,7 @@
 
 ## TypeScript
 
-### [Meaning](/TYPESCRIPT/meaning.md)
+### [TypeScript?](/TYPESCRIPT/meaning.md)
 
 ### [Types](/TYPESCRIPT/types.md)
 
