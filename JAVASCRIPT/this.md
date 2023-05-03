@@ -5,7 +5,7 @@
 # 단독 this
 ```
 let a = this;
-console.log(this); // window
+console.log(a); // window
 ```
 > 위 코드는 그저 this를 호출하기 때문에 브라우저 기준에서  
 > global object인 [object Window]를 가리킨다.
