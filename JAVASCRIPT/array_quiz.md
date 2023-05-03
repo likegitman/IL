@@ -1,4 +1,4 @@
-# Quiz
+# array Quiz
 
 ## 배열에서 문자열 만들기
 ```
@@ -54,7 +54,7 @@
 {
     const array = [1, 2, 3, 4, 5];
     // slice(start?: number, end?: number)
-    // end number를 4로하게되면 그 index값(5)이 배제되기때문에 end number를 5로한다
+    // end number를 4로하게되면 그 index값이 배제되기때문에 end number를 5로한다
     const result = array.slice(2, 5); 
     console.log(result); // output: (3) [3, 4, 5]
     console.log(array); // output: (5) [1, 2, 3, 4, 5]
