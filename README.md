@@ -19,15 +19,15 @@
 
 ### [Color](/CSS/color.md)
 
-### [Virtual_Class](/CSS/virtual_class.md)
+### [Virtual-Class](/CSS/virtual-class.md)
 
 ### [Box-Sizing](/CSS/box-sizing.md)
 
 ### [Unit](/CSS/unit.md)
 
-### [Z-index](/CSS/z-index.md)
+### [z-index](/CSS/z-index.md)
 
-### [Scroll_Bar](/CSS/scroll.md)
+### [Scroll-Bar](/CSS/scroll.md)
 
 ### [Filter](/CSS/filter.md)
 
@@ -40,11 +40,11 @@
 
 ### [Hoisitng](/JAVASCRIPT/hoisting.md)
 
-### [Variable_name-notation](/JAVASCRIPT/notation.md)
+### [Variable-Name-Notation](/JAVASCRIPT/notation.md)
 
 ### [Data-type](/JAVASCRIPT/data-type.md)
 
-### [String_function](/JAVASCRIPT/string.md)
+### [String-function](/JAVASCRIPT/string.md)
 
 ### [Operator](JAVASCRIPT/operators.md)
 
@@ -62,7 +62,7 @@
 
 ### [Array](/JAVASCRIPT/array.md)
 
-### [Array Api Quiz](/JAVASCRIPT/array_api_quiz.md)
+### [Array-Api-Quiz](/JAVASCRIPT/array-quiz.md)
 
 ### [Closure](/JAVASCRIPT/closure.md)
 
@@ -72,9 +72,9 @@
 
 ### [Promise](/JAVASCRIPT/promise.md)
 
-### [Async, Await](/JAVASCRIPT/async&await.md)
+### [Async, Await](/JAVASCRIPT/async-await.md)
 
-### [Synchronous, Asynchronous](/JAVASCRIPT/sync&async.md)
+### [Synchronous, Asynchronous](/JAVASCRIPT/sync-async.md)
 
 ### [ESLint](/JAVASCRIPT/ESLint.md)
 
@@ -104,7 +104,7 @@
 
 ### [useEffect](/REACT/useEffect.md)
 
-### [Cleanup_Function](/REACT/cleanup_function.md)
+### [Cleanup-Function](/REACT/cleanup-function.md)
 
 ### [Map](/REACT/map.md)
 
@@ -116,11 +116,11 @@
 
 ### [useCallback](/REACT/useCallback.md)
 
-### [React.memo](/REACT/React_memo.md)
+### [React.memo](/REACT/React-memo.md)
 
-### [Life_Cycle](/REACT/life_cycle.md)
+### [Life-Cycle](/REACT/life-cycle.md)
 
-### [Server_Communication](/REACT/server_commu.md)
+### [Server-Communication](/REACT/server-commu.md)
 
 ### [Router](/REACT/router.md)
 
@@ -128,15 +128,15 @@
 
 ### [QueryString](/REACT/queryString.md)
 
-### [Context_Api](/REACT/context_api.md)
+### [Context-API](/REACT/context-api.md)
 
-### [Redux_Keyword](/REACT/redux_keyword.md)
+### [Redux-Keyword](/REACT/redux-keyword.md)
 
-### [Redux_Rule](/REACT/redux_rule.md)
+### [Redux-Rule](/REACT/redux-rule.md)
 
-### [CSR, SSR](/REACT/csr_ssr.md)
+### [CSR, SSR](/REACT/csr-ssr.md)
 
-### [SPA, MPA](/REACT/spa_mpa.md)
+### [SPA, MPA](/REACT/spa-mpa.md)
 
 ### [API](/REACT/api.md)
 
@@ -156,7 +156,7 @@
 
 ### [Generic](/TYPESCRIPT/generic.md)
 
-### [Props_Types](/TYPESCRIPT/props_types.md)
+### [Props-Types](/TYPESCRIPT/props-types.md)
 
 ### [Conjugation](/TYPESCRIPT/conjugation.md)
 
