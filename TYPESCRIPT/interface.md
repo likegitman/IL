@@ -5,7 +5,7 @@
    단, 추상 클래스의 추상 메소드와 달리 abstract 키워드를 사용하지 않는다.
 
 * 기존 JavaScript
-```
+```javascript
 let user:object = {
     name: "unrin",
     age: 18,
@@ -14,7 +14,7 @@ console.log(user.age); // possible
 ```
 
 * TypeScript
-```
+```javascript
 // 기존 JS처럼 선언하고 접근하면 오류가 생기는데
 // 이럴 때 사용하는 것이 interface
 interface User {
@@ -31,7 +31,7 @@ console.log(user.age);
 ```
 
 # Declaration
-```
+```javascript
 interface 이름 {
     key: type;
     key: type;
@@ -42,7 +42,7 @@ interface 이름 {
 
 ## union
 > 기본 type
-```
+```javascript
 interface User {
     name: string;
     age: number;
@@ -58,7 +58,7 @@ let user:User = {
 
 ## optional
 > 있어도 되고 없어도 되는 속성으로 만듦(? 사용)    
-```
+```javascript
 interface User {
     name: string;
     age: number;
@@ -74,7 +74,7 @@ let user:User = {
 
 ## readonly
 > 읽기전용 속성으로 만듦(처음 생성할 때만 할당이 가능하고 후에는 재할당이 불가능)
-```
+```javascript
 interface User {
     name: string;
     age: number;
@@ -94,7 +94,7 @@ let user:User = {
 
 ## index
 > 여러 속성 정보를 받을 때 사용 (key:number, value:string)
-```
+```javascript
 interface User{
     name: string;
     age: number:
@@ -114,9 +114,8 @@ let user:User = {
 ```
 
 ## function
-> 함수의 매개변수와 리턴 값의 type을 지정할 때 사용
-
-```
+> 함수의 매개변수와 리턴 값의 type을 지정할 때 사용va
+```javascript
 interface Add {
     (num1: number, num2: number): number;
 }
@@ -147,7 +146,7 @@ isAdult(20);
 > 이러한 이유로 type이 interface보다 할 수 있는 작업이 많다.
 
 1. Type alias 만들기
-```
+```javascript
 type Hello = string; // possible
 interface Hello = string; // error
 ```
