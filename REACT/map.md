@@ -1,6 +1,11 @@
 # Map
+> React에서는 반복되는 컴포넌트를 렌더링하기 위해 JavaScript 배열의 내장함수인 map을 사용한다.  
+> 파라미터로 전달된 callback 함수를 사용하여 배열 내 각 요소를 원하는 규칙에 따라 변환한 후 새로운 배열을 생성 한다.  
+> 그래서 원래 배열에 영향을 미치지 않는다.
 
-## 컴포넌트 반복
+# Example
+
+## map()을 사용하지 않았을 때
 ```javascript
 function Winter() {
   return(
@@ -16,9 +21,7 @@ function Winter() {
 export default Winter;
 ```
 
-## map
-
-### Key값이 없을 때 (index)
+## map을 사용할 때 (Key값이 없을 때)
 ```javascript
 import React from 'react';
 
@@ -29,6 +32,7 @@ function Winter() {
         <div>
             <ul>
                 {winters.map((winter, index) => (
+                    // key값이 없을 때는 index값을 사용한다. index는 0부터 시작함
                     <li key={index}>{winter}</li>
                 ))}
             </ul>
@@ -39,7 +43,7 @@ function Winter() {
 export default Winter;
 ```
 
-### Key값을 지정했을 때
+## Key값을 지정했을 때
 ```javascript
 import { useState } from 'react';
 
