@@ -106,9 +106,7 @@
 
 ### [Cleanup-Function](/REACT/cleanup-function.md)
 
-### [Map](/REACT/map.md)
-
-### [Coins](/REACT/coins.md)
+### [map](/REACT/map.md)
 
 ### [useReducer](/REACT/useReducer.md)
 
