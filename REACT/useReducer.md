@@ -21,21 +21,6 @@ function reducer(state, action) {
 
 # useReducer를 이용한 Counter
 
-## App.js
-```javascript
-import ReduCounter from "./ReduCounter";
-
-function App() {
-  return (
-    <div>
-      <ReduCounter />
-    </div>
-  );
-}
-
-export default App;
-```
-
 ## ReduCounter.js
 ```javascript
 import React, { useReducer } from 'react';
