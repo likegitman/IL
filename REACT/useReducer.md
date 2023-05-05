@@ -40,31 +40,35 @@ export default App;
 ```javascript
 import React, { useReducer } from 'react';
 
+// 오타 방지
+const INCREASE = "INCREASE";
+const DECREASE = "DECREASE";
+
 function reducer(state, action){
     // action.type에 따라 다른 작업 수행
     switch(action.type){
-        case 'INCREMENT':
-            return {value: state.value + 1};
+        case INCREASE:
+            return state + 1;
 
-        case 'DECREMENT':
-            return {value: state.value - 1};
+        case DECREASE:
+            return state - 1;
 
         default:
-            // 아무것도 해당되지 않을 때 기존 상태 변환
+            // 아무것도 해당되지 않을 때 기존 state 반환
             return state;
     }
 }
 
 function ReduCounter (){
-    const [state, dispatch]=useReducer(reducer, {value: 0});
+    const [state, dispatch]=useReducer(reducer, 0);
     
     return (
         <div>
             <p>
-                현재 카운터 값은  <b>{state.value}</b>입니다.
+                Counter : <b>{state}</b>입니다.
             </p>
-            <button onClick={()=>dispatch({type: 'INCREMENT'})}>+1</button>
-            <button onClick={()=>dispatch({type: 'DECREMENT'})}>-1</button>
+            <button onClick={()=>dispatch({type: INCREASE})}>+1</button>
+            <button onClick={()=>dispatch({type: INCREASE})}>-1</button>
         </div>
     );
 };
@@ -94,7 +98,7 @@ const ReduInfo=()=> {
   const { name, nikname } = state;
 
   const onChange = (e) => {
-    // useReducer는 어떤 값도 사용할 수 있어 e.target.value를 안 해도 된다.
+    // useReducer는 어떤 값 사용할 수 있어 e.target.value를 안 해도 된다.
     dispatch(e.target);
   };
 
@@ -119,10 +123,6 @@ export default ReduInfo;
 # useReducer를 이용한 입출금 시스템
 ```javascript
 import React, { useReducer, useState } from 'react';
-
-// reducer - state를 업데이트 하는 역할 (은행)
-// dispatch - state 업데이트를 위한 요구
-// action - dispatch의 요구내용
 
 const ACTION_TYPES = {
     deposit: 'deposit',
@@ -189,7 +189,7 @@ function ReduBank() {
 export default ReduBank;
 ```
 
-# useReducer를 이용한 출석부 (여러개의 state)
+# useReducer를 이용한 출석부 (여러개의 state다루기)
 
 # ReduAttendance.js
 ```javascript
