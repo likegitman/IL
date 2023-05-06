@@ -1,7 +1,7 @@
 # Class
 
 ## Class Declarations and object
-```
+```javascript
 // class declarations
 class Person {
   // constructor
@@ -24,7 +24,7 @@ woonrin.speak(); // output: woorin hello!!
 ```
 
 ## Base 
-```
+```javascript
 class Counter {
     constructor(runEvery5Times) {
         this.counter = 0;
@@ -59,7 +59,7 @@ const aleartSomething = new Counter(aleartSomething);
 ```
 
 ## Getter and Setters 
-```
+```javascript
 class User {
   constructor(firstName, lastName, age) {
     this.firstName = firstName;
@@ -84,7 +84,7 @@ console.log(user1.age); // output: error
 > constructor없이 field를 정의할 때  
   그냥 정의한다면 publicfield -> 외부에서 접근이 가능함  
   #를 붙여 정의한다면 privatefield -> 외부에서 접근이 불가능하고 class내부에서만 접근이 가능함
-```
+```javascript
  // constructor없이 field를 정의할 때
 class Experiment {
   publicField = 2;
@@ -116,7 +116,7 @@ Article.printPublisher(); // output: woonrin
 ```
 
 ## Inherit
-```
+```javascript
 class Share {
   constructor(width, height, color) {
     this.width = width;
