@@ -1,7 +1,7 @@
 # Array
 
 ## Declaration
-```
+```javascript
 // way 1
 const arr1 = new Array();
 // way 2
@@ -9,7 +9,7 @@ const arr2 = [1, 2];
 ```
 
 ## Index position
-```
+```javascript
 const figure = ['■', '▲'];
 console.log(figure); // output: (2) ["■", "▲"]
 console.log(figure.length); // output: 2
@@ -21,7 +21,7 @@ console.log(figure[figure.length - 1]); // output: ▲
 
 ## Looping over an array
 * for
-```
+```javascript
 const figure = ['■', '▲'];
 
 for (let i = 0; i < figure.length; i++) {
@@ -30,7 +30,7 @@ for (let i = 0; i < figure.length; i++) {
 ```
 
 * for of
-```
+```javascript
 const figure = ['■', '▲'];
 
 for(let figure of figure) {
@@ -39,7 +39,7 @@ for(let figure of figure) {
 ```
 
 * forEach
-```
+```javascript
 const figure = ['■', '▲'];
 
 figure.forEach(function (figure, index) {
@@ -52,7 +52,7 @@ figure.forEach((figure) => console.log(figure)); // output: ■ \n ▲
 
 ## Addtion, Deletion, Copy
 * pop and push
-```
+```javascript
 const figure = ['■', '▲'];
 
 // push: add an item to the end
@@ -66,7 +66,7 @@ console.log(figure); // output: (2) ['■', '▲']
 ```
 
 * unshift and shift
-```
+```javascript
 // ※ unshift, shift are slower than push, pop
 
 const figure = ['■', '▲'];
@@ -82,7 +82,7 @@ console.log(figure); // output: (2) ['■', '▲']
 ```
 
 * splice
-```
+```javascript
 const figure = ['■', '▲'];
 
 // splice: remove an item by index position
@@ -97,7 +97,7 @@ console.log(figure); // output: (5) ['■', '◈', '＃', '♥', '♣']
 ```
 
 * combine two arrays
-```
+```javascript
 const figure = ['■', '▲'];
 const figure2 = ['＆', '§'];
 const newFigure = figure.concat(figure2);
@@ -107,7 +107,7 @@ console.log(newFigure); // output: (4) ['■', '▲', '＆', '§']
 ## Searching
 
 * indexOf
-```
+```javascript
 const figure = ['■', '▲', '◆'];
 
 // indexOf: 몇번째 index에 있는지 나온다
@@ -119,7 +119,7 @@ console.log(figure.indexOf('▣')); // output: -1
 ```
 
 * includes
-```
+```javascript
 const figure = ['■', '▲', '◆'];
 // includes: index값이 포합되어있는지 나타낸다
 console.log(figure.includes('■')); // output: true
@@ -127,7 +127,7 @@ console.log(figure.includes('★')); // output: false
 ```
 
 * lastIndexOf
-```
+```javascript
 const figure = ['■', '▲', '◆'];
 
 figure.push('■');
