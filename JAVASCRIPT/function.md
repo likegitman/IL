@@ -38,7 +38,7 @@ function showMessage(message, from) {
 showMessage('hello'); // output: hello by undefined
 ```
 
-```
+```javascript
 function showMessage(message, from = 'unknown') { // 사용자가 지정하지않을 때 값을 대신할 수 있음
   consolo.log(`${message} by ${from}`);
 }
