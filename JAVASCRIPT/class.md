@@ -97,7 +97,7 @@ console.log(experiment.privateField); // output: undefined
 
 ## Static
 > object마다 할당이 되는게 아닌 class자체에 붙어있음
-```
+```javascript
 class Article {
   static publisher = 'woonrin';
   constructor(articleNumber) {
