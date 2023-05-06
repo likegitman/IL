@@ -1,4 +1,4 @@
-# Props_Type
+# Props Type
 
 # Basic
 
