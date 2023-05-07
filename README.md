@@ -31,6 +31,8 @@
 
 ### [Filter](/CSS/filter.md)
 
+### [Background](/CSS/background.md)
+
 ## JavaScript
 ### [Const, Let, Var](/JAVASCRIPT/declaration.md)
 
