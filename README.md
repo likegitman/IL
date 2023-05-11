@@ -132,10 +132,6 @@
 
 ### [Context-API](/REACT/context-api.md)
 
-### [Redux-Keyword](/REACT/redux-keyword.md)
-
-### [Redux-Rule](/REACT/redux-rule.md)
-
 ### [CSR, SSR](/REACT/csr-ssr.md)
 
 ### [SPA, MPA](/REACT/spa-mpa.md)
@@ -168,3 +164,11 @@
 ### [Next?](/NEXT/next.md)
 
 ### [Routing](/NEXT/routing.md)
+
+# Redux
+
+### [Redux?](/REDUX/redux.md)
+
+### [Redux-Keyword](/REDUX/redux-keyword.md)
+
+### [Redux-Rule](/REDUX/redux-rule.md)
