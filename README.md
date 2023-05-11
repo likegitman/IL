@@ -172,3 +172,5 @@
 ### [Redux-Keyword](/REDUX/redux-keyword.md)
 
 ### [Redux-Rule](/REDUX/redux-rule.md)
+
+### [Module](/REDUX/module.md)
