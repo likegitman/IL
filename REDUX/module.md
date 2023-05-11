@@ -12,8 +12,8 @@ const INCREASE = "counter/INCREASE";
 const DECREASE = "counter/DECREASE";
 
 // export를 붙여 다른 파일에서 action 생성 함수를 불러올 수 있다.
-export const increase = () => ({type: INCREASE"});
-export const decrease = () => ({type: DECREASE"});
+export const increase = () => ({type: INCREASE});
+export const decrease = () => ({type: DECREASE});
 
 // reducer함수의 초기상태
 const initialState = 0;
