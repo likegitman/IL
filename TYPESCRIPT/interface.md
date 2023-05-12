@@ -91,7 +91,7 @@ let user:User = {
   birthday: "2000.01.01",
 }
 
-// user.birthday="2000.01.02"; // error
+user.birthday="2000.01.02"; // error
 ```
 
 ## index
@@ -116,7 +116,7 @@ let user:User = {
 ```
 
 ## function
-> 함수의 매개변수와 리턴 값의 type을 지정할 때 사용va
+> 함수의 매개변수와 리턴 값의 type을 지정할 때 사용
 ```javascript
 interface Add {
     (num1: number, num2: number): number;
