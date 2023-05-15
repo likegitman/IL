@@ -116,6 +116,8 @@
 
 ### [map](/REACT/map.md)
 
+### [UUID](/REACT/uuid.md)
+
 ### [useReducer](/REACT/useReducer.md)
 
 ### [useMemo](/REACT/useMemo.md)
