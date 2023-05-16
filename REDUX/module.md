@@ -52,3 +52,24 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 ```
+
+## rootReducer store에 넣고 프로젝트에 store 
+```
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import {legacy_createStore as createStore } from 'redux';
+import App from './App';
+import rootReducer from './modules';
+
+const store = createStore(rootReducer);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  // Provider를 이용해 store를 프로젝트에 적용시킨다.
+  // Provider는 sotre를 props로 전달해 주어야한다.
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+```
