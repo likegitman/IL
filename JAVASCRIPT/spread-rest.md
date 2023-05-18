@@ -29,7 +29,7 @@ console.log(array); // output: [3, 4, 5]
 
 console.log(...array) // output: 3, 4, 5
 
-console.log(sum(...array)); // output: 60
+console.log(mul(...array)); // output: 60
 
 let newArray = [...array, 6];
 console.log(newArray); // output: [3, 4, 5, 6]
