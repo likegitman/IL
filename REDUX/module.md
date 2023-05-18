@@ -53,8 +53,8 @@ const rootReducer = combineReducers({
 export default rootReducer;
 ```
 
-## rootReducer store에 넣고 프로젝트에 store 
-```
+## 프로젝트에 store 적용하기
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
@@ -62,14 +62,47 @@ import {legacy_createStore as createStore } from 'redux';
 import App from './App';
 import rootReducer from './modules';
 
+// store 생성
 const store = createStore(rootReducer);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // Provider를 이용해 store를 프로젝트에 적용시킨다.
-  // Provider는 sotre를 props로 전달해 주어야한다.
+  // Provider는 store를 props로 전달해 주어야한다.
   <Provider store={store}>
     <App />
   </Provider>
 );
+```
+
+## createAction, handleActions
+> createAction을 사용하면 매번 객체를 직접 만들어 줄 필요없이 간단하게 action 생성 함수를 만들 수 있고  
+> handleAction를 사용하여 각 액션마다 업데이트 함수를 `switch/case`문이 아닌 간단하게 코드를 짤 수 있다.
+```javascript
+import { createAction, handleActions } from "redux-actions";
+
+const INCREASE = "counter/INCREASE";
+const DECREASE = "counter/DECREASE";
+
+export const increase = createAction(INCREASE);
+export const decrease = createAction(DECREASE);
+
+const initialState = {
+    number: 0,
+}
+
+// 다루어야하는 업데이트 함수가 여러개라면 handleActions를 사용해야하고 handleAction을 사용하면 오류가 발생한다.
+const counter = handleActions(
+    {
+        [INCREASE]: (state, action) => ({
+            number: state.number + 1,
+        }),
+        [DECREASE]: (state, action) => ({
+            number: state.number - 1,
+        }),
+    },
+    initialState
+);
+
+export default counter;
 ```
