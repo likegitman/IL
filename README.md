@@ -70,6 +70,8 @@
 
 ### [Array-Api-Quiz](/JAVASCRIPT/array-quiz.md)
 
+### [Spread-Rest Operator](/JAVASCRIPT/spread-rest.md)
+
 ### [Closure](/JAVASCRIPT/closure.md)
 
 ### [JSON](/JAVASCRIPT/json.md)
