@@ -52,7 +52,7 @@ export default connect(
 ```
 > mapDispatchProps에 해당하는 파라미터를 함수 형태가 아닌 action생성 함수로 이루어진 객체 형태로 넣어주면  
 > connect함수가 bindActionCreators 작업을 대신해 준다.
-```
+```javascript
 export default connect(
   state => ({
     number: state.counter.number,
@@ -66,9 +66,9 @@ export default connect(
 ```
 
 ## useSelector, useDispatch
-> connect함수를 사용하지 않고도 redux의 상태를 조회할 수 있는 hooks이다.  
-> 상태 선택 함수의 형태는 mapStateProps의 형태와 같고  
-> 컴포넌트 내부에서 store의 내장 함수인 dispatch를 사용할 수 있게 해준다. Container Components에서  
+> useSelector는 connect함수를 사용하지 않고도 redux의 상태를 조회할 수 있는 hooks이다.  
+> 상태 선택 함수의 형태는 mapStateProps의 형태와 같다.  
+> useDispatch는 컴포넌트 내부에서 store의 내장 함수인 dispatch를 사용할 수 있게 해준다. Container Components에서  
 > action을 dispatch해야할 때 주로 사용한다.
 ```javascript
 import React, { useCallback } from 'react';
