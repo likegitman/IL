@@ -142,15 +142,9 @@
 
 ### [SPA, MPA](/REACT/spa-mpa.md)
 
-### [API](/REACT/api.md)
-
-### [REST](/REACT/rest.md)
-
 ### [Pagination](/REACT/pagination.md)
 
 ### [Portal](/REACT/portal.md)
-
-### [Web-Storage](/REACT/webstorage.md)
 
 ## TypeScript
 
@@ -168,12 +162,12 @@
 
 ### [Conjugation](/TYPESCRIPT/conjugation.md)
 
-# NEXT
+## NEXT
 ### [Next?](/NEXT/next.md)
 
 ### [Routing](/NEXT/routing.md)
 
-# Redux
+## Redux
 
 ### [Redux?](/REDUX/redux.md)
 
@@ -182,3 +176,9 @@
 ### [Redux-Rule](/REDUX/redux-rule.md)
 
 ### [Module](/REDUX/module.md)
+
+## CS
+
+### [API](/CS/api.md)
+### [REST](/CS/rest.md)
+### [Web-Storage](/CS/web-storage.md)
