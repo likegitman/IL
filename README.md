@@ -96,7 +96,7 @@
 
 ### [Component](/REACT/component.md)
 
-### [props](/REACT/props.md)
+### [Props](/REACT/props.md)
 
 ### [import-export](/REACT/import-export.md)
 
@@ -116,7 +116,7 @@
 
 ### [Cleanup-Function](/REACT/cleanup-function.md)
 
-### [map](/REACT/map.md)
+### [Map](/REACT/map.md)
 
 ### [UUID](/REACT/uuid.md)
 
@@ -149,6 +149,8 @@
 ### [Pagination](/REACT/pagination.md)
 
 ### [Portal](/REACT/portal.md)
+
+### [Web-Storage](/REACT/webstorage.md)
 
 ## TypeScript
 
