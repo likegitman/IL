@@ -167,6 +167,10 @@
 
 ### [Routing](/NEXT/routing.md)
 
+### [Style](/NEXT/style.md)
+
+### [Custom-App, Document](/NEXT/custom.md)
+
 ## Redux
 
 ### [Redux?](/REDUX/redux.md)
