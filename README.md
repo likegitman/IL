@@ -173,6 +173,8 @@
 
 ### [Redirect, Rewrite](/NEXT/redirect-rewrite.md)
 
+### [getServerSideProps](/NEXT/getServerSideProps.md)
+
 ## Redux
 
 ### [Redux?](/REDUX/redux.md)
