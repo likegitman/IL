@@ -171,6 +171,8 @@
 
 ### [Custom-App, Document](/NEXT/custom.md)
 
+### [Redirect, Rewrite](/NEXT/redirect-rewrite.md)
+
 ## Redux
 
 ### [Redux?](/REDUX/redux.md)
