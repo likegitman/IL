@@ -9,7 +9,7 @@
 ### profile/[name].js
 ```js
 import {useRouter} from "next/router";
-import Seo
+import Seo from "../components/Seo";
 
 function DetailName() {
   const router = useRouter();
