@@ -21,3 +21,8 @@ function DetailName() {
   );
 }
 ```
+
+# Catch All
+> catch all URL은 무엇이든지 가져오는 URL인데 dynamic routes와 달리 하나의 변수뿐만 아니라  
+> 여러개의 변수들을 가지고오고싶을 때 주로 사용한다. catch all을 하는 방법
+> 파일명을 `/my-prifile/[...params]`와 같이 `...`을 넣주면 catch all을 할 수 있다.
