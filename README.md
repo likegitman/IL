@@ -146,6 +146,8 @@
 
 ### [Portal](/REACT/portal.md)
 
+### [Vite](/REACT/vite.md)
+
 ## TypeScript
 
 ### [TypeScript?](/TYPESCRIPT/meaning.md)
