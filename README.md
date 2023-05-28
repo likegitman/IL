@@ -86,6 +86,8 @@
 
 ### [ESLint](/JAVASCRIPT/ESLint.md)
 
+### [Prettier](/JAVASCRIPT/prettier.md)
+
 ## React
 
 ### [React?](/REACT/react.md)
