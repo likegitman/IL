@@ -75,9 +75,42 @@ root.render(
 );
 ```
 
-## createAction, handleActions
-> createAction을 사용하면 매번 객체를 직접 만들어 줄 필요없이 간단하게 action 생성 함수를 만들 수 있고  
-> handleAction를 사용하여 각 액션마다 업데이트 함수를 `switch/case`문이 아닌 간단하게 코드를 짤 수 있다.
+## createAction
+> createAction을 사용하면 매번 객체를 직접 만들어 줄 필요없이 간단하게 action 생성 함수를 만들 수 있다.  
+> 단, 타입을 정의한다면 상관없지만 타입을 변수로 만들지 않고 createAction을 사용하면 action 생성 함수의  
+> type으로 접근을 할 수 있다.
+```js
+import {createAction} from "react-actions";
+
+export const increase = createAction("counter/INCREASE");
+export const decrease = createAction("counter/DECREASE");
+
+const initialState = {
+    number: 0
+};
+
+const counter = (state = initialState, action) => {
+    switch(action.type) {
+        case increase.type:
+          return {
+            number: state.number + 1,
+          };
+        case decrease.type:
+          return {
+            number: state.number - 1,
+          }
+        default:
+          return state;
+    }
+}
+
+export default counter;
+```
+
+## handleAction(s)
+
+> handleAction을 사용하여 각 액션마다 업데이트 함수를 `switch/case`문이 아닌 간단하게 코드를 짤 수 있다.
+> 단, 다루어야하는 업데이트 함수가 여러개라면 handleActions를 사용해야하고 handleAction을 사용하면 오류가 발생한다.
 ```javascript
 import { createAction, handleActions } from "redux-actions";
 
@@ -91,7 +124,6 @@ const initialState = {
     number: 0,
 }
 
-// 다루어야하는 업데이트 함수가 여러개라면 handleActions를 사용해야하고 handleAction을 사용하면 오류가 발생한다.
 const counter = handleActions(
     {
         [INCREASE]: (state, action) => ({
