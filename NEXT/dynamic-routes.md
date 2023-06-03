@@ -24,5 +24,49 @@ function DetailName() {
 
 # Catch All
 > catch all URL은 무엇이든지 가져오는 URL인데 dynamic routes와 달리 하나의 변수뿐만 아니라  
-> 여러개의 변수들을 가지고오고싶을 때 주로 사용한다. catch all을 하는 방법
+> 여러개의 변수들을 가지고오고싶을 때 주로 사용한다. catch all url을 하는 방법은
 > 파일명을 `/my-prifile/[...params]`와 같이 `...`을 넣주면 catch all을 할 수 있다.
+> catch all url을 사용하면 query는 더이상 문자열이 아닌 객체를 반환한다.
+
+# Example
+
+## router사용
+### profile/[...parmas]
+```js
+import {useRouter} from "next/router";
+import Seo from "../components/Seo";
+
+function DetailName() {
+  const router = useRouter();
+  const [name] = router.query.parmas || [];
+  
+  return (8
+    <Seo title={name}/>
+    <h2>{name}</h2>
+  );
+}
+```
+
+## getServerSideProps사용
+### profile/[...parmas]
+```js
+import {useRouter} from "next/router";
+import Seo from "../components/Seo";
+
+function DetailName({params}) {
+  const [name] = params || [];
+  
+  return (
+    <Seo title={name}/>
+    <h2>{name}</h2>  
+  );
+}
+
+export function getServerSideProps({params: {params}}) {
+  return {
+    props: {
+      params,
+    }
+  }
+}
+```
