@@ -58,6 +58,8 @@
 
 ### [Function](/JAVASCRIPT/function.md)
 
+### [Replace](/JAVASCRIPT/replace.md)
+
 ### [Event-Handling, Event-Bubbling, Event-Capturing](/JAVASCRIPT/e-handling-bubbling-capturing.md)
 
 ### [Class](/JAVASCRIPT/class.md)
