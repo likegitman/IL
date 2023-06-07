@@ -10,10 +10,16 @@
 
 # Example
 
-### .env
+### .env 기입
 ```js
 REACT_APP_API_KEY = ...;
 ```
+
+> React에서 `.env`파일을 프로젝트의 최상단에 생성해준다.  
+> `.env`파일에는 api key같이 민감한 값을 넣어주면 되는데 react가 아닌 환경에서는  
+> `이름=값`으로 기입하면 되지만 react에서 기입할 때는 REACT_APP을 붙여서 기입하여야한다.
+> 이름과 값 사이엔 `=`말고는 띄어쓰기를 넣지 않는다.
+`REACT_APP_API_KEY = ...`
 
 ### .env 사용
 ```js
@@ -54,14 +60,9 @@ function NewsList() {
 export default NewsList;
 ```
 
-> React에서 `.env`파일을 프로젝트의 최상단에 생성해준다.  
-> `.env`파일에는 api key같이 민감한 값을 넣어주면 되는데 react가 아닌 환경에서는  
-> `이름=값`으로 기입하면 되지만 react에서 기입할 때는 REACT_APP을 붙여서 기입하여야한다.
-> 이름과 값 사이엔 `=`말고는 띄어쓰기를 넣지 않는다.
-`REACT_APP_API_KEY = ...`
-
 > js파일에서 사용할 때는 `process.env`를 붙여 접근하여 사용한다.  
 `process.env.REACT_APP_API_KEY`;
 
+### .env 숨기기 (.gitignore)
 > 가장 중요한 `.env`을 숨기는 방법은 `.gitignore`파일에 `.env`글자를 추가하면 github에서  
 > `.env`파일이 보이지 않게된다.
