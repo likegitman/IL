@@ -78,6 +78,8 @@
 
 ### [JSON](/JAVASCRIPT/json.md)
 
+### [JWT](/JAVASCRIPT/jwt.md)
+
 ### [Callback](/JAVASCRIPT/callback.md)
 
 ### [Promise](/JAVASCRIPT/promise.md)
