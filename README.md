@@ -36,7 +36,7 @@
 ### [Background](/CSS/background.md)
 
 ## JavaScript
-### [Const, Let, Var](/JAVASCRIPT/declaration.md)
+### [Declaration](/JAVASCRIPT/declaration.md)
 
 ### [Scope](/JAVASCRIPT/scope.md)
 
