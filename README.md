@@ -199,7 +199,15 @@
 
 ### [Redux-Rule](/REDUX/redux-rule.md)
 
+### [Dev-Tools](/REDUX/dev-tools.md)
+
+### [Store](/REDUX/store.md)
+
 ### [Module](/REDUX/module.md)
+
+### [Container](/REDUX/container.md)
+
+### [Middleware](/REDUX/middleware.md)
 
 ## CS
 
