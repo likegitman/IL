@@ -9,7 +9,7 @@
 ### yarn
 `yarn add redux-devtools-extension`
 
-* 먼저 웹 브라우저에서 확장 프로그램을 설치해주어야한다!
+### 위의 명령어를 치기전에 먼저 웹 브라우저에서 확장 프로그램을 설치해주어야한다!
 
 # 기능
 ### 1. TimeTRavel
