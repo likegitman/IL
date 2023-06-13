@@ -58,7 +58,9 @@
 
 ### [Function](/JAVASCRIPT/function.md)
 
-### [Replace](/JAVASCRIPT/replace.md)
+### [Generator](/JAVASCRIPT/generator.md)
+
+### [replace](/JAVASCRIPT/replace.md)
 
 ### [Event-Handling, Event-Bubbling, Event-Capturing](/JAVASCRIPT/e-handling-bubbling-capturing.md)
 
