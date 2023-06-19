@@ -140,6 +140,8 @@
 
 ### [React.memo](/REACT/React-memo.md)
 
+### [React.lazy](/REACT/lazy.md)
+
 ### [Life-Cycle](/REACT/life-cycle.md)
 
 ### [Server-Communication](/REACT/server-commu.md)
