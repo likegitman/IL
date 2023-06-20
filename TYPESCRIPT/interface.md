@@ -42,8 +42,8 @@ interface 이름 {
 
 # Union, Optional, Readonly, Index, Function
 
-## union
-> 기본 type
+### union
+기본 type
 ```javascript
 interface User {
     name: string;
@@ -58,8 +58,8 @@ let user:User = {
 }
 ```
 
-## optional
-> 있어도 되고 없어도 되는 속성으로 만듦(? 사용)    
+### optional
+있어도 되고 없어도 되는 속성으로 만듦(? 사용)    
 ```javascript
 interface User {
     name: string;
@@ -74,8 +74,8 @@ let user:User = {
 }
 ```
 
-## readonly
-> 읽기전용 속성으로 만듦(처음 생성할 때만 할당이 가능하고 후에는 재할당이 불가능)
+### readonly
+읽기전용 속성으로 만듦(처음 생성할 때만 할당이 가능하고 후에는 재할당이 불가능)
 ```javascript
 interface User {
     name: string;
@@ -94,8 +94,8 @@ let user:User = {
 user.birthday="2000.01.02"; // error
 ```
 
-## index
-> 여러 속성 정보를 받을 때 사용 (key:number, value:string)
+### index
+여러 속성 정보를 받을 때 사용 (key:number, value:string)
 ```javascript
 interface User{
     name: string;
@@ -115,7 +115,7 @@ let user:User = {
 }
 ```
 
-## function
+### function
 > 함수의 매개변수와 리턴 값의 type을 지정할 때 사용
 ```javascript
 interface Add {
