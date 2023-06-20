@@ -13,7 +13,7 @@ const addOneThunk = x => () => addOne(x);
 const fn = addOneThunk(1);
 setTimeout(()=> {
   const value = fn(); // fn이 실행되는 시점에 연산한다.
-  console.log(value); // 
+  console.log(value);
 }, 1000);
 ```
 
