@@ -8,17 +8,17 @@
 
 ```javascript
 function App() {
-    return (
-        <div>
-            <h1
-                style={{
-                    color:'red',
-                    // Kebab case가 아닌 Camel case 표기법으로 작성해야 됨
-                    textAlign: "center"
-                }}
-            >Hello React!!</h1>
-        </div>
-    );
+  return (
+    <div>
+      <h1
+        style={{
+          color:'red',
+          // Kebab case가 아닌 Camel case 표기법으로 작성해야 됨
+          textAlign: "center"
+        }}
+        >Hello React!!</h1>
+      </div>
+  );
 }
 
 export default App;
@@ -117,26 +117,53 @@ export default App;
 > JS 안에 CSS 를 작성하는 것을 말한다. style을 적용하고자 하는 태그나 컴포넌트를
 > styled-components로 감싸면 style이 적용된다.  
 
-## Installation
+### Installation
 `yarn add styled-components`
 
-## App.js
+### App.js
 ```javascript
 import styled from 'styled-components';
 
 // 백틱으로 감싸줘야 함
 const StyleBox = styled.div`
-    color: red;
+  color: red;
 `;
 
 function App() {
-    return (
-        <div>
-            <StyleBox>
-                <h1 className={style.hello}>Hello React!!</h1>
-            </StyleBox>
-        </div>
-    );
+  return (
+    <div>
+      <StyleBox>
+        <h1 className={style.hello}>Hello React!!</h1>
+      </StyleBox>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## 특정 값을 props로 넘겨줘 다양한 기능을 구현할 수도 있다.
+> props를 대문자로 쓰면 오류가 발생한다. ( props는 소문자로 )
+### App.js
+```js
+import styled from 'styled-components';
+
+// 백틱으로 감싸줘야 함
+const StyleBox = styled.div`
+  color: ${(props)=>};
+`;
+
+function App() {
+
+  const [clicked, setClicked] = useState(false);
+  
+  return (
+    <div>
+      <StyleBox >
+        <h1 className={style.hello}>Hello React!!</h1>
+      </StyleBox>
+    </div>
+  );
 }
 
 export default App;
