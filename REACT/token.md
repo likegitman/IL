@@ -6,4 +6,8 @@
 ## Access Token
 > 보호된 정보들에 접근할 수 있는 권한부여에 사용되는 token이다. 클라이언트가 처음 인증을 받을 때 `ex)로그인`
 > access token과 refresh token 둘 다 받게 되지만 실제로 권한을 얻는 데에 사용하는 토큰은 access token이다.
-> 권한을 부여받는 데에는 access token만 있으면 된다.
+> 권한을 부여받는 데에는 access token만 있으면 된다. 하지만 토큰이 탈취되면 안 되기 때문에 만료기간을 짧게 설정해야한다.
+
+## Refresh Token
+access token의 만료기간을 짧게하고 이 access token이 만료될 때마다 refresh token을 통해 말 그대로 access token을 refresh한다.  
+`__access token__은 로그인 정보에 접근할 수 있는 카드키, refresh token은 카드키 재발급이라고 생각하면 된다.`
