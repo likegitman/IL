@@ -1,5 +1,5 @@
 # Conditional
-## if 
+## if-else
 ```js
 const name = 'Mike';
 if (name === 'Mike') {
