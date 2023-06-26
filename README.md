@@ -96,6 +96,8 @@
 
 ### [Prettier](/JAVASCRIPT/prettier.md)
 
+### [Web-Storage](/JAVASCRIPT/web-storage.md)
+
 ## React
 
 ### [React?](/REACT/react.md)
@@ -219,4 +221,3 @@
 
 ### [API](/CS/api.md)
 ### [REST](/CS/rest.md)
-### [Web-Storage](/CS/web-storage.md)
