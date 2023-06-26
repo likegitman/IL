@@ -78,6 +78,8 @@
 
 ### [Closure](/JAVASCRIPT/closure.md)
 
+### [Scroll](/JAVASCRIPT/scroll.md)
+
 ### [JSON](/JAVASCRIPT/json.md)
 
 ### [JWT](/JAVASCRIPT/jwt.md)
