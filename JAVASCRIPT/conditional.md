@@ -1,6 +1,6 @@
 # Conditional
-* if 
-```
+## if 
+```js
 const name = 'Mike';
 if (name === 'Mike') {
   console.log('Oh! Mike!');
@@ -11,8 +11,8 @@ if (name === 'Mike') {
 }
 ```
 
-* switch-case
-```
+## switch-case
+```js
 const name = 'Mike';
 switch(name) {
   case 'Mike':
