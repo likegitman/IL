@@ -1,8 +1,11 @@
 # Function
+> 어떠한 목적을 가진 작업들을 수행하는 코드들이 모인 블럭으로 이해하면 된다.  
+> 재사용이 가능한 영역을 정의하고, 정보영역을 캡슐화하는데 사용된다. 이 말은 호출을 여러번 하는 것이 가능하단 것이다.  
+> 기본적으로 입력 -> 함수 -> return -> 출력의 형태를 가진다.
 
-## Use
-```javascript
-// declaration
+## Example
+```js
+// 선언
 fucntion printHello() {
   console.log('Hello');
 } 
@@ -12,7 +15,7 @@ function add(a, b) {
   return sum;
 }
 
-// call
+// 호출
 printanything(); // output: Hello
 
 const result = add(1, 2);
@@ -20,13 +23,13 @@ console.log(result) // output: 3
 ```
 
 ## Parameters
-```javascript
+```js
 function changeName(obj) {
   obj.name = 'Woonrin'
 }
 const Name = { name : 'Minsu' };
 changeName(Name);
-console.log(Name); // output: Woonrin
+console.log(Name.name); // output: Woonrin
 ```
 
 ## Default parameters
