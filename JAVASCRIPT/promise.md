@@ -5,16 +5,39 @@
 > `state: rejected, result: error`의 형태가 된다.
 
 ## Example
-
+> 다음 코드에서 then문에서 result만 실행된다.
 ```js
 const promise = new Promise((resolve, reject) => {
     console.log('doing something...');
     setTimeout(() => {
         // 성공
         resolve('woonrin');
-        // 실패(error)
-        reject(new Error('no network'));
     }, 2000);
 });
+
+promise.then(
+  function(result) {},
+  function(error) {},
+)
+```
+
+> 더욱 가독성을 높이기 위해서는 then-catch 문을 사용할 수 있다.
+```js
+const promise = new Promise((resolve, reject) => {
+    console.log('doing something...');
+    setTimeout(() => {
+        // 성공
+        resolve('woonrin');
+    }, 2000);
+});
+
+// finally는 성공이든 실패든 해당 코드를 실행한다.
+promise.then(
+  function(result) {}
+).catch(
+  function(error) {}
+).finally(
+  function() {}
+)
 ```
 
