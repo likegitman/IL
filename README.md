@@ -188,6 +188,8 @@
 
 ### [Conjugation](/TYPESCRIPT/conjugation.md)
 
+### [typeof, keyof](/TYPESCRIPT/type-key-of.md)
+
 ## NEXT
 ### [Next?](/NEXT/next.md)
 
