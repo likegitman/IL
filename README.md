@@ -74,6 +74,8 @@
 
 ### [Array-Api-Quiz](/JAVASCRIPT/array-quiz.md)
 
+### [every, some](/JAVASCRIPT/every-some.md)
+
 ### [Spread-Rest Operator](/JAVASCRIPT/spread-rest.md)
 
 ### [Closure](/JAVASCRIPT/closure.md)
