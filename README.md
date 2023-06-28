@@ -227,3 +227,6 @@
 
 ### [API](/CS/api.md)
 ### [REST](/CS/rest.md)
+### [SEO](/CS/seo.md)
+### [MSA](/CS/msa.md)
+### [Framework, Library](/CS/framework-library.md)
