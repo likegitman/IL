@@ -197,7 +197,11 @@
 
 ### [Routing](/NEXT/routing.md)
 
+### [Dynamic-Routes](/NEXT/dynamic-routes.md)
+
 ### [Style](/NEXT/style.md)
+
+### [Image](/NEXT/image.md)
 
 ### [Custom-App, Document](/NEXT/custom.md)
 
@@ -226,7 +230,11 @@
 ## CS
 
 ### [API](/CS/api.md)
+
 ### [REST](/CS/rest.md)
+
 ### [SEO](/CS/seo.md)
+
 ### [MSA](/CS/msa.md)
+
 ### [Framework, Library](/CS/framework-library.md)
