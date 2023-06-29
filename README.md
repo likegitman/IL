@@ -207,7 +207,7 @@
 
 ### [Redirect, Rewrite](/NEXT/redirect-rewrite.md)
 
-### [getServerSideProps](/NEXT/getServerSideProps.md)
+### [Pre-Rendering](/NEXT/pre-rendering.md)
 
 ## Redux
 
