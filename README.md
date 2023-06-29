@@ -17,8 +17,6 @@
 
 ### [Text](/CSS/text.md)
 
-### [Color](/CSS/color.md)
-
 ### [Virtual-Class](/CSS/virtual-class.md)
 
 ### [Box-Sizing](/CSS/box-sizing.md)
