@@ -2,7 +2,7 @@
 > PreRendering이란 `SSR`을 구현하는 NextJS의 특징이라고 볼 수 있다.  
 > SSR 방식은 미리 서버에서 HTML파일로 랜더링해 클라이언트로 전송해주는 방식이다.  
 > 이로인해 서버> > 와 통신을 할 때 미리 만들어둔 HTML파일을 전달받아 React에서 쓰이는  
-> CSR보다 랜더링 속도가 빠르다. 그래서 Pre-Rendering이라하고고 NextJS에서는 Pre-Rendering 방법을 2가지 제공한다.
+> CSR보다 랜더링 속도가 빠르다. 그래서 Pre-Rendering이라하고 NextJS에서는 Pre-Rendering 방법을 2가지 제공한다.
 
 ## 1. Static Generation
 > 정적 생성 방식이다. 블로그나 마케팅 페이지에서 사용자가 보기 전에 미리 랜더링 해야 할 때
