@@ -2,8 +2,9 @@
 > Redux의 파일구조 중 Ducks패턴을 사용해서 modules폴더 안에 액션 타입, 액션 생성 함수, 리듀서를  
 > 작성한 코드를 모듈이라고 한다.
 
+## Example
 
-# Example
+### reducer
 ```javascript
 // src/modules/counter.js
 
@@ -26,9 +27,9 @@ function counter(state, action) {
         number: state + 1
       };
      case DECREASE:
-      return {
-        number: state - 1
-      };
+       return {
+         number: state - 1
+       };
       default:
         return state;
   }
@@ -37,7 +38,7 @@ function counter(state, action) {
 export default counter;
 ```
 
-## rootReducer
+### rootReducer
 > createStore함수를 사용하여 store를 생성할 때 리듀서는 하나만 사용해야한다.  
 > 만약 리듀서가 여러개라면 rootReducer파일을 만들고 combineReducers함수를 사용하여 기존의 리듀서들을 하나로 합칠 수 있다.
 ```javascript
@@ -45,15 +46,17 @@ export default counter;
 
 import { combineReducers } from "redux";
 import counter from "./counter";
+import todos from "./todos";
 
 const rootReducer = combineReducers({
-    counter,
+  counter,
+  todos  
 })
 
 export default rootReducer;
 ```
 
-## 프로젝트에 store 적용하기
+### 프로젝트에 store 적용하기
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
