@@ -60,6 +60,8 @@
 
 ### [replace](/JAVASCRIPT/replace.md)
 
+### [reduce](/JAVASCRIPT/reduce.md)
+
 ### [Event-Handling, Event-Bubbling, Event-Capturing](/JAVASCRIPT/e-handling-bubbling-capturing.md)
 
 ### [Class](/JAVASCRIPT/class.md)
