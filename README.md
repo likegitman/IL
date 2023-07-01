@@ -60,6 +60,12 @@
 
 ### [replace](/JAVASCRIPT/replace.md)
 
+### [map](/JAVASCRIPT/map.md)
+
+### [filter](/JAVASCRIPT/filter.md)
+
+### [find](/JAVASCRIPT/find.md)
+
 ### [reduce](/JAVASCRIPT/reduce.md)
 
 ### [Event-Handling, Event-Bubbling, Event-Capturing](/JAVASCRIPT/e-handling-bubbling-capturing.md)
