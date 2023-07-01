@@ -3,7 +3,7 @@
 > 사용할 수 있는 표준이고 특히 컴포넌트에 고유한 key를 요구하는 React에서 유용하게 사용할 수 있다.  
 > 사용하는 모듈로는 `react-uuid`가 있는데 이 모듈을 이용해 UUID를 생성하는 함수를 제공한다.
 
-# Install
+## Install
 
 ### npm
 `npm install uuid`
@@ -11,7 +11,7 @@
 ### yarn
 `yarn add uuid`
 
-# Example
+## Example
 > 꼭 map에서만 쓸 수 있는 것은 아니고 간단한 예제이다.
 ```js
 import uuid from "react-uuid";
