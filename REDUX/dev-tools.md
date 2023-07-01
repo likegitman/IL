@@ -2,16 +2,16 @@
 > Redux Application의 상태 변화를 모니터링하고 디버깅하기 위한 브라우저 확장 프로그램이다.  
 > Chrom이나 Firefox, Safari, Edge 등에서 사용할 수 있다.
 
-# Install
+## Install
 ### npm
 `npm i redux-devtools-extension`
 
 ### yarn
 `yarn add redux-devtools-extension`
 
-### 위의 명령어를 치기전에 먼저 웹 브라우저에서 확장 프로그램을 설치해주어야한다!
+#### 위의 명령어를 치기전에 먼저 웹 브라우저에서 확장 프로그램을 설치해주어야한다!
 
-# 기능
+## 기능
 ### 1. TimeTRavel
 > Redux Application의 상태변화를 타임라인의 형태로 시각화하여 쉽게 이해할 수 있게 해준다.  
 > 이로써 개발자는 과거 상태로 돌아가거나 미래의 상태로 이동하여 Application의 동작을 디버깅할 수 있다.
