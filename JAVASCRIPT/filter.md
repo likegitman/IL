@@ -6,11 +6,13 @@
 
 ## 인자
 ### callback
-#### 1. 현재 처리할 요소의 index (index는 0부터 시작한다.)
-#### 2. filter를 호출한 배열 (array)
+> 각 요소를 시험할 함수로 true를 반환하면 요소를 유지하고 false를 반환하면 요소를 버린다.
+#### 1. 현재 처리할 요소 (element)
+#### 2. 현재 처리할 요소의 index (index는 0부터 시작한다.)
+#### 3. filter를 호출한 배열 (array)
 
 ### thisArg
-> callback을 실행할 때 this로 사용하는 값
+> callback을 실행할 때 this로 사용하는 값이다.
 
 ## Example
 ```js
