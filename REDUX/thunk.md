@@ -41,7 +41,7 @@ export const decreaseAsync = () => dispatch => {
 
 const initialState = 0;
 
-const counter = () => {
+const counter = (state = initialState, action) => {
   switch(action.type) {
     case INCREASE:
       return state + 1;
