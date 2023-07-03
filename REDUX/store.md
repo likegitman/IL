@@ -1,9 +1,9 @@
 # Store
 > 앱의 전체 상태 트리를 가지고 있다. store안의 상태를 바꾸는 방법은 이 store에 action을 보내는 방법뿐이다.  
-> store는 classㄱ 아니고 몇가지 메서드가 들어있는 객체이다. store를 생성하기 위해서는 root reducer함수를  
+> store는 class가 아니고 몇가지 메서드가 들어있는 객체이다. store를 생성하기 위해서는 root reducer함수를  
 > createStore에 전달하면 된다.
 
-# Method
+## Method
 ### 1. getState()
 > Application의 현재 상태 트리를 반환한다. store의 reducer가 마지막으로 반환한 값과 동일하다.  
 
