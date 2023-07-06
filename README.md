@@ -84,6 +84,8 @@
 
 ### [every, some](/JAVASCRIPT/every-some.md)
 
+### [String-method](/JAVASCRIPT/string-method.md)
+
 ### [Spread-Rest Operator](/JAVASCRIPT/spread-rest.md)
 
 ### [Closure](/JAVASCRIPT/closure.md)
