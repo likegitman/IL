@@ -186,6 +186,10 @@
 
 ### [Dotenv](/REACT/env.md)
 
+### [swiper](/REACT/swiper.md)
+
+### [textarea-auto-size](/REACT/textarea-auto-size.md)
+
 ## TypeScript
 
 ### [TypeScript?](/TYPESCRIPT/meaning.md)
