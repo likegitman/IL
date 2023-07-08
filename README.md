@@ -188,7 +188,7 @@
 
 ### [swiper](/REACT/swiper.md)
 
-### [textarea-auto-size](/REACT/textarea-auto-size.md)
+### [react-textarea-autosize](/REACT/react-textarea-autosize.md)
 
 ## TypeScript
 
