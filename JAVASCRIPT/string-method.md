@@ -61,8 +61,9 @@ console.log(str3); // output: !
 # toString()
 
 ### 문법
-`number.toString()`
-
+`number.toString(radix)`
+> 임의의 숫자형 값을 문자열로 변환하는 자바스크립트 Number객체의 내장 method이다.  
+> radix 매개변수는 10 진법으로 표현된 숫자를 다른 진수로 변환한다. 변환된 진수도 물론 문자열이다.
 ### Example
 ```js
 let num = 17;
@@ -70,4 +71,9 @@ let str = num.toString();
 
 console.log(num); // output: 17
 console.log(str); // output: "17"
+
+console.log(17.toString()); // Error: Invalid or unexpected token
+console.log((17).toString()); // "17"
+console.log((10.9).toString()); // output: "10.9"
+console.log((-17).toString()); // output: "-17"
 ```
