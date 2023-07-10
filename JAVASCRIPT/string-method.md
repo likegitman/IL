@@ -57,3 +57,17 @@ console.log(str3); // output: !
 ### 2. start값 또는 end값이 음수일 때
 #### slice는 가장 뒤에서 음수의 절댓값만큼 내려온 index로 취급하고 substring은 start와 end값을
 #### index 0으로 취급한다.
+
+# toString()
+
+### 문법
+`number.toString()`
+
+### Example
+```js
+let num = 17;
+let str = num.toString();
+
+console.log(num); // output: 17
+console.log(str); // output: "17"
+```
