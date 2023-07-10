@@ -1,14 +1,14 @@
 # Operators
 
 ## String concatenation
-```
+```js
 console.log('my' + 'cat'); //output: my cat
 console.log('1' + 2) //output: 3
 console.log(`string literals: 1 + 2 = ${1 + 2}`);
 ```
 
 ## Numeric operators
-```
+```js
 console.log(8 + 2); 
 console.log(8 - 2);
 console.log(8 / 2); //output: 4
@@ -18,7 +18,7 @@ console.log(2 ** 3); //output: 8
 ```
 
 ## Increment and decrement operators
-```
+```js
 let counter = 2;
 const preIncrement = ++counter;
 console.log(`preIncrement: ${preIncrement}, counter: ${conter}`); // output: 3, 3
@@ -29,7 +29,7 @@ console.log(`preIncrement: ${postIncrement}, counter: ${conter2}`); // output: 5
 ```
 
 ## Assignment operators
-```
+```js
 let x = 3;
 let y = 6;
 
@@ -40,7 +40,7 @@ x /= y;
 ```
 
 ## Comparison operators
-```
+```js
 console.log(2 < 8); //작다
 console.log(4 <= 5); //작거나 같다
 console.log(3 > 1); //크다
@@ -49,13 +49,25 @@ console.log(10 >= 5); //크거나 같다
 
 ## Logical operators
 * AND(&&)
-> 조건이 모두 참이면면 true반환  
-  하나라도 거짓이라면 false반환
+> 조건이 모두 참이라면 true반환  
+  하나라도 거짓이면 false반환
 * OR(||)
 > 조건중 한 가지라도 참이면 true반환  
   모두 다 거짓이면 false반환
 * NOT(!)
-> 참이면 거짓으로 거짓이면 참으로 바꿈
+> 참이면 거짓으로, 거짓이면 참으로 바꿈
+* Nullish 병합 연산자(??)
+> 왼쪽 피연산자가 null이거나 undefined일 때 오른쪽 피연산자를 반환하고 그렇지 않으면
+> 왼쪽의 피연산자를 반환하는 논리 연산자이다.
+```js
+const x = "null";
+const y = "full";
+const defaultValue = "default";
+const result = x ?? defaultValue;
+const result2 = y ?? defaultValue;
+console.log(result); // output: default
+console.log(result2); // output: full
+```
 
 ## Equality operators
 * ==
