@@ -58,6 +58,8 @@
 
 ### [Generator](/JAVASCRIPT/generator.md)
 
+### [fill](/JAVASCRIPT/fill.md)
+
 ### [replace](/JAVASCRIPT/replace.md)
 
 ### [map](/JAVASCRIPT/map.md)
