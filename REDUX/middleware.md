@@ -1,6 +1,8 @@
 # Middleware
-> redux에서 비동기 작업을 위한 기능이기 때문에 action을 dispatch했을 때 reducer에서 이를 처리하기전에  
-> 사전에 지정된 작업들을 실행한다. 따라서 middleware는 action과 reducer사이의 중간자 역할이라고 할 수 있다.
+> dispatch된 action이 reducer에 도달하기 전에 중간영역에서 사용자의 목적에 맞게 기능을  
+> 확장할 수 있도록 돕는다. 예시로 `redux-logger`는 action이 dispatch 될 때마다  
+> 개발자 도구 console에 log가 찍히는 것을 예씨로 들 수 있다. action이 reducer에 도달하기전에  
+> log를 출력하는 과정이 중간에 추가된 것이기 때문이다.
 
 # 구조
 ```js
