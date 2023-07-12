@@ -76,7 +76,7 @@
 
 ### [Class](/JAVASCRIPT/class.md)
 
-### [ProtoType](/JAVASCRIPT/proto_type.md)
+### [ProtoType](/JAVASCRIPT/proto-type.md)
 
 ### [Object](/JAVASCRIPT/object.md)
 
