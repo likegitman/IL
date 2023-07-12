@@ -79,3 +79,41 @@ export const store = configureStore({
 
 export default store;
 ```
+
+## createReducer()
+> 상태에 변화를 일으키는 reducer 함수를 생성하는 util함수이다. 내부적으로 `immer라이브러리를
+> 사용하기에 `state.loading = false`식으로 작성해도 불변 업데이트가 이루어진다.
+> 인자로 주어지는 builder객체는 addCase, addMacher, addDefaultCase라는 메서드를 제공한다.
+> 그리고 각 함수에서 action을 reducer에서 어떻게 처리할지를 결정한다.
+
+```js
+const initialState = {
+  todo: [
+    {id: 1, text: "redux 공부하기", isDone: false},
+    {id: 2, text: "react 심화", isDone: true},
+  ]
+};
+
+const todos = createReducer(state = initialState, (builder) => {
+  builder.addCase('TOGGLE', (state, action) => {
+    const newTodo = state.todo.find((item) => item.id === action.id);
+    newTodo.isDone = !newTodo.isDone;
+  })
+});
+```
+### builder 표기법
+```js
+// 라인마다 builder 메서드 호출
+const initialState = [];
+const todos = createReducer(state = initialState, (builder) => {
+  builder.addCase(increment, (state, action)) => {})
+  builder.addCase(increment, (state, action)) => {})
+});
+
+// 메서드 호출을 연속적으로 작성
+const todos = createReducer(state = initialState, (builder) => {
+  builder
+  .addCase(increment, (state, action)) => {})
+  .addCase(increment, (state, action)) => {})
+});
+```
