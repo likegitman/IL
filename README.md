@@ -259,6 +259,6 @@
 
 ### [Blob](/CS/blob.md)
 
-### [MIME, Content-type](/mime-content-type.md)
+### [MIME, Content-type](/CS/mime-content-type.md)
 
-### [Incoding, Decoding](/incoding-decoding.md)
+### [Incoding, Decoding](/CS/incoding-decoding.md)
