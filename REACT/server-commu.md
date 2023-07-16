@@ -1,214 +1,32 @@
-# 서버 통신
-
-# fetch()
-
-## fetch/server/app.js
-```javascript
-const express = require("express");
-const app = express();
-const cors = require('cors');
-
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-let id = 2;
-const todoList = [
-  {
-    id: 1,
-    text: "할일 1",
-    done: false,
-  },
-];
-
-app.get("/api/todo", (req, res) => {
-    res.json(todoList);
-});
-
-app.post("/api/todo", (req, res) => {
-  const { text, done } = req.body;
-  todoList.push({
-    id: id++,
-    text,
-    done,
-  });
-  return res.send('success');
-});
-
-app.listen(4000, () => {
-  console.log("server start!!");
-});
-```
-
-## fetch/client/src/App.js
-```javascript
-import { useEffect, useState } from "react";
-
-function App() {
-  const [todoList, setTodoList] = useState(null);
-  const [value, setValue]=useState("");
-  const [checked, setChecked]=useState(false);
-
-  const fetchData = () => {
-    fetch("http://localhost:4000/api/todo")
-      .then((response) => response.json())
-      .then((data) => setTodoList(data));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const onChange=(e)=>{
-    setValue(e.target.value);
-  };
-
-  const onClick=()=>{
-    setChecked(!checked);
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    const text = e.target.text.value;
-    const done = e.target.done.checked;
-    fetch('http://localhost:4000/api/todo',{
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        text,
-        done
-      }),
-    }).then(()=>{
-      fetchData();
-    });
-    setValue("");
-    setChecked(false);
-  };
-
-  return (
-    <div>
-      <h1>TODO LIST</h1>
-      <form onSubmit={onSubmit}>
-        <input value={value} onChange={onChange} name="text" />
-        <input checked={checked} onClick={onClick} name="done" type="checkbox" />
-        <input type="submit" value="추가" />
-      </form>
-
-      {todoList?.map((todo) => (
-        <div key={todo.id}  style={{display: 'flex'}}>
-          <div style={{margin: '10px'}}>{todo.id}</div>
-          <div style={{margin: '10px'}}>{todo.text}</div>
-          <div style={{margin: '10px'}}>{todo.done ? "Y" : "N"}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default App;
-```
-
 # axios
+> axios는 브라우저와 Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리이다.
 
-## fetch/server/app.js
-```javascript
-const express = require("express");
-const app = express();
-const cors = require('cors');
+## 특징
+1. 운영환경에 따라 브라우저의 XMLHttpRequest 객체 또는 Node.js의 http api를 사용한다.
+2. Promise API를 사용한다.
+3. 요청과 응답 데이터의 변형
+4. HTTP 요청 취소
+5. HTTP 요청과 응답을 JSON 형태로 자동 변경한다.
 
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+## create()
+> axios를 활용한 비동기 처리를 도와주는 메소드이다. HTTP 메소드인 `GET, POST, PUT, PATCH, DELETE`를 제공해
+> 편리하게 통신을 할 수 있게 해준다.
 
-let id = 2;
-const todoList = [
-  {
-    id: 1,
-    text: "할일 1",
-    done: false,
-  },
-];
+### Example
 
-app.get("/api/todo", (req, res) => {
-    res.json(todoList);
-});
-
-app.post("/api/todo", (req, res) => {
-  const { text, done } = req.body;
-  todoList.push({
-    id: id++,
-    text,
-    done,
-  });
-  return res.send('success');
-});
-
-app.listen(4000, () => {
-  console.log("server start!!");
-});
-```
-
-## fetch/client/src/App.js
-```javascript
-import { useEffect, useState } from "react";
+#### 생성
+```js
 import axios from "axios";
 
-const SERVER_ADDRESS="http://localhost:4000/api/todo";
+const API = axios.create({
+  baseURL: process.env.REACT_APP_URL,
+  withCredentials: true
+});
 
-function App() {
-  const [todoList, setTodoList] = useState(null);
-  const [value, setValue]=useState("");
-  const [checked, setChecked]=useState(false);
+export default API;
+```
 
-  const fetchData = async () => {
-    const response=await axios.get(SERVER_ADDRESS);
-    setTodoList(response.data);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const onChange=(e)=>{
-    setValue(e.target.value);
-  };
-
-  const onClick=()=>{
-    setChecked(!checked);
-  };
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    const text = e.target.text.value;
-    const done = e.target.done.checked;
-    await axios.post(SERVER_ADDRESS, {text, done});
-    fetchData();
-    setValue("");
-    setChecked(false);
-  };
-
-  return (
-    <div>
-      <h1>TODO LIST</h1>
-      <form onSubmit={onSubmit}>
-        <input value={value} onChange={onChange} name="text" />
-        <input checked={checked} onClick={onClick} name="done" type="checkbox" />
-        <input type="submit" value="추가" />
-      </form>
-
-      {todoList?.map((todo) => (
-        <div key={todo.id}  style={{display: 'flex'}}>
-          <div style={{margin: '10px'}}>{todo.id}</div>
-          <div style={{margin: '10px'}}>{todo.text}</div>
-          <div style={{margin: '10px'}}>{todo.done ? "Y" : "N"}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default App;
-
+#### 사용
+```js
+API.get()
 ```
