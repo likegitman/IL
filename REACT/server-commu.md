@@ -28,5 +28,19 @@ export default API;
 
 #### 사용
 ```js
-API.get()
+import API from '@/api';
+
+const onFetch = (userInfo) => {
+  try {
+    const response = await API.post(`/user`, {
+      id: userInfo.id 
+      name: userInfo.name,
+      age: userInfo.age
+    });
+
+    setUserDatas(response.data);
+  } catch(e) {
+    console.log(e);
+  }
+};
 ```
