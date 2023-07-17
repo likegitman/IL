@@ -11,7 +11,7 @@
 > `refresh`한다.
 
 ## Refresh Token
-> 만료기한을 짧게하면서 편리한 방법을 생각하다 나온 방법이다. access `token`과 똑같은 형태의 JWT이다.
+> 만료기한을 짧게하면서 편리한 방법을 생각하다 나온 방법이다. `access token`과 똑같은 형태의 JWT이다.
 > 처음 로그인을 완료했을 때 `access token`과 동시에 발급되고 만료기한을 가지면서 `access token`이
 > 만료 됐을 때 새로 토큰을 발급해주는 토큰이다. refresh token이 만료되지 않았다면 클라이언트는
 > 계속 `access token`을 발급받을 수 있고 `refresh token`이 만료 된다면 새로 로그인을 해야한다.
