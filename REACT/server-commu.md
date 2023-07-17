@@ -20,6 +20,7 @@ import axios from "axios";
 
 const API = axios.create({
   baseURL: process.env.REACT_APP_URL,
+  // CORS 요청을 보낼 때 쿠키를 포함할지 설정하는 옵션이다.
   withCredentials: true
 });
 
@@ -43,4 +44,31 @@ const onFetch = (userInfo) => {
     console.log(e);
   }
 };
+```
+
+## interceptors
+> axios를 이용해 통신을 할 때 아래와 같은 경우에 interceptors를 사용해 통신 전에 넣고싶은 설정들을 해줄 수 있다.
+1. axios 요청 마다 겹치는 부분을 기본 URL로 설정.
+2. axios 요청 마다 매번 header를 처리.
+3. error 발생마다 공통으로 예외처리.
+
+### 구성
+1. instance
+2. request 설정
+3. response 설정  
+
+__request와 response 설정은 각각 2개의 callback함수를 받는다. (요청 성공, 실패)__
+
+### Example
+```js
+import axios from "axios";
+
+const API = axios.create({
+    baseURL: process.env.REACT_APP_URL,
+    withCredentials: true
+})
+
+API.interceptors.request.use(async (config) => {
+   
+})
 ```
