@@ -8,6 +8,120 @@
 4. HTTP 요청 취소
 5. HTTP 요청과 응답을 JSON 형태로 자동 변경한다.
 
+## 사용
+### GET
+#### callback
+```js
+axios.get('example url')
+  then((response) => {
+    // response
+  }).catch((e) => {
+    // error
+  }).then(() => {
+    // always execution
+  });
+
+// 파라미터 포함
+axios.get('example url', {
+    params: {
+      id: 1
+    }
+  })
+  then((response) => {
+    // response
+  }).catch((e) => {
+    // error
+  }).then(() => {
+    // always execution
+  });
+```
+#### async await
+```js
+try {
+  const data = await axios.get("example url")
+} catch(e) {
+  // error 
+}
+
+// 파라미터 포함
+try {
+  const data = await axios.get("example url", {
+    params: {
+      id: 1
+    }
+  })
+} catch(e) {
+  // error 
+}
+```
+
+### POST
+#### callback
+```js
+axios.post('example url', {
+    email: example,
+    password: example,
+  }).then((response) => {
+    // response
+  }).catch((e) => {
+    // error
+  }).then(() => {
+    // always execution
+  });
+```
+
+#### async await
+```js
+try {
+  const data = await axios.post("example url", {data: id});
+} catch(e) {
+  // error
+}
+```
+
+### PUT
+#### callback
+```js
+axios.put("example url", {
+  password: example
+}).then((response) => {
+    // response
+  }).catch((e) => {
+    // error
+  }).then(() => {
+    // always execution
+  });
+```
+
+#### async await
+```js
+try {
+	const data = await axios.put("example url", { 
+    password: example
+  });
+} catch(e) {
+	// error
+}
+```
+
+### DELETE
+#### callback
+```js
+axios.delete('/example?id=12345')
+  .then((response) => {
+    // success
+  })
+  .catch((error) => {
+    // handle error
+  })
+  .then(() => {
+    // always executed
+  });
+```
+#### async await
+```js
+
+```
 ## create()
 > axios를 활용한 비동기 처리를 도와주는 메소드이다. HTTP 메소드인 `GET, POST, PUT, PATCH, DELETE`를 제공해
 > 편리하게 통신을 할 수 있게 해준다.
