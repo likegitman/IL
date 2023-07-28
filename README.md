@@ -80,6 +80,8 @@
 
 ### [Object](/JAVASCRIPT/object.md)
 
+### [Math](/JAVASCRIPT/math.md)
+
 ### [Array](/JAVASCRIPT/array.md)
 
 ### [Array-Api-Quiz](/JAVASCRIPT/array-quiz.md)
