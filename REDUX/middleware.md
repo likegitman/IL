@@ -24,8 +24,8 @@ const middleWare = function middleWare(store) {
 > 위 코드에서 알 수 있듯이 middleware는 함수를 반환하는 함수를 반환하는 함수이다.  
 > 위 코드의 파라미터들을 설명하자면 store는 redux store instance, action은 dispatch된 action을 가리킨다.  
 > next는 함수의 형태로 store.dispatch와 비슷한 역할을 한다. 이 둘의 차이점은 next(action)을 호출하면 그 다음에  
-> 처리해야 할 middleware에게 action을 넘겨주고, 그 다음 middleware가 없다면 reducer에게 action을 넘겨준다는 것을  
-> 의미한다.
+> 처리해야 할 middleware에게 action을 넘겨주고, 그 다음 middleware가 없다면 reducer에게 action을
+> 넘겨준다는 것을 의미한다.  
 
 ## redux-thunk
 > redux에서 할 수 없는 네트워크 요청 기능에 도움을 주는 `middleware` 중에서 가장 많이 사용하는  
@@ -41,8 +41,8 @@ const middleWare = function middleWare(store) {
 > async await의 함수 형태이기 때문이다.
 
 2. promise로 호출할 때
-> action creator를 호출하고 action이 dispatch 되어 reducer로 이동할 때 API요청을 promise로 작성하면
-> 이러한 모든 단계는 순신간에 실행된다. 이 말은 Promise를 사용해 너무 순식간에 실행돼 반환되는 데이터가
+> action creator를 호출하고 action이 dispatch 되어 reducer로 이동할 때 API요청을 promise로 작성하면  
+> 이러한 모든 단계는 순신간에 실행된다. 이 말은 Promise를 사용해 너무 순식간에 실행돼 반환되는 데이터가  
 > 아직 없다고 판단한다는 것이다.
 
 ### Thunk가 호출이 가능한 이유
@@ -51,9 +51,9 @@ const middleWare = function middleWare(store) {
 > 즉, 객체가 되었을 때 reducer로 dispatch된 action을 보낸다.
 
 ## redux-saga
-> `redux-thunk` 다음으로 많이 쓰이는 `middleware`이다. `redux-saga`는 비동기적으로 API를 호출하여
-> 데이터를 가져오는 일과 같은 부수 효과 (Side Effect)를 쉽게 처리하기 위해 사용된다. 예를들어 때에 따라
-> 기존 요청을 취소해야하거나 여러개의 API를 순차적으로 호출해야하는 등의 까다로운 비동기 작업을 다룰 때
+> `redux-thunk` 다음으로 많이 쓰이는 `middleware`이다. `redux-saga`는 비동기적으로 API를 호출하여  
+> 데이터를 가져오는 일과 같은 부수 효과 (Side Effect)를 쉽게 처리하기 위해 사용된다. 예를들어 때에 따라  
+> 기존 요청을 취소해야하거나 여러개의 API를 순차적으로 호출해야하는 등의 까다로운 비동기 작업을 다룰 때  
 > `redux-saga`를 많이 사용한다.
 
 ## Example
