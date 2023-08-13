@@ -50,3 +50,11 @@ const middleWare = function middleWare(store) {
 > dispatch 된 action이 함수인지 아닌지 판단하고 만약 action이 함수라면 계속 그 함수를 실행하고 함수가 아니라면
 > 즉, 객체가 되었을 때 reducer로 dispatch된 action을 보낸다.
 
+## redux-saga
+> `redux-thunk` 다음으로 많이 쓰이는 `middleware`이다. `redux-saga`는 비동기적으로 API를 호출하여
+> 데이터를 가져오는 일과 같은 부수 효과 (Side Effect)를 쉽게 처리하기 위해 사용된다. 예를들어 때에 따라
+> 기존 요청을 취소해야하거나 여러개의 API를 순차적으로 호출해야하는 등의 까다로운 비동기 작업을 다룰 때
+> `redux-saga`를 많이 사용한다.
+
+## Example
+[예제](/Redux-Middleware-Practice)
