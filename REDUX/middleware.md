@@ -57,4 +57,4 @@ const middleWare = function middleWare(store) {
 > `redux-saga`를 많이 사용한다.
 
 ## Example
-[예제](/Redux-Middleware-Practice)
+[예제](https://github.com/likegitman/Redux-Middleware-practice)
