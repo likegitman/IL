@@ -2,21 +2,66 @@
 > JavaScript Test의 약자로 JS코드가 제대로 동작하는지를 확인하는 test case를 만드는 테스팅 프레임워크이다.
 > lint가 코드 스타일에 규칙을 정하는 것이라면 jest는 코드가 올바른 기능을 하는 지 체크할 수 있다.  
 
-# 기본 문법
-> test파일을 만든다. 그 test 파일의 이름은 `테스트함수의파일명.test.js`로 해준다.
-```javascript
-describe("계산 테스트", () => {
-  const a = 1;
-  const b = 2;
-  
-  test("a + b는 3이다.", () => {
-    expect(a + b).toEqual(3);
-  });
-});
+## Example
+```js
+const sum = require('./sum')
 
-// output:
-// 계산 테스트
-// ✅a + b는 3이다.
+test('1 + 2는 3입니다.', () => {
+  expect(sum(1, 2)).toBe(3)
+})
 ```
-> describe는 테스트 그룹을 묶어주는 역할을 하고, callback함수 내에 test에 쓰일  
-> 가짜 변수, 객체들을 일회용으로 사용한 것이다.M 
+
+## Matchers
+> 테스트 코드에서 기대하는 결과를 검증하기 위해 사용되는 함수이며 테스트 대상 코드의  
+> 실행 결과나 값을 기대하는 값과 비교하여 일치 여부를 판단하는 역할을 한다.  
+> Jest는 다양한 Matcher 함수를 제공하여 다양한 종류의 테스트 검증을 수행할 수 있도록 도와준다.
+
+### toBe(value)
+> 기본 값을 비교하거나 개체 인스턴스의 참조 ID를 확인하는 데 사용한다.  
+> `toBe(value)`는 값과 타입(데이터 유형)을 모두 바교한다.  
+> 그렇기에 값과 타입이 정확하게 일치해야 테스트가 성공한다.
+```js
+const User = {
+  name: 'Mike',
+  age: 25,
+};
+
+describe('The User', () => {
+  test('User의 나이는 25입니다. ', () => {
+    expect(User.age).toBe(25);
+  }); // 성공
+
+  test('User의 이름은 Mike입니다.', () => {
+    expect(User.name).toBe('Mike');
+  }); // 성공
+
+  test('이름은 Mike입니다.', () => {
+    expect({ name: 'Mike' }).toBe({ name: 'Mike' });
+  }); // 실패 (내요이 같아도 서로 다른 메모리이다.)
+});
+```
+
+### toEqual(value)
+> 개체 인스턴스의 모든 속성을 재귀적으로 비교하는 데 사용한다. 값이 일치하는지 비교한다는 점에서  
+> `toBe(value)`와 헷갈릴 수 있지만 `toEqual(value)`은 값의 내용(값 자체)을 비교한다.  
+```js
+const User1 = {
+  name: 'Jane',
+  age: 20,
+};
+const User2 = {
+  name: 'Jane',
+  age: 20,
+  gender: undefined
+};
+
+describe('The User', () => {
+  test('User1의 값과 User2의 값이 일치한다.', () => {
+    expect(User1).toEqual(User2);
+  }); // 성공
+
+  test('User1의 값과 User2의 값이 일치한다.', () => {
+    expect(User1).toStrictEqual(User2);
+  }); // 실패
+});
+```
