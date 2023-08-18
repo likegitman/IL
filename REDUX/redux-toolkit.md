@@ -39,7 +39,7 @@ const todos = createReducer(state = initialState, (builder) => {
 ```
 
 ## createAction
-> 기존의 action 생성함수는 type이나 payload를 객체 형태로 일일이 써야 했지만 createAction을 사용하면
+> 기존의 action 생성함수는 type이나 payload를 객체 형태로 일일이 써야 했지만 createAction을 사용하면  
 > 훨씬 간단하게 action 생성함수를 작성할 수 있다.
 ### Example
 
