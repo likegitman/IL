@@ -65,3 +65,53 @@ describe('The User', () => {
   }); // 실패
 });
 ```
+
+### toBeNull(item)
+> 결괏값이 `null`인지 판단할 때 사용한다.
+```js
+
+```
+
+### toBeUndefined
+```js
+```
+
+### toBeDefined
+```js
+```
+
+### toBeTruthy
+```js
+```
+
+### toBeFalsy
+```js
+```
+
+### toBeGreaterThan
+```js
+```
+
+### toBeGreaterThanOrEqual
+```js
+```
+
+### toBeLessThan
+```js
+```
+
+### toBeLessThanOrEqual
+```js
+```
+
+### toBeCloseTo
+```js
+```
+
+### toMatch
+```js
+```
+
+### toThrow
+```js
+```
