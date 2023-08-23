@@ -36,6 +36,8 @@
 ## JavaScript
 ### [Declaration](/JAVASCRIPT/declaration.md)
 
+### [Method](/JAVASCRIPT/method.md)
+
 ### [Scope](/JAVASCRIPT/scope.md)
 
 ### [This](/JAVASCRIPT/this.md)
