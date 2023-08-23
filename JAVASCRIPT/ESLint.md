@@ -1,5 +1,5 @@
 # ESLint
-> ES + Lint, ES는 EcmaScript, 자바스크립트를 뜻하고 Lint는 보푸라기라는 뜻이다. 프로그래밍에서Lint는  
+> ES + Lint, ES는 Ecma(European Computer Manufacturers Association) Script, 자바스크립트를 뜻하고 Lint는 보푸라기라는 뜻이다. 프로그래밍에서Lint는  
 > 에러가 있는 코드에 표시를 달아놓는 것을 의미한다. 따라서 ESLint는 자바스크립트 문법 중 에러가 있는 곳에  
 > 표시를 다는 도구이다.
 
