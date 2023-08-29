@@ -67,3 +67,47 @@ describe('The User', () => {
 ```
 
 ### [더 많은 Matchers](https://jestjs.io/docs/using-matchers)
+
+## 비동기
+
+### 함수 파일
+```js
+const fn = {
+  getAge: (callback) => {
+    const age = 20
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(age)
+        }, 2000)
+      })
+  }
+}
+
+module.exports = fn
+```
+
+### test 파일
+#### then catch
+```js
+const fn = require('./fn')
+
+describe('The Async', () => {
+  test('2초 후에 받아오는 나이는 20살입니다.', () => {
+    return fn.getAge().then((age) => {
+      expect(age).toBe(20)
+    })
+  }) 
+});
+```
+
+#### async, await
+```js
+const fn = require('./fn')
+
+describe('The Async', () => {
+  test('2초 후에 받아오는 나이는 20살입니다.', async () => {
+    const age = await fn.getAge()
+    expect(age).toBe(20)
+  }) 
+});
+```
