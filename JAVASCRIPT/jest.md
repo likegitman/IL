@@ -69,11 +69,48 @@ describe('The User', () => {
 ### [더 많은 Matchers](https://jestjs.io/docs/using-matchers)
 
 ## 비동기
-
-### 함수 파일
+### Calback
+#### 함수 파일
 ```js
 const fn = {
-  getAge: (callback) => {
+  getName: (callback) => {
+    const name = 'Woonrin'
+    setTimeout(() => {
+      callback(name)
+    }, 2000)
+  }
+}
+
+module.exports = fn
+```
+
+#### 테스트 파일
+> done은 Jest에게 테스트할 코드가 비동기 코드라는 것을 알려주며 콜백의 호출까지  
+> 마무리가 되었다(done)는 것을 알려주는 것이다.
+```js
+const fn = require('./fn')
+
+// done을 호출하지 않으면 test는 빠르게 통과되어 모든 test가 정답이라고 처리한다.
+describe('The Callback', () => {
+  test('2초 후에 받아오는 나이는 20살입니다.', (done) => {
+    function callback(name) {
+      try {
+        expect(name).toBe('Woonrin')
+        done()
+      } catch (e) {
+        done(e)
+      }
+    }
+    fn.getName(callback)
+  }) 
+});
+```
+
+### Promise
+#### 함수 파일
+```js
+const fn = {
+  getAge: () => {
     const age = 20
       return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -86,8 +123,8 @@ const fn = {
 module.exports = fn
 ```
 
-### test 파일
-#### then catch
+#### test 파일
+##### then catch
 ```js
 const fn = require('./fn')
 
@@ -100,7 +137,7 @@ describe('The Async', () => {
 });
 ```
 
-#### async, await
+##### async, await
 ```js
 const fn = require('./fn')
 
