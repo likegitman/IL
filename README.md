@@ -104,6 +104,8 @@
 
 ### [JWT](/JAVASCRIPT/jwt.md)
 
+### [JEST](/JAVASCRIPT/jest.md)
+
 ### [Callback](/JAVASCRIPT/callback.md)
 
 ### [Promise](/JAVASCRIPT/promise.md)
