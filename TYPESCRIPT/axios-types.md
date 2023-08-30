@@ -1,4 +1,4 @@
-# Axios Error Types
+# Axios Types
 
 ## AxiosError<T>
 > Axios 에러 객체의 타입. T는 에러 응답 데이터의 타입이다.
