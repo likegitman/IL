@@ -148,3 +148,133 @@ describe('The Async', () => {
   }) 
 });
 ```
+
+## 전후 작업
+> test를 하다보면 test 전 후에 해주어야 될 작업이 생기는데 이를 위해 Jest에서는 help 함수를 제공한다.
+
+## Example
+### beforeEach
+> 각각의 테스트가 실행되기 전에 필요한 설정이나 값을 초기화하는 경우에 주로 사용되는 함수이다.
+> beforeEach 블록 내에서 작성한 코드는 해당 테스트 내의 모든 테스트 케이스에 적용된다.
+```js
+const fn = require('./fn')
+
+let num = 10
+
+beforeEach(() => {
+  num = 0
+})
+
+test('0 + 1은 1이다.', () => {
+  num = fn.add(num, 1)
+  expect(num).toBe(1)
+})
+
+test('0 + 2는 2다.', () => {
+  num = fn.add(num, 2)
+  expect(num).toBe(2)
+})
+
+test('0 + 3은 3이다.', () => {
+  num = fn.add(num, 3)
+  expect(num).toBe(3)
+})
+
+test('0 + 4는 4야.', () => {
+  num = fn.add(num, 4)
+  expect(num).toBe(4)
+})
+```
+> 결과 : 모두 성공 beforeEach를 사용하지 않았다면 첫번째 테스트만 성공
+
+### afterEach
+> `beforeEach`는 모든 테스트 케이스 이전에 실행되지만 `afterEach`는 한 테스트가 끝날 때마다 실행되어서
+> 한 테스트가 끝날 때마다 정리 작업을 할 때 많이 사용된다. 테스트가 끝날때마다 어떤 log를 보는것을
+> 예로 들 수 있다.
+```js
+const fn = require('./fn')
+
+let num = 10
+
+afterEach(() => {
+  num = 0
+})
+
+test('0 + 1은 1이다.', () => {
+  num = fn.add(num, 1)
+  expect(num).toBe(1)
+})
+
+test('0 + 2는 2다.', () => {
+  num = fn.add(num, 2)
+  expect(num).toBe(2)
+})
+
+test('0 + 3은 3이다.', () => {
+  num = fn.add(num, 3)
+  expect(num).toBe(3)
+})
+
+test('0 + 4는 4야.', () => {
+  num = fn.add(num, 4)
+  expect(num).toBe(4)
+})
+```
+> 결과 : 첫 번째 테스트를 제외한 테스트 모두 성공 afterEach는 테스트가 끝날 때마다 실행되기 때문에
+> 첫 번째 테스트에서 num은 초기화 되지않고 10인채 테스트를 진행한다.
+
+## 테스트 제어
+### only
+> 특정 한 테스트 케이스만 실행하고 나머지는 무시한다. 보통 테스트가 통과가 되지 않았을 때
+> 코드상의 오류인지 알아볼 때 사용한다. 아래 코드에서 `0 + 4는 4야`라는 테스트에서 오류가 발생한다.
+> 이때 오류를 발생시키는 `num = 5`코드를 포함한 테스트를 skip하기 때문에 마지막 테스트는 통과된다.
+```js
+const fn = require('./fn')
+
+let num = 0
+
+test('0 + 1은 1이야', () => {
+  expect(fn.add(num, 1)).toBe(1)
+})
+
+test('0 + 2는 2야', () => {
+  expect(fn.add(num, 2)).toBe(2)
+})
+
+test.skip('0 + 3은 3이야', () => {
+  expect(fn.add(num, 3)).toBe(3)
+  num = 5
+})
+
+test.only('0 + 4는 4야', () => {
+  expect(fn.add(num, 4)).toBe(4)
+})
+```
+> 결과 : 마지막 테스트는 통과되고 마지막을 제외한 나머지는 테스트가 `skip`된다.
+
+### skip
+> 해당 테스트 케이스를 테스트하지않고 건너뛸 때 사용한다. test에서 오류가 발생했을 때 어떤 테스트가
+> 원인인지 찾을 때 주로 사용한다. 또한 완성되지 않은 테스트를 건너뛸 때도 사용된다.
+```js
+const fn = require('./fn')
+
+let num = 0
+
+test('0 + 1은 1이야', () => {
+  expect(fn.add(num, 1)).toBe(1)
+})
+
+test('0 + 2는 2야', () => {
+  expect(fn.add(num, 2)).toBe(2)
+})
+
+test.skip('0 + 3은 3이야', () => {
+  expect(fn.add(num, 3)).toBe(3)
+  num = 5
+})
+
+test('0 + 4는 4야', () => {
+  expect(fn.add(num, 4)).toBe(4)
+})
+```
+> 결과 : 오류의 원인이 되는 테스트를 skip 했기에 skip한 테스트 제외 모두 통과된다.
