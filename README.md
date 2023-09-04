@@ -216,6 +216,8 @@
 
 ### [typeof, keyof](/TYPESCRIPT/type-key-of.md)
 
+### [Utility](/TYPESCRIPT/utility.md)
+
 ## NEXT
 ### [Next?](/NEXT/next.md)
 
