@@ -70,3 +70,41 @@ const nav: Record<Page, PageInfo> = {
  
 nav.about;
 ```
+
+## Pick
+> `type`에서 프로퍼티 `keys`의 집합을 선택해 타입을 생성한다.
+```js
+interface Todo {
+  title: string
+  description: string
+  completed: boolean
+}
+
+tyep TodoPreview = Pick<Todo, 'title' | 'completed'>
+
+const todo: TodoPreview = {
+  title: 'Clean room',
+  completed: false
+```
+
+## Omit
+> `type`에서 모든 프로퍼티를 선택하고 `key`를 제거한 타입을 생성한다.
+```js
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+ 
+type TodoPreview = Omit<Todo, "description">;
+ 
+const todo: TodoPreview = {
+  title: "Clean room",
+  completed: false,
+};
+ 
+todo;
+ 
+const todo: TodoPreview
+```
+
