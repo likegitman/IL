@@ -66,6 +66,8 @@
 
 ### [map](/JAVASCRIPT/map.md)
 
+### [indexOf](/JAVASCRIPT/indexOf.md)
+
 ### [filter](/JAVASCRIPT/filter.md)
 
 ### [find](/JAVASCRIPT/find.md)
@@ -74,7 +76,7 @@
 
 ### [reduce](/JAVASCRIPT/reduce.md)
 
-### [Set[(/JAVASCRIPT/set.md)
+### [Set](/JAVASCRIPT/set.md)
 
 ### [Event-Handling, Event-Bubbling, Event-Capturing](/JAVASCRIPT/e-handling-bubbling-capturing.md)
 
