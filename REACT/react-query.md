@@ -35,13 +35,45 @@ cacheTime // default: 5분 (60 * 5 * 1000)
 ```
 
 #### staleTime
-1. staleTime은 데이터가 fresh -> stale 상태로 변경되는데 걸리는 시간이다.
-2. fresh 는 최신 데이터이기에 이 상태일 때는 Refetch Trigger가 발생해도 Refetch가 일어나지 않는다.
-3. 기본값이 0이므로 따로 설정해주지 않는다면 Trigger가 발생했을 때 무조건 Refetch가 일어난다.
+> staleTime은 데이터가 fresh -> stale 상태로 변경되는데 걸리는 시간이다.  
+> fresh 는 최신 데이터이기에 이 상태일 때는 Refetch Trigger가 발생해도 Refetch가 일어나지 않는다.  
+> 기본값이 0이므로 따로 설정해주지 않는다면 Trigger가 발생했을 때 무조건 Refetch가 일어난다.
 
 #### cacheTime
-1. `cacheTime`은 데이터가 `inactive`한 상태일 때 캐싱된 상태로 남아있는 시간이다.
-2. 컴포넌트가 언마운트되면 사용된 데이터는 `inactive` 상태로 바뀌고 이때 데이터를 `cacheTime`만큼 유지된다.
-3. 만약 `cacheTime`이 지나지 않았는데 해당 데이터를 사용하는 컴포넌트가 다시 `mount`되면 새로운 데이터를
-   fetch 해오는 동안 캐싱된 데이터를 보여준다.
-4. 캐싱된 데이터를 계속
+> `cacheTime`은 데이터가 `inactive`한 상태일 때 캐싱된 상태로 남아있는 시간이다.  
+> 컴포넌트가 `unmount`되면 사용된 데이터는 `inactive` 상태로 바뀌고 이때 데이터는  
+> `cacheTime`만큼 유지된다. 만약 `cacheTime`이 지나지 않았는데 해당 데이터를 사용하는  
+> 컴포넌트가 다시 `mount`되면 새로운 데이터를 fetch 해오는 동안 캐싱된 데이터를 보여준다.  
+> 캐싱된 데이터를 계속보여주는 게 아니라 fetch 하는 동안 **임시로** 보여주는 것이다.
+
+## 2. 서버와 클라이언트 간 데이터 분리
+> Client 데이터는 여러 전역관리 라이브러리들로 관리가 잘 되지만 이런 라이브러리들이  
+> Server 데이터까지 관리해야 될 상황이 발생하는데 당연히 이런 라이브러리들은 비동기 함수 처리를  
+> 할 수 있고 서드 파티도 지원하는 것들이 많다. 그렇지만 이것이 두 데이터를 분리하여 관리하는데에  
+> 유용하지않다. 당연히 기본적으로 Client 데이터를 관리하기 위한 라이브러리들이기 때문이다.
+> 하지만 `React Query`를 사용하면 이러한 문제 또한 해결할 수 있다.
+```js
+const { data, isLoading } = useQueries(
+	['unique-key'],
+	() => {
+		return api({ // axios instance
+			url: URL,
+			method: 'GET',
+		});
+	},
+	{
+		onSuccess: (data) => {
+			// 요청 성공 시 data를 다루는 로직
+		}
+	},
+	{
+		onError: (error) => {
+			// 요청 실패 시 error를 다루는 로직
+ 		}
+	}
+)
+```
+> 위 코드는 Server 데이터 요청에 대한 성공과 실패를 다룰 수 있다. 이렇게 하면 Client 데이터는
+> 상태관리 라이브러리가, Server 데이터는 React-Query가 관리하도록 할 수 있다. 띠리서 두 데이터는
+> 온전히 분리되어 관리된다.
+
