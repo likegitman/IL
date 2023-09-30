@@ -34,6 +34,92 @@ staleTime // default: 0
 cacheTime // default: 5분 (60 * 5 * 1000)
 ```
 
+## 2. 서버와 클라이언트 간 데이터 분리
+> Client 데이터는 여러 전역관리 라이브러리들로 관리가 잘 되지만 이런 라이브러리들이  
+> Server 데이터까지 관리해야 될 상황이 발생하는데 당연히 이런 라이브러리들은 비동기 함수 처리를  
+> 할 수 있고 서드 파티도 지원하는 것들이 많다. 그렇지만 이것이 두 데이터를 분리하여 관리하는데에  
+> 유용하지않다. 당연히 기본적으로 Client 데이터를 관리하기 위한 라이브러리들이기 때문이다.  
+> 하지만 `React Query`를 사용하면 이러한 문제 또한 해결할 수 있다.
+```js
+const { data, isLoading } = useQueries(
+  ['unique-key'],
+  () => {
+    return api({ // axios instance
+      url: URL,
+      method: 'GET',
+    });
+  },
+  {
+    onSuccess: (data) => {
+      // 요청 성공 시 data를 다루는 로직
+  },
+  {
+    onError: (error) => {
+      // 요청 실패 시 error를 다루는 로직
+    }
+  }
+)
+```
+> 위 코드는 Server 데이터 요청에 대한 성공과 실패를 다룰 수 있다. 이렇게 하면 Client 데이터는 상태관리 라이브러리가, Server 데이터는  
+> React-Query가 관리하도록 할 수 있다. 띠리서 두 데이터는 온전히 분리되어 관리된다.
+
+## Install
+### npm
+`npm install react-query`
+
+### yarn
+`yarn add react-query`
+
+## useQuery
+> `React Query`를 이용하여 서버로부터 데이터를 조회할 때 사용한다. 데이터에 대한 변경은 `useMutation`이라는 훅을 사용한다.  
+> `queryKey`, `queryFn` 2개의 인자를 받는다.
+
+### queryKey
+`queryKey`는  useQuery마다 부여되는 고유한  `key` 값이다. 문자열로 사용될 수도 있고 배열의 형태로도 사용될 수 있다.
+
+#### Example
+```js
+// 1.
+// 문자열
+const { isLoading, data, error } = useQuery('persons', queryFn);
+
+// 배열 1.
+const { isLoading, data, error } = useQuery(['persons'], queryFn);
+
+// 배열 2.
+const { isLoading, data, error } = useQuery(['persons', 'add Id'], queryFn);
+
+// 배열 3.
+const { isLoading, data, error } = useQuery(['add Id', 'persons'], queryFn);
+
+// 배열 4.
+const { isLoading, data, error } = useQuery(['persons', {type: 'add', name: 'Id'}], queryFn);
+```
+> 문자열은 자동으로 길이가 1인 배열로 인식하기 때문에 배열1과 같다고 보면된다. 하지만 배열2와 배열3은 같아보일 수 있지만 서로  
+> 다른 `key`를 가지고 있다. 배열에 입력되는 순서를 중요시하고 순서를 보장하기 때문이다. 이 `queryKey`의 역할은 데이터를  
+> 캐싱할 수 있도록 한다.
+
+#### Example
+```js
+const getPersons1 = () => {
+  const res1 = useQuery(['persons'], queryFn1);
+}
+
+const getPersons2 = () => {
+  const res2 = useQuery(['persons'], queryFn2);
+}
+```
+> res1과 res2가 동일한 `key`를 사용해 데이터를 가져오고 있는 중인데 보통은 res1과 res2에 대한 요청이 있기 때문에 요청이 2번 전달되지만  
+> 위 코드에서는 요청이 1번만 전달된다. res1에서 이미 동일한 `queryKey`로 데이터를 조회했기 때문에 res2는 res1의 **결괏값**을 **그대로** 가져온다.  
+> 그래서 위 코드는 1번만 데이터를 요청하게 된다.
+
+### queryFn
+> `useQuery`에서 보통 `axios`를 이용하여 서버에 데이터를 요청하는 함수로 사용된다.
+`const { isLoading, data, error } = useQuery(['persons'], () => axios.get('http://localhost:4000/persons')); // callback 함수가 아닌 정의하여도 된다.`
+
+### options
+> `staleTime`, `chachTime`, `refechOnWindowFocus` 등등을 설정할 수 있다.
+
 #### staleTime
 > staleTime은 데이터가 fresh -> stale 상태로 변경되는데 걸리는 시간이다.  
 > fresh 는 최신 데이터이기에 이 상태일 때는 Refetch Trigger가 발생해도 Refetch가 일어나지 않는다.  
@@ -46,34 +132,29 @@ cacheTime // default: 5분 (60 * 5 * 1000)
 > 컴포넌트가 다시 `mount`되면 새로운 데이터를 fetch 해오는 동안 캐싱된 데이터를 보여준다.  
 > 캐싱된 데이터를 계속보여주는 게 아니라 fetch 하는 동안 **임시로** 보여주는 것이다.
 
-## 2. 서버와 클라이언트 간 데이터 분리
-> Client 데이터는 여러 전역관리 라이브러리들로 관리가 잘 되지만 이런 라이브러리들이  
-> Server 데이터까지 관리해야 될 상황이 발생하는데 당연히 이런 라이브러리들은 비동기 함수 처리를  
-> 할 수 있고 서드 파티도 지원하는 것들이 많다. 그렇지만 이것이 두 데이터를 분리하여 관리하는데에  
-> 유용하지않다. 당연히 기본적으로 Client 데이터를 관리하기 위한 라이브러리들이기 때문이다.
-> 하지만 `React Query`를 사용하면 이러한 문제 또한 해결할 수 있다.
 ```js
-const { data, isLoading } = useQueries(
-	['unique-key'],
-	() => {
-		return api({ // axios instance
-			url: URL,
-			method: 'GET',
-		});
-	},
-	{
-		onSuccess: (data) => {
-			// 요청 성공 시 data를 다루는 로직
-		}
-	},
-	{
-		onError: (error) => {
-			// 요청 실패 시 error를 다루는 로직
- 		}
-	}
-)
+const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes,
+  {
+    // cacheTime: 5000, // 5초 동안 데이터를 캐싱함
+    // staleTime: 30000, // 30초 동안 stale data를 보여줌
+    // refetchOnMount: true, // mount 시 자동으로 쿼리를 실행하는가?
+    // refetchOnWindowFocus: false, // 브라우저 창이 focus 시 자동으로 쿼리를 실행하는가?
+    // refetchInterval: 2000, // 2초마다 자동으로 query를 실행함
+    // refetchIntervalInBackground: false // 백그라운드에서도 자동으로 query를 실행함
+  }
+);
 ```
-> 위 코드는 Server 데이터 요청에 대한 성공과 실패를 다룰 수 있다. 이렇게 하면 Client 데이터는
-> 상태관리 라이브러리가, Server 데이터는 React-Query가 관리하도록 할 수 있다. 띠리서 두 데이터는
-> 온전히 분리되어 관리된다.
 
+### Event
+```js
+const { isLoading, data, error, refetch } = useQuery('persons', fetchFnm, enabled: false);
+
+<button onClick=={refetch}>Click Refetch!</button>
+```
+
+### select
+> queryFn을 통해 반환 받은 값을 가공, 정제할 수 있는 옵션
+
+## Dev-tools
+![image](https://github.com/likegitman/TIL/assets/105215297/9e1f3ff8-6b46-4e49-bc8e-677a690c38b4)
+> `queryKey`를 누르면 해당 `key`에 대한 `fetch` 정보들(fresh, fetching, stale, inactive. data, headers..)을 확인할 수 있다.
