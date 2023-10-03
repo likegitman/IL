@@ -152,6 +152,8 @@
 
 ### [Ref](/REACT/ref.md)
 
+### [forwardRef](/REACT/forwardRef.md)
+
 ### [useEffect](/REACT/useEffect.md)
 
 ### [Cleanup-Function](/REACT/cleanup-function.md)
