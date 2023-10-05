@@ -7,6 +7,14 @@
 > 그렇기에 서버로부터 미리 완성된 HTML파일을 미리 렌더링( pre-rendering )을 한다.   
 > #### [참고](/REACT/csr_ssr.md)
 
+## 기능
+### 1. hot Code Reloading
+### 2. code splitting
+### 3. automatic routing
+### 4. single file components
+### 5. server landing
+### 6. typescript
+
 ## 폴더 구조
 > React에서 있던 src폴더는 없어지고 pages 폴더 안에 index, _app, _document파일들을 추가하고  
 > 페이지 관련 js파일들은 전부 pages안에 보관해야한다. 그리고 pages안에 보관된 파일들은  
@@ -27,3 +35,54 @@
 
 * pages/index.js  
 기본 경로에 해당하는 파일(페이지), 이 말은 맨 처음화면에 뜨는 페이지라고 할 수 있다.
+
+## version 13
+
+### app 디렉토리 도입
+> 기존의 `NextJS`는 파일 시스템 라우터 기능을 통해 디렉토리 폴더 내부에 파일 생성만으로 애플리케이션 경로를  
+> 설정할 수 있다. `/app` 디렉토리를 라우팅 및 레이아웃 경험을 개선했다고 한다. 크게 4가지 기능을 제공한다.
+
+#### 1. Layout
+> 리렌더링 성능을 개선하며 경로 간에 UI를 쉽게 공유할 수 있다. 여러 페이지들이 공유하는 공통 UI 기능을  
+> 제공하며 불필요한 리렌더링을 방지하고 서로 상호작용할 수 있는 기능을 제공한다. Root 디렉토리에 기존의  
+> `pages` 대신에 `app` 디렉토리를 생성하고 하위에 `page.js`를 생성한다. `index.js`와 같이 해당 경로에  
+> 표시될 페이지를 의미한다.
+```js
+export default function Page() {
+  return <div>Hello World</div>
+}
+```
+> 또 `layout.js`가 생성되는데 페이지 영역은 `children`를 통해서 주입 및 배치되며
+> 나머지 변경이 불필요한 부분들은 내부 컴포넌트가 변경되어도 리렌더링이 발생하지 않는다.
+```js
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <head></head>
+      <body>
+        <h2>커스텀 레이아웃</h2>
+        {children}
+      </body>
+    </html>
+  )
+}
+```
+> 이렇게 `children` 이외의 태그를 추가하면 `page.js`에서 `layout.js`가 혼합되어 보여진다.  
+> `app/page2/page.js` 같이 하위에 새로운 페이지를 생성해도 `layout.js`가 공통으로 보여진다. 그렇기에  
+> 페이지 단위로 컴포넌트가 변경되어도 `layout.js`의 컴포넌트는 리렌더링이 발생하지 않아 성능을 향상시킨다.
+
+#### 2. Server Component
+> `server component` 기능을 손쉽게 제공하여 성능 향상에 도움을 줄 수 있게된다. `app` 디렉토리에
+> `server component`를 사용한다면 말 그대로 `server`에서만 컴포넌트를 렌더링한다. `React Server Component`는
+> `React 18`에 도입되는 최신 기술이며 서버에서 동작하는 리액트 컴포넌트를 의미한다. 즉, `server`에서 `data fetching`
+> 등을 수행하여 `client`에서 연속된 API 호출을 방지할 수 있게된다. 이러면 `client`에 전송되는 `javascript`의 양이
+> 줄어들며 초기 페이지 로딩을 더 빠르게 진행할 수 있다. `server component`가 `app` 디렉토리에서 사용되는 컴포넌트이다.
+
+#### 3. 스트리밍
+> 로딩 상태를 표시하고 렌더링되는 UI 단위로 스트리밍을 제공하고 있다. `server side`에서 고정적인 레이아웃들은 `data fetching`이  
+> 필요없기 때문에 먼저 `client`에게 전송하여 렌더링을 진행하게 된다.
+4. data fetching
+> 새로운 `data fetching` 기능을 제공한다.
+
+
+
