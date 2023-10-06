@@ -5,7 +5,7 @@
 > Next에는 이것들이 이미 만들어져있다. 또, Next는 CSR(Client Side Rendering)인 React와 다르게  
 > SEO(Search Engine Optimization)를 위한 SSR(Server Side Rendering)이 가능한 프레임워크이다.  
 > 그렇기에 서버로부터 미리 완성된 HTML파일을 미리 렌더링( pre-rendering )을 한다.   
-> #### [참고](/REACT/csr_ssr.md)
+> #### [참고](../REACT/csr-ssr.md)
 
 ## 기능
 ### 1. hot Code Reloading
