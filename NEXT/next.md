@@ -80,9 +80,43 @@ export default function RootLayout({ children }) {
 
 #### 3. 스트리밍
 > 로딩 상태를 표시하고 렌더링되는 UI 단위로 스트리밍을 제공하고 있다. `server side`에서 고정적인 레이아웃들은 `data fetching`이  
-> 필요없기 때문에 먼저 `client`에게 전송하여 렌더링을 진행하게 된다.
+> 필요없기 때문에 먼저 `client`에게 전송하여 렌더링을 진행하게 된다. `data fetching`이 필요한 부분은 별도로 `data fetching`이
+> 끝난 후에 `client`에게 전송하여 렌더링을 마무리한다. 이 과정에서 `app` 디렉토리 내부에 `loading.js`라는 예약 파일을 만들게 될 경우
+> 해당 컴포넌트는 loading 상태를 표현해주는 UI 컴포넌트로 활용된다.
+![image](https://github.com/likegitman/TIL/assets/105215297/def4d841-501f-4c31-b78d-0225d444bf18)
+
+
 4. data fetching
-> 새로운 `data fetching` 기능을 제공한다.
+> 새로운 `data fetching` 기능을 제공한다. 원래는 `getStaticProps`와 `getServerSideProps` 함수를 사용하지 않고 `Server Side`로직을
+> 구현할 수 있다. `use`훅을 사용하여 간편하게 `data fetching`을 구현할 수 있게 됐다.
+```js
+import { use } from "react";
+
+export default function Page() {
+  const name = use(getData());
+
+  return <div>Hello World!</div>;
+}
+
+async function getData() {
+  const res = await fetch("API url");
+  const data = await res.json();
+  return data;
+}
+```
+> 또한 `cache` 기능을 옵션으로 사용할 수 있다.
+```js
+// default 설정이며 기존의 getStaticProps 와 동일하게 동작다.
+fetch(URL, { cache: 'force-cache' })
+
+// 캐시 기능을 사용하지 않는다.
+// getServerSideProps 와 동일하게 동작한다.
+fetch(URL, { cache: 'no-store' })
+
+// revalidate 단위로 설정된 시간을 주기로 캐시한다.
+// getStaticProps에서 revalidate 옵션을 사용한 것과 동일하다.
+fetch(URL, { next: { revalidate: 10 } })
+``` 
 
 
 
