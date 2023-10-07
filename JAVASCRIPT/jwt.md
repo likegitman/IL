@@ -2,16 +2,19 @@
 > JSON Web Token의 약자로 JSON 웹 토큰은 JSON을 이용해 정보를 안전하게 다루기 위한 개방형 표준인 RFC 7519방법이다.  
 > JWT는 크게 헤더와 내용, 서명으로 나뉘고 dot(`.`)으로 각 부분을 구분한다. 여기서 각 부분은 전부 basw64로 인코딩되어 사용된다.
 
-## 헤더
+## Header
+* 암호화 규칙
+* 토큰 타입
 ### example
 ```js
 {
-  "type" : "JWT",
-  "algoritm" : "HSA256",
+  "alg" : "HSA256",
+  "typ" : "JWT"
 }
 ```
 
-## 내용
+## Payload
+* 토큰 데이터
 ### example
 ```js
 {
@@ -20,8 +23,8 @@
   "admin" : true, // 비공개 claim
 }
 ```
-> 내용에 들어갈 정보들은 claim이라고 부르는데 claim은 크게 세 종류도 나뉜다고 한다.
-> 첫 번재는 등록된 claim이다. 사전 정의되어 있고 필수적으로 사용할 필요는 없지만 사용이 권고되는 것들이다.
+> `Payload`에 들어갈 정보들은 `claim`이라고 부르는데 `claim`은 크게 세 종류도 나뉜다고 한다.
+> 첫 번재는 등록된 `claim`이다. 사전 정의되어 있고 필수적으로 사용할 필요는 없지만 사용이 권고되는 것들이다.
 ```
 iss : 데이터의 발행자를 뜻한다.
 sub : 토큰의 제목이다.
@@ -37,14 +40,28 @@ jti : 토큰의 고유 식별자이다.
 
 > 세 번째는 비공개 claim이다. 통신을 주고받는 당사자들끼리 협의해서 자유롭게 key와 값을 정할 수 있다.
 
-## 서명
+## Signature
+* 암호화를 위한 데이터
 ### example
 ```js
 HMACSHA256(
   base64UrlEncode(header) + "." +
   base64UrlEncode(payload),
-  secret)
+  MY_SECRET_KEY_1234!@#
+) secret base64 encoded
 ```
+
+## 토큰을 암호화하는 방식 (해싱)
+![image](https://github.com/likegitman/TIL/assets/105215297/495119d6-9e06-4e3f-8c5f-3c6f172a32da)
+
+## 유효성 검증 방식
+![image](https://github.com/likegitman/TIL/assets/105215297/7dcef6b6-bb38-4f53-99e8-91efde864cee)
+
+___ 
+
+![image](https://github.com/likegitman/TIL/assets/105215297/6ecc9671-14ef-4214-a54f-d7e861ea11e2)
+
+
 
 # 사용 목적
 > 지금까지 내용을 보면 자연스레 알 수 있듯이 JWT는 주로 인증과정에서 많이 쓰이는 것이다. 인증과정에 JWT를 사용하는 이유는  
