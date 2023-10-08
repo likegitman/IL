@@ -208,6 +208,8 @@
 
 ### [React-Query](/REACT/react-query.md)
 
+### [Tailwind-CSS](/REACT/tailwind.md)
+
 ## TypeScript
 
 ### [TypeScript?](/TYPESCRIPT/meaning.md)
