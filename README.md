@@ -210,6 +210,8 @@
 
 ### [Tailwind-CSS](/REACT/tailwind.md)
 
+### [Suspense](/REACT/suspense.md)
+
 ## TypeScript
 
 ### [TypeScript?](/TYPESCRIPT/meaning.md)
