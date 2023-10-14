@@ -158,3 +158,55 @@ const { isLoading, data, error, refetch } = useQuery('persons', fetchFnm, enable
 ## Dev-tools
 ![image](https://github.com/likegitman/TIL/assets/105215297/9e1f3ff8-6b46-4e49-bc8e-677a690c38b4)
 > `queryKey`를 누르면 해당 `key`에 대한 `fetch` 정보들(fresh, fetching, stale, inactive. data, headers..)을 확인할 수 있다.
+
+## useMutation
+> `useQuery`와 달리 생성, 업데이트, 삭제 요청을 할 때 사용되는 `hook`이고 `querykey`를 갖지않는다.
+
+### Option
+#### 1. mutationFn
+> 비동기 작업을 수행하고 `Promise`를 반환하는(api를 요청하는) 함수이다.
+#### 2. options
+1. onMutate
+* `mutation` 함수가 실행되기 전에 실행되고 `mutation` 함수가 받을 동일한 변수가 전달된다.
+2. onSuccess
+* `mutation` 함수가 성공했을 때 실행되는 함수이다.
+3. onError
+* `mutation` 함수가 실패 즉 error가 발생했을 때 실행되는 함수이다.
+4. onSettled
+* `mutation` 함수의 성공, 실패에 상관없이 실행되는 함수이다.
+
+### Example
+```js
+import { useMutation } from '@tanstack/react-query';
+import instance from '@/api'
+
+export default function Component() {
+  const { mutate, error, isLoading } = useMutation(
+    async (newPost) => {
+      return await instance.post('/posts', newPost);
+    },
+    {
+      onSuccess: () => {
+        console.log('Success!');
+      },
+      onError: () => {
+        console.log(error);
+      },
+    },
+  );
+
+  if (isLoading) return <div>Loading...</div>;
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          mutate({ id: 1, post: 'useMutation 공부' });
+        }}
+      >
+        Post
+      </button>
+    </div>
+  );
+}
+```
