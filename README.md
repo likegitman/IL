@@ -86,6 +86,8 @@
 
 ### [Object](/JAVASCRIPT/object.md)
 
+### [Destructuring-Assignment](/JAVASCRIPT/destructuring-assignment.md)
+
 ### [Math](/JAVASCRIPT/math.md)
 
 ### [Array](/JAVASCRIPT/array.md)
