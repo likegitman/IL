@@ -2,37 +2,6 @@
 ## Today I Learn
 날마다 공부한 내용을 MarkDown기법으로 기록(정리)하는 공간입니다!:fire:
 
-## CSS
-### [Cascading](/CSS/cascading.md)
-
-### [Padding](/CSS/padding.md)
-
-### [Margin](/CSS/margin.md)
-
-### [Flexbox](/CSS/flexbox.md)
-
-### [Layout](/CSS/layout.md)
-
-### [Border](/CSS/border.md)
-
-### [Text](/CSS/text.md)
-
-### [Virtual-Class](/CSS/virtual-class.md)
-
-### [Box-Sizing](/CSS/box-sizing.md)
-
-### [Unit](/CSS/unit.md)
-
-### [z-index](/CSS/z-index.md)
-
-### [Scroll-Bar](/CSS/scroll.md)
-
-### [Filter](/CSS/filter.md)
-
-### [Prefix](/CSS/prefix.md)
-
-### [Background](/CSS/background.md)
-
 ## JavaScript
 ### [Declaration](/JAVASCRIPT/declaration.md)
 
