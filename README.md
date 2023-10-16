@@ -103,8 +103,6 @@
 
 ### [DOM](/REACT/dom.md)
 
-### [JSX](/REACT/JSX.md)
-
 ### [Component](/REACT/component.md)
 
 ### [Props](/REACT/props.md)
