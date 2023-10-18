@@ -2,10 +2,15 @@
 1. 리액트에서 페이지 이동을 할 수 있게 해주는 기능이다.(주소에 따라)
 2. React Router v6에서는 v5의 Switch기능을 Routes가 해준다.
 
-# Installation
+## Installation
+### npm
+`npm install react-router-dom`
+
+### yarn
 `yarn add react-router-dom`
 
-# USE
+## Example
+### App.js
 ```javascript
 import {Routes, Route} from "react-router-dom"
 import Home from './components/Home';
@@ -22,16 +27,32 @@ function App() {
 
 export default App;
 ```
+### index.js
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import {BrowserRouter} from 'react-router-dom';
 
+const root = ReactDOM.createRoot(
+  document.getElementById("root")
+);
 
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+```
 
-# Link
+## Link
 > 리액트에서 페이지 이동을면하고싶다면 a 태그가 아닌 Link 컴포넌트를 사용한다.  
 > a 태그는 페이지를 이동시키면서 페이지를 새로고침한다.  
 > 이렇게 되면 원래 리액트 앱의 상태들이 초기화되고 새로 렌더링을 하게 된다.  
 > 반면 Link 컴포넌트는 브라우저의 주소만 바꾸고 페이지가 새로고침 되지 않는다.
 
-## App.js
+### App.js
 ```javascript
 import { Routes, Route } from "react-router-dom"
 import Home from './components/Home';
@@ -47,10 +68,9 @@ function App() {
 }
 
 export default App;
-
 ```
 
-## Home.js
+### Home.js
 
 ```javascript
 import React from 'react';
@@ -69,15 +89,15 @@ function Home() {
 export default Home;
 ```
 
-# useParams
+## useParams
 > URL parameter를 조회할 때 사용하는 React Hooks이다.  
 > 사용할 때 Route의 주소설정은 /:keyword를 입력한다.
 
-## App.js
+### App.js
 ```javascript
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./routes/Home";
+import Home from "./routes/Movie";
 import Detail from "./routes/Detail";
 
 function App() {
@@ -85,7 +105,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<Detail />}/>
+        <Route path="/movie" element={<Home />} />
+        <Route path="/movie/:id" element={<Detail />}/>
       </Routes>
     </Router>
   );
@@ -94,7 +115,7 @@ function App() {
 export default App;
 ```
 
-## Movie.js
+### Movie.js
 ```javascript
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -107,7 +128,7 @@ function Movie({id , title, img, star }) {
             <img src={IMG_BASE_URL + img} alt="영화 포스터" />
             <div className='movie-info'>
                 {/* id값을 넘겨줌 */}
-                <Link to={`/${id}`}><h4>{title}</h4></Link>
+                <Link to={`/movie/${id}`}><h4>{title}</h4></Link>
                 <span>{star}</span>
             </div>
         </div>
@@ -117,7 +138,7 @@ function Movie({id , title, img, star }) {
 export default Movie;
 ```
 
-## Detail.js
+### Detail.js
 ```javascript
 import React from "react";
 import { useParams } from "react-router-dom";
@@ -128,7 +149,7 @@ function Detail() {
   // 받은 id값 조회
   const { id } = useParams();
   const movieList = dummy.results.filter((movie) => movie.id === Number(id));
-  console.log(movieList);
+
   return (
     <div>
       {movieList.map((movie) => (
@@ -147,10 +168,10 @@ function Detail() {
 export default Detail;
 ```
 
-# Outlet
+## Outlet
 > Route의 chidren으로 들어가는 JSX element를 보여주는 역할을 한다.
 
-## App.js
+### App.js
 ```javascript
 import { Routes, Route } from "react-router-dom"
 import Home from './components/Home';
@@ -177,7 +198,7 @@ export default App;
 
 ```
 
-## Articles.js
+### Articles.js
 ```javascript
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
@@ -205,7 +226,7 @@ function Articles() {
 export default Articles;
 ```
 
-# useNavigate
+## useNavigate
 > Link 컴포넌트를 사용하지 않고 페이지를 이동해야 할 때 사용하는 React Hooks이다.
 ```javascript
 import React from 'react';
@@ -246,7 +267,7 @@ function Layout() {
 export default Layout;
 ```
 
-# NavLink
+## NavLink
 1. 링크에서 사용하는 경로가 현재 라우트의 경로와 일치하는 경우  
    특정 스타일을 적용하는 컴포넌트이다.
 2. 이 컴포넌트는 style과 className은 { isActive: boolean }을 파라미터로  
@@ -261,7 +282,7 @@ export default Layout;
 />
 ```
 
-## USE
+### Articles.js
 ```javascript
 import React from 'react';
 import { NavLink, Outlet } from "react-router-dom";
