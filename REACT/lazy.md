@@ -1,70 +1,45 @@
-# React lazy
+# React.lazy
+> `React`에서 `component` 파일을 코드의 최상단에 `import`로 정의하고 동적으로 불러오기를 사용하면 에러가 발생한다. 만약 이 오류를
+> 생기게 하고 싶지않다면 `React.lazy()`를 사용해야한다. `React.lazy method`를 사용하면 동적 가져오기를 사용하여 구성 요소 수준에서
+> `React Application`을 쉽게 코드 분할을 할 수 있다. `Code Splitting`(분할)을 간단히 말하자면 코드에서 당장 사용하는 부분만을 로드하고
+> 현재 필요하지 않은 코드 부분은 따로 분리시켜 나중에 로드함으로써 로딩시간을 개선하는것이다.
 
-## 코드 분할
-> 대부분 React 앱들은 Webpack, Rollup또는 Browserify 같은 툴을 사용하여 여러 파일을 하나로 병합한 __번들__ 된 파일을
-> 웹페이지에 포함하여 한 번에 전체 앱을 로드할 수 있다.
+## 사용하는 이유
+> 일반적으로 규모가 큰 `React Application`은 많은 요소, 라이브러리 등으로 구성된다. 필요할 때만 `Application`의 다른 부분을 로드하려고
+> 하지 않으면 `CSR`의 특성상 첫 페이지를 로드하는 때에 대규모 `Javascript bundle`이 사용자에게 전송된다. 이것은 페이지 성능에 큰 영향을
+> 줄 수 있는데 `React.lazy`를 사용하면 이러한 문제를 쉽게 해결할 수 있다.
 
-### App.js
+## Example
+### LazyComponent
 ```js
-import { add } from './math.js';
-
-console.log(add(10, 20)); // output: 30
-```
-
-### Math.js
-```js
-export function add(a + b) {
-  return a + b;
+const LazyComponent = () => {
+  return <div>Learn React.lazy!</div>
 }
 ```
 
-### Bundle
+### App
 ```js
-function add(a, b) {
-  return a + b;
-}
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } form 'react-router-dom'
 
-console.log(add(10, 20)) // output: 30
-```
+const LazyComponent = lazy(() => import('./LazyComponent'));
 
-> 번들링은 좋지만 개발하는 Application이 커지면 번들도 따라서 커지게 된다. 번들이 커지는 것을 방지하기 위한 방법은
-> 번들을 __나누는__ 것이다. 코드 분할은 런타임에 여러 번들을 동적으로 만들고 불러오는것으로 번들러가 지원하는 기능이다.
-> 코드분할은 우리의 Application을 __지연 로딩__ 을 할 수 있게 도와주고 사용자에게 성능향상을 제공한다.  또힌, 코드의 양을
-> 줄이지 않고도 사용자가 필요하지 않은 코드를 불러오지않게 하며 초기화 로딩에 필요한 비용을 줄인다.
-
-## import()
-> 코드 분할을 도입하는 가장 좋은 방법이다.
-
-### App.js
-```js
-import("./math").then((math)=> {
-  console.log(math.add(10, 20))
-})
-```
-
-## React.lazy()
-> 동적 import를 사용해서 컴포넌트를 렌더링 시킬 수 있다.
-> App이 처음 렌더링 될 때 About 컴포넌트를 포함한 번들을 자동으로 불러온다.
-> React.lazy()는 동적 import()를 호출하는 함수를 인자로 가지고 이 함수는 React 컴포넌트를
-> default export로 가진 모듈 객체가 실행되는 Promise를 반환해야 한다.
-> lazy는 `Suspense`라는 컴포넌트의 하위에서 렌더링 되어야하며 Suspense 컴포넌트는 lazy 컴포넌트가
-> 로드되길 기다리는 동안 loading화면과 같은 예비 콘텐츠를 볼 수 있게 한다.
-
-### App.js
-```js
-import React, { Suspense } from 'react';
-
-const About = React.lazy(() => import('./About'));
-
-function App() {
+const App = () => {
   return (
-    <>
+    <Router>
+      <h1>Hello, React.lazy!</h1>
       <Suspense fallback={<div>Loading...</div>}>
-        <OtherComponent />
+        <Routes>
+          <Route path='/lazy' element={<LazyComponent />} />
+        </Routes>
       </Suspense>
-    </>
+    </Router>
   );
-}
+};
+
+export default App;
 ```
-> fallback props는 컴포넌트가 로드될 때까지 기다리는 동안 렌더링하려는 React Element를 받아들인다.  
-> Susoense 컴포넌트는 lazy 컴포넌트를 감싸고 하나의 Suspense 컴포넌트로 여러 lazy 컴포넌트를 감쌀 수 있다.
+> `React.lazy()`는 `import()` 구분을 반환하는 `callback` 함수를 인자로 받는다. `React component`를 포함해야하고
+> `default export`를 가진 `component`여야 한다.  
+> [Suspense 참고](/TIL/React/suspense.md)
+> 공식문서에서는 `react-router-dom`과 `Suspense`를 함께 사용하는 것을 권장한다.
