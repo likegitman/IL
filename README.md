@@ -129,7 +129,7 @@
 
 ### [Map](/REACT/map.md)
 
-### [UUID](/REACT/uuid.md)
+### [UUID, ULID](/REACT/uuid-ulid.md)
 
 ### [useMemo](/REACT/useMemo.md)
 
@@ -217,6 +217,8 @@
 ### [Redirect, Rewrite](/NEXT/redirect-rewrite.md)
 
 ### [Pre-Rendering](/NEXT/pre-rendering.md)
+
+### [ServerComponent, ClientComponent](/NEXT/component.md)
 
 ## Redux
 
