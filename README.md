@@ -97,6 +97,8 @@
 
 ### [Web-Storage](/JAVASCRIPT/web-storage.md)
 
+### [package.json](/JAVASCRIPT/package.md)
+
 ## React
 
 ### [React?](/REACT/react.md)
