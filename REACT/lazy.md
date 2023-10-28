@@ -41,5 +41,5 @@ export default App;
 ```
 > `React.lazy()`는 `import()` 구분을 반환하는 `callback` 함수를 인자로 받는다. `React component`를 포함해야하고
 > `default export`를 가진 `component`여야 한다.  
-> [Suspense 참고](/TIL/React/suspense.md)
+> [Suspense 참고](/REACT/suspense.md)
 > 공식문서에서는 `react-router-dom`과 `Suspense`를 함께 사용하는 것을 권장한다.
