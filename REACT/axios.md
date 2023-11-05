@@ -116,3 +116,45 @@ const url = 'https://jsonplaceholder.typicode.com/posts/1';
 
 axios.delete(url);
 ```
+
+## Instance
+기본 axios에서 더 나아가 instance라는 것을 설정해줄 수 있다. axios instance를 이용하면 아래와 같이
+
+api 통신에 대한 구성 기본 값 설정을 편리하게 할 수 있다.
+
+```js
+const instance = axios.create({
+  baseURL: process.env.BASE_URL,
+  timeout: 30000,
+  headers: ...,
+  widthCredentials: true // 서버 cors origin 에러 방지 (요청을 보낼 때 쿠키, HTTP 인증 헤더를 포함할지)
+})
+```
+
+### Interceptors
+axios의 interceptors는 요청과 응답을 가로채고 변경할 수 있는 기능을 제공한다.
+
+이를 통해 요청이나 응답을 수정하거나, 요청 전에 인증 토큰을 추가하거나 응답을 가공하는 등의 작업과 에러를 처리할 수 았더.
+
+```js
+// 요청 interceptors
+instance.interceptors.request.use(
+  config => {
+    이 안에 들어가는 코드는 요청이 전달되기 전에 실행된다.
+    return config
+  },
+  error => {
+    return Promise.reject(error)
+  }
+)
+
+intance.interceptors.response.use(
+  response = > {
+    // 상태코드가 2xx 범위에 있다면 이 함수를 트리거한다.
+    return response
+  },
+  error => {
+    return Promise.reject(error)
+  }
+)
+```
