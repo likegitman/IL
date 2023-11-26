@@ -67,3 +67,4 @@ showName(people)
 parameter의 타입은 name으로 한정되어 있다. 하지만 타입을 명시하지 않은 people이라는 변수를 매개변수로 줘도 people이 Animal의 속성인 name을 갖고있어
 
 parameter.name으로 접근이 가능하기에 오류가 발생하지 않는다.
+
