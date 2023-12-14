@@ -110,6 +110,126 @@ const nums = [1, 2, 3, 4, 5];
 console.log(nums.find((v) => v > 3)); // output: 4
 ```
 
+### findIndex
+> 작성한 테스트 함수를 만족하는 배열의 첫 번째 요소 index를 반환한다. 만족하는 값이 없다면 -1을 반환한다.
+```js
+const arr = [1, 2, 3, 4, 5];
+console.log(arr.findIndex((v) => v > 2)); // output: 2
+```
+
+### forEach
+> 각 배열 요소에 대해 제공된 함수를 한 번씩 실행한다.
+
+```js
+const arr = [1, 2, 3, 4, 5];
+
+arr.forEach((v) => console.log(v)); // output: 1, 2, 3, 4, 5
+```
+
+### from
+> 순회 가능, 유사 배열 객체에서 얕게 복사된 새로운 Array instance를 반환한다.
+
+```js
+console.log(Array.from('foo')); // output: ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (v) => v + v)); // output: [2, 4, 6]
+```
+
+### includes
+> 배열의 항목에 특정 값이 포함되어 있는지를 판단하여 boolean 값을 반환한다.
+
+```js
+const arr = [1, 2, 3, 4, 5];
+
+console.log(arr.includes(2)); // output: true
+console.log(arr.includes(6)); // output: false
+```
+
+### indexOf
+> String 객체에서 주어진 값과 일치하는 첫 번째 index를 반환한다. 일치하는 값이 없으면 -1을 반환한다.
+
+```js
+const str = "I love dog!";
+
+console.log(str.indexOf("love")); // output: 2
+```
+
+### isArray
+> 인자가 Array인지 판별한다.
+
+```js
+Array.isArray([1, 2, 3]); // output: true
+Array.isArray("string"); // output: false
+Array.isArray({foo: 100}); // output: false
+Array.isArrya(undefined); // output: false
+```
+
+### join
+> 배열의 모든 요소를 연결해 하나의 문자열로 만든다.
+
+```js
+const arr = ["I", "love", "you"];
+
+console.log(arr.join()); // output: I,love,you
+console.log(arr.join("")); // output: Iloveyou
+console.log(arr.join("_")); // output: I_love_you
+```
+
+### keys
+> 배열의 각 index에 대한 key를 포함하는 새로운 배열 반복자 객체를 반환한다.
+
+```js
+const arr = ["a", "b", "c"];
+const iterator = arr.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// output: 0
+// output: 1
+// output: 2
+```
+
+### lastIndexOf
+> 주어진 값과 일치하는 부분을 fromIndex로부터 역순으로 탐색하여 최초로 마주치는 index를 반환한다.
+> 일치하는 부분을 찾을 수 없으면 -1을 반환한다.
+
+```js
+const str = "I love you! because I love your personality";
+
+console.log(str.lastIndexOf("love")); // output: 22
+```
+
+### length
+> 배열의 길이를 반환한다. 반환값은 부호 없는 32bit 정수형이며 배열의 최대 index보다 항상 1크다.
+> length 속성에 값을 설정할 경우 배열의 길이를 변경한다.
+
+```js
+const nums = [1, 2, 3, 4];
+
+console.log(nums.length); // output: 4
+```
+
+### map
+> 배열내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환한다.
+
+```js
+const nums = [1, 2, 3, 4];
+
+console.log(nums.map((v) => v * 2)); // output: [2, 4, 6, 8]
+```
+
+### pop
+> 배열의 마지막 요소를 제거하고 그 요소를 반환한다.
+
+```js
+const nums = [1, 2, 3, 4];
+
+console.log(nums.pop()); // output: 4
+console.log(nums); // output: [1, 2, 3]
+```
+
 ## 복사
 js에서 배열을 복사하는 방법이 있는데 얕은 복사와 깊은 복사가 있다.
 
