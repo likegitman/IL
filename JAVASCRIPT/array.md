@@ -230,6 +230,113 @@ console.log(nums.pop()); // output: 4
 console.log(nums); // output: [1, 2, 3]
 ```
 
+### push
+> 배열의 끝에 하나 이상의 요소를 추가하고 배열의 새로운 길이를 반환한다.
+
+```js
+const nums = [1, 2, 3];
+
+const copy = nums.push(4);
+console.log(copy); // output: 4
+console.log(nums); // output: [1, 2, 3, 4]
+nums.push(5, 6, 7);
+console.log(nums); // output: [1, 2, 3, 4, 5, 6, 7]
+```
+
+### reduce
+> 배열의 각 요소에 대해 주어진 reducer 함수를 실행하고 하나의 결괏값을 반환한다.
+
+```js
+const arr = [1, 2, 3];
+
+const result = arr.reduce((acc, cur) => acc + cur , 0);
+
+console.log(result); // output: 6
+```
+
+### reverse
+> 배열의 순서를 반전시킨다. 첫 번째 요소는 마지막 요소가 되며 마지막 요소는 첫 번째 요소가 된다.
+
+```js
+const arr = [1, 2, 3];
+
+console.log(arr.reverse()); // output: [3, 2, 1]
+console.log(arr); // output: [3, 2, 1]
+```
+
+### shift
+> 배열에서 첫 번째 요소를 제거하고 제거된 요소를 반환하고 배열의 길이를 변하게 한다.
+
+```js
+const arr = [1, 2, 3];
+
+const removedEl = arr.shift();
+
+console.log(arr); // output: [2, 3]
+console.log(removedEl); // output: 1
+```
+
+### slice
+> 어떤 배열의 begin부터 end까지(end 포함x)에 대한 얕은 복사본을 새로운 배열 객체로 반환한다.
+> 원본 배열을 바꾸지는 않는다.
+
+```js
+const arr = [1, 2, 3];
+console.log(arr.slice(1)); // output: [2, 3]
+console.log(arr); // output: [1, 2, 3]
+console.log(arr.slice(0, 2)); // output: [1, 2]
+console.log(arr.slice(-2)); // output: [2, 3]
+console.log(arr.slice(0, -1)); // output: [1, 2]
+console.log(arr.slice()); // output: [1, 2, 3]
+```
+
+### some
+> 배열 안의 어떤 요소라도 주어진 판별 함수를 적어도 하나라도 통과하는지 테스트한다.
+> 만약 배열에서 주어진 함수가 true를 반환하면 true를, 그렇지 않으면 false를 반환한다.
+
+```js
+const arr = [1, 2, 4];
+
+console.log(arr.some((v) => v % 2 === 0)); // output: true
+```
+
+### sort
+> 배열의 요소를 적절한 위치에 정렬한 후 그 배열을 반환한다. 기본 정렬은 유니코드 코드 포인트를 따른다.
+
+```js
+const nums = [1, 4, 3, 2];
+console.log(nums.sort()); // output: [1, 2, 3, 4]
+```
+
+### splice
+> 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경한다.
+
+```js
+const nums = [1, 2, 3, 4];
+nums.splice(1, 0, 100);
+console.log(nums); // output: [1, 100, 2, 3, 4]
+nums.splice(2, 2, 200);
+console.log(nums); // output: [1, 100, 200, 4]
+```
+
+### toString
+> 지정된 배열 및 그 요소를 나타내는 문자열을 반환한다.
+
+```js
+const arr = [1, 2, 3];
+console.log(arr.toString(1)); // output: "1,2,3"
+```
+
+### unshift
+> 새로운 요소를 배열의 맨 앞쪽에 추가하고 새로운 길이를 반환한다.
+
+```js
+const arr = [1, 2, 3];
+
+console.log(arr.unshift(4, 5)); // output: 5
+console.log(arr); // output: [4, 5, 1, 2, 3]
+```
+
 ## 복사
 js에서 배열을 복사하는 방법이 있는데 얕은 복사와 깊은 복사가 있다.
 
