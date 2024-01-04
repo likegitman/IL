@@ -143,3 +143,29 @@ const arrowExampleFunction2 = <T extends {}>(arg: T): T[] => {
   return new Array(3).fill(arg);
 };
 ```
+
+## 함수
+함수의 매개변수나 반환 값에 다양한 타입을 넣고 싶을 때 제네릭을 사용할 수 있다.
+```ts
+function ReadOnlyRepository<T>(target: ObjectType<T> | EntitySchema<T> | string): Repository<T> {
+  return getConnection("ro").getRepository(target);
+}
+```
+
+## 호출 시그니처
+ts의 함수 타입 문법으로 함수의 매개변수와 반환 타입을 미리 선언하는 것을 말한다. 호출 시그니처를 사용함으로써
+
+개발자는 함수 호출 시 필요한 타입을 별도로 지정할 수 있게된다. 사용할 때 제네릭 타입을 어디에 위치시키는지에 따라
+
+타입의 범위와 제네릭 타입을 언제 구체 타입으로 한정할지를 결정할 수 있다.
+```ts
+interface useSelectPaginationProps<T> {
+  categoryAtom: RecoilState<number>;
+  filterAtom: RecoilState<string[]>;
+  sortAtom: RecoilState<SortType>;
+  fetcherFunc: (props: CommonListRequest) => Promise<DefaultResponse<ContentListResponse<T>>>;
+}
+```
+```ts
+export type UseRequestHookType = <RequestData = void, ResponseData = void>(baseURL?: string | Headers, defaultHeader?: Headers) => [RequestStatus, Requester<RequestData, ResponseData>];
+```
