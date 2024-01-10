@@ -112,3 +112,14 @@ Next.js에서는 그저 이름만 넣으면 내가 넣은 이미지가 보이지
 `import 이미지 from "../../asssets/example.png";`라는 형태로 가져오고 `url(import한 이미지 이름)`만 넣으면 해당 경로를 
 
 정적 자원으로 처리하지 않기 때문에  `url(import한 이미지 이름.src)`로 해주어야 정적 자원으로 처리를한다.
+
+## Sharp, Squoosh
+Sharp와 Squoosh는 이미지 최적화 리이브러리이며 next/image에서 둘 다 사용이 가능하다.
+
+Sharp는 따로 설치해서 사용해야되고 Squoosh는 별도의 설치없이 사용이 가능하다.
+
+### Sharp
+Squoosh보다 6배 빠르다. 다만 설치할 때 호환성의 이슈가 있을 수 있다. Next.js에서는 Sharp를 추천한다.
+
+### Squoosh
+설치하지 않아도 바로 사용이 가능하기에 호환성 문제가 없다. 하지만 Sharp보다 6배 느리다.
