@@ -36,3 +36,36 @@ Same-Origin-Policy의 약자로 동일 출처 정책이라는 뜻이다.
 특히, Postman같은 가상의 요청을 날릴 수 있는 것에서는 잘 요청되다가 웹에서 요청만 하면 CORS가 발생하는 문제가 생겼을 것이다.
 이는 브라우저가 SOP를 지키고 있기 때문에 헤더에서 CORS 설정을 하지 않으면 정책을 지키라는 문구가 나타나게 되는 것이다.
 
+## 교차 출처 요청 정책
+### 단순 요청 ( Simple Request )
+- GET, HEAD, POST 의 method만 요청해야 한다.
+- `Accpet`, `Accept-Language`, `Content-Language`, `Content-Type` 같은 CORS 헤더를 가진다.
+- `Content-Type`은 `application/x-www-form-urlencoded`, `multipart/form-data`, `text/plain`만 가능하다.
+- ReadableStrean 객체는 사용되지 않는다.
+- XMLHttpRequest 객체를 사용해 요청하면 요청에서 사용된 XMLHttpRequest.upload에 의해서 반환되는 객체에
+  어떠한 EventListner도 등록되지 않는다.
+
+브라우저는 다른 출처에 현재 자신의 출처를 origin에 담아서 보낸다.
+이때 이 다른 출처가 서버라면 origin의 출처에 접근이 가능하다는 것을 알려주기 위해
+`Access-Control-Arrow-Origin`에 주소를 담아서 return한다.
+
+`Access-Control-Arrow-Origin`은 CORS 헤더의 요소 중 하나로 어떤 요청을 허용할지 결정하는데
+하나의 출처를 허용할 수도 있고 '*'로 모든 출처도 허용할 수 있다.
+
+서버가 헤더에 응답하지 않거나, 헤더 값이 요청의 출처와 일치하지 않는 도메인일 경우에는 브라우저가 응답을 차단한다.
+당연히 `Access-Control-Allow-Origin`에 포함되어 있는 경우도 마찬가지이다.
+
+### 예비 요청 ( Preflight Request )
+- OPTIONS 메서드로 HTTP 요청을 미리 보내서 본 요청이 전송하기 안전한지 확인한다.
+  교차 출처 요청이 어떤 영향을 줄 지 모르기 때문에 미리 검사의 목적을 가지고 있다.
+- 요청 헤더: `origin`, `Access-Control-Request-Method`, `Access-Control-Request-Headers`
+- 응답 헤더: `Access-Control-Allow-Origin`, `Access-Aontrol-Allow-Methods`, 
+           `Access-Control-Allow-Headers`, `Access-Control-Max-Age`
+
+### 신용 요청 ( Credentialed Request )
+쿠키, 인증 헤더, TLS 클라이언트 인증서같은 신용정보와 함께 요청한다. CIRS 정책은 교차 출처 요청에
+인증정보를 포함하는 것을 허용하지 않는데 서버에서 `Access-Control-Allow-Credintials`가 true로 되어있다면 가능하다.
+또한 클라이언트에서는 요청에 인증을 포함한다는 것을 알려주기 위해 withCredentials를 true로 해주어야한다.
+
+서버가 `Access-Control-Allow-Credintials`를 true로 하지 않거나 `Access-Control-Allow-Origin` 값이
+허용된 출처가 아니라면 오류가 발생한다.
