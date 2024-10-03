@@ -1,99 +1,152 @@
 # Data-type
+JS는 정적 타입 언어들과 달리 메모리 관리에 대한 압박에서 자유롭다.  
+예를들어 숫자의 경우 정수이냐 부동소수이냐를 구분하지 않고 8바이트를 확보한다.  
+이 말은 형변환을 걱정할 필요가 없다는 것이다.
 
-## Number
-### infinity
-> 양수를 0으로 나누게되면 infinity 값
-### negativeInfinity 
-> 음수를 0으로 나누게되면 negativeInfinity 값
-### NaN 
-> 숫자가 아닌것을 숫자로 나누게되면 Not a Number 값
-
-## String
-#### ' '(작은 따옴표)나 " "(큰 따옴표)로 감싼 것
-
-### 문자열과 변수를 + 기호를 이용해  연결시킬수 있음
+모튼 데이터는 바이트 단위의 식별자(메모리 주소값)를 통해 서로 구분하고 연결할 수 있다. 
+## 변수 선언
 ```js
-const name = 'Woonrin';
-const greeting = 'hello ' + name;
+let a;
+```
+변할 수 있는 데이터를 만드는데 이 테이터를 식별하는 식별자의 이름은 a이다. (변수명이다)  
+컴퓨터는 비어있는 메모리 공간을 확보한 후에 사용자가 a라는 변수에 접근하려 할 때  
+a라는 이름을 가진 주소를 검색하여 이 공간에 담겨있는 데이터를 반환한다.
 
-console.log(greeting); //output: hello Woonrin
+## 데이터 할당
+```js
+let a;
+a = "abc";
+a = "abcdef";
+```
+변수 a의 값은 abcdef일 것이다. 그러면 변수 a의 값을 저장한 공간에서  
+**직접** 변경한다고 생각이들 수 있는데 새로운 메모리 공간을 다시 확보해서  
+그 공간에 abcdef을 저장한 후 해당 주소를 **변수 영역**에 저장하는 형태이다.
+
+여기서 변수 영역(예제: a)과 데이터 영역(예제: abcdef)이라는 개념을알 수 있다.  
+변수와 데이터의 영역을 나누는 이유는 메모리 관리와 데이터 변경이 자유롭기 때문이다.
+
+(숫자와 문자열은 데이터 크기가 다르다.)  
+만약에 미리 확보한 공간에서만 데이터를 변경할 수 있다면 숫자와 문자열을 형변환할 때  
+해당 데이터의 크기에 맞게 늘리는 작업이 필요하게 된다.
+
+## 기본형 타입, 참조형 타입
+(기본형 타입은 값이 담긴 주소값을 바로 복제하고 참조형 타입은 주소값들로 이루어진  
+묶음을 가리키는 주소값을 복제한다.)  
+변수와 상수를 구분하는 것은 **변수 영역**에 다른 데이터를 재할당할 수 있는지로 구분한다.  
+
+### 불변값
+불변과 상수의 개념을 착각할 수 있는데 이 둘은 다른 개념이다.  
+불변성 여부를 구분하는 것은 **데이터 영역**의 메모리가 변하지 않는 것이다.  
+상수와는 명확히 다른 개념!
+
+기본형 타입은 number, string, boolean 등이 존재하는데 이 타입들은 모두 불변값이다.  
+기본형 타입을 수정할 때 해당 공간에서 직접 수정하지 않는다고 했다.  
+즉, 데이터 영역이 변하지 않는다. 따라서 한 번 만들어진 값은 GC를 당하지 않는 한 불변하다.
+
+### 가변값
+그렇다면 불변이 아닌 가변이란 무엇일까?  
+기본형 타입과 달리 참조형 타입(function, array, object 등)은 가변 값이다. (불변 활용 가능)  
+```js
+let obj = {
+  a: 1,
+  b: 'abc',
+};
+```
+obj라는 변수 영역, 1과 'abc'라는 데이터 영역, a와 b라는 객체의 변수 영역 총 3가지가 존재한다.
+```js
+obj.a = 2
+```
+2라는 데이터를 데이터 영역에 새로 생성한 후 a라는 변수를 나타내는 객체의 변수 영역에 주소를 재할당한다.  
+(데이터 영역 변경)  
+* 참조형 데이터의 프로퍼티에 다시 참조형 데이터를 할당하면 중첩 객체라고 한다고 한다.(a: [1, 2, 3])
+
+## 변수 복사
+변수 복사 과정은 기본형이나 참조형이나 **같은 주소를 바라보는 것**은 같다.  
+```js
+let a = 10;
+let b = a;
+
+let obj1 = { a: 'abc' };
+let obj2 = obj1;
+
+b = 20;
+obj2.b = 'def';
+```
+위 코드는 다음과 같다. a !== b, obj1 === obj2  
+즉 b를 변경해도 a는 변경되지 않지만 obj2를 변경하면 obj1도 같이 변경된다는 것이다.  
+여기서 기본형 타입은 b가 가리키는 곳을 변경해 값을 생성하고  
+참조형 타입은 똑같이 가리키지만 가리키는 곳의 값이 바뀐 것이다.  
+여기서 obj2의 데이터를 변경한 것이 아니고 obj2의 내부 프로퍼티를  
+변경했기 때문에 이 obj2의 값을 가변값이라고 할 수 있다.
+
+값으로 전달받은 객체에 변경이 일어나도 원본 객체가 변경되지 않아야 한다면  
+가변 객체가 아니라 불변 객체가 필요한 것이다.
+
+### 얕은 복사
+얕은 복사는 바로 아래 단계까지만 복사해 더 아래까지 들어간 프로퍼티들은 값이 공유된다.  
+```js
+function copyObj (target) {
+  let obj = {};
+    for (var prop in target) {
+      obj[prop] = target[prop];
+  }
+  return obj;
+};
+
+let user1 = {
+  name: 'woon',
+  url: {
+    blog: 'woon.me'
+  },
+};
+
+var user2 = copyObj(user1);
+user2.name = 'woonrin;
+user2.url.blog = 'woonrin.me';
+
+console.log(user.name, user2.name)			// woon, woonrin
+console.log(user.url.blog, user2.url.blog) 	// woonrin.me, woonrin.me
+```
+바로 아래 단계인 name 프로퍼티는 잘 변경되었지만 더 아래 단계로 들어간  
+url.blog는 값이 변경되지 않고 원본과 사본 모두 같은 값인 것을 확인할 수 있다.
+
+### 깊은 복사
+얕은 복사와 달리 바로 아래 단계가 아니라 값을 하나하나 모두 찾아서 복사한다.  
+그래서 모든 프로퍼티 중 원본과 사본이 같은 값을 공유하는 것은 없다.
+```js
+function copyObj (target) {
+  return JSON.parse(JSON.stringify(target));
+};
+
+let user1 = {
+  name: 'woon',
+  url: {
+    blog: 'woon.me'
+  },
+};
+
+var user2 = copyObj(user1);
+user2.name = 'woonrin;
+user2.url.blog = 'woonrin.me';
+
+console.log(user.name, user2.name)			// woon, woonrin
+console.log(user.url.blog, user2.url.blog) 	// woon.me, woonrin.me
 ```
 
-### 여러 따옴표사용
-```js
-// 작은 따옴표가 포함되어 있으면 큰 따옴표로 문자열을 작성.
-let str = "I'm String";
+## undefined
+보통 undefined가 나오는 경우는 3가지가 있다.  
+- 값이 대입되지 않은 변수
+- 객체 내부의 존재하지 않는 프로퍼티에 접근하려할 때
+- return이 없거나 호출되지 않는 함수의 실행결과
 
-// 큰 따옴표가 포함되어 있으면 작은 따옴표로 문자열을 작성.
-let str2 = 'I"m String';
+undefined와 혼용될 수 있는 개념인 empty라는 것이 있지만 둘은 엄연히 다르다.  
+empty는 순회 메서드에서 제외된다. (map, filter 등)  
+하지만 undefined는 비어있지만 그 자체로 하나의 값이기 때문에 순회 대상에 포함된다.
 
-console.log(str, str2);
-// output: I'm String
-           I "m String
+## null
+undefined와 비슷하게 비어있다는 의미지만 다른 타입이기 때문에 조심해야 한다.  
 ```
-
-```js
-// 잘못된 방법
-let str1 = "I'm String!"and good"";
-
-// 옳은 방법
-let str2 = "I'm String!\"and good\"";
+let a;
+let b = null;
 ```
-
-### template literals
-> ``(백틱)으로 감싸고 $기호를 사용하는 것
-```js
-const name = 'Woonrin'
-console.log(`hello ${name}`); //output: hello Woonrin
-```
-
-## Boolean
-#### 참과 거짓
-### true
-> false가 아닌 모든 값
-
-### false
-> 0, null, undefined, NaN, ' ' 비어있는 string  
-`const false = 3 < 1; //false` 
-
-## Null, Undefined
-### null
-> 명확하게 비어있다고 지정하였을 때  
-`let x = null;`
-
-### undefined
-> 선언은 되어있지만 안의 값이 지정되지 않았을 때  
-`let x;`
-
-## Symbol
-고유한 식별자가 필요할 때 사용
-```js
-const symbol1 = Symbol('id');
-const symbol2 = symbol('id');
-console.log(symbol1 === symbol2); //output: false
-```
-
-### 심볼의 값이 같다고 지정할 때
-```js
-const symbol1 = Symbol.for('id');
-const symbol2 = symbol.for('id');
-console.log(symbol1 === symbol2); //output: true
-```
-
-### 출력할 때
-```js
-const symbol1 = Symbol('id');
-console.log(`${symbol1.description}`); //output: id
-```
-
-## Dynamic typing
-```js
-let x = 'hello';
-consolo.log(`value: ${x}, type: $(typeof x)`); //output: value: hello, type: string
-let x = 1;
-consolo.log(`value: ${x}, type: $(typeof x)`); //output: value: 1, type: number
-let x = '7' + 5;
-consolo.log(`value: ${x}, type: $(typeof x)`); //output: value: 75, type: string
-let x = '8' / '2';
-consolo.log(`value: ${x}, type: $(typeof x)`); //output: value: 4, type: number
-```
+만약 둘이 다르다는 것을 확인하고 싶다면 동등 연산자와 일치 연산자로 비교해보자.
